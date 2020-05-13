@@ -1,0 +1,25 @@
+$mobile-width-min: 320px;
+$tablet-width-min: 768px;
+$desktop-width-min: 1024px;
+
+$tablet-width-max: $desktop-width-min - 1px;
+$mobile-width-max: $tablet-width-min - 1px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$desktop-padding: 50px;
+$tablet-padding: 3.3%;
+$mobile-padding: 5.2%;
+
+$main-font: "FiraSans", "Arial", sans-serif;
+$second-font: "Montserrat", "Arial", sans-serif;
+
+$title-color: #1fc0fc;
+$description-color: #484848;
+$decor-color: #ffc341;
+$gradient: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+
+$transition: 0.3s easy-out;
+$active-state-opacity: 0.4;
+$hover-state-opacity: 0.7;
