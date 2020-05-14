@@ -1,0 +1,150 @@
+.page-header {
+  background-repeat: no-repeat;
+  background-size: 1366px 906px, 1018px 340px, 1366px 906px;
+  background-position: center top, center top 160px, center top -15px;
+
+  h1 {
+    @include visually-hidden;
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.webp .page-header {
+  background-image: url("../img/header-girl-desktop@1x.webp"), url("../img/israel-desktop@1x.webp"), url("../img/header-background-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.webp"), url("../img/header-background-desktop@2x.webp"),
+  }
+}
+
+.no-webp .page-header {
+  background-image: url("../img/header-girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-background-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.png"), url("../img/header-background-desktop@2x.jpg");
+  }
+}
+
+.page-header__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 423px;
+  padding: 32px 115px 32px 110px;
+  line-height: 18px;
+
+  a {
+    font-weight: 500;
+    color: $description-color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $decor-color;
+      transition: $transition;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+    }
+  }
+}
+
+.page-header__phone {
+  order: -1;
+}
+
+.page-header__feedback-link {
+  letter-spacing: -0.7px;
+  font-variant: small-caps;
+  border-bottom: 1px dashed $description-color;
+}
+
+.page-header__logo {
+  margin-left: -20px;
+}
+
+.page-header__scroll {
+  display: block;
+  margin: 0 auto;
+  width: 76px;
+  height: 132px;
+  stroke: #fff;
+
+  background-image: url("../img/mouse.svg");
+  background-position: center 24px;
+  background-repeat: no-repeat;
+  background-size: 20px 30px;
+
+  &:hover {
+    transition: $transition;
+    stroke: $decor-color;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .page-header {
+    background-size: 1366px 906px, calc(340px + 50%) 340px, 1366px 906px;
+  }
+
+  .page-header__contacts {
+    padding: 32px 40px;
+  }
+}
+
+
+@media (max-width: $mobile-width-max) {
+  .page-header {
+    background-size: cover;
+  }
+
+  .no-webp .page-header {
+    background-image: url("../img/header-background-mobile.jpg");
+  }
+
+  .webp .page-header {
+    background-image: url("../img/header-background-mobile.webp");
+  }
+
+  .page-header__contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 8px 20px 15px;
+
+    a:not(.page-header__logo) {
+      margin-left: auto;
+      margin-bottom: 9px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .page-header__phone {
+    margin-top: -45px;
+    order: 0;
+  }
+
+  .page-header__logo {
+    display: block;
+    margin-left: 0;
+    padding-top: 5px;
+
+    img {
+      width: 120px;
+      height: 42px;
+    }
+  }
+}

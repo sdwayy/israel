@@ -15,6 +15,14 @@
 }
 
 @font-face {
+  font-weight: 500;
+  font-family: "FiraSans";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/FiraSans-Medium.woff2") format("woff2"), url("./../fonts/FiraSans-Medium.woff") format("woff");
+}
+
+@font-face {
   font-weight: bold;
   font-family: "Montserrat";
   font-style: normal;
@@ -45,12 +53,17 @@ body {
   width: 100%;
   min-height: 100%;
   font-family: $main-font;
-  font-size: 16px;
-  line-height: 22px;
-  color: $second-color;
+  font-size: 15px;
+  line-height: 170%;
+  color: $description-color;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+picture {
+  font-size: 0;
+  line-height: 0;
 }
