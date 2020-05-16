@@ -1,0 +1,13 @@
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid $decor-color;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + .checkbox {
+  background-image: url("../img/check-icon.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -33,6 +33,45 @@
       </svg>
     </a>
   </header>
+  <main class="page-main">
+    <section class="about-program">
+      <h2>О программе</h2>
+      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+      <div class="about-program__video">
+        <picture>
+          <source type="image/webp" srcset="img/about-photo-desktop@1x.webp 1x, img/about-photo-desktop@2x.webp 2x">
+          <img src="img/about-photo-desktop@1x.png" width="870" height="460" alt="Видео превью"
+            srcset="img/about-photo-desktop@1x.png 1x, img/about-photo-desktop@2x.png 2x" loading="lazy">
+        </picture>
+        <button type="button" aria-label="Запустить видео">
+          <svg width="96" height="96" viewbox="0 0 96 96">
+            <use xlink:href="img/sprite_auto.svg#icon-play-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+  <div class="overlay visually-hidden">
+    <section class="feedback-form">
+      <h2>Заказать звонок</h2>
+      <p>Оставьте ваши контактные данные, <br> мы свяжемся c вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+      <form action="#" method="POST" autocomplete="off">
+        <label aria-label="Введите ваше имя">
+          <input type="text" name="user-name" placeholder="Имя" required id="feedback-form__user-name" minlength="3">
+        </label>
+        <label aria-label="Введите ваш телефон">
+          <input type="tel" name="user-phone" placeholder="Телефон" required id="feedback-form__user-phone">
+        </label>
+        <label>
+          <input class="visually-hidden" type="checkbox" name="pesronal-data-consent" tabindex="-1"  required>
+          <div class="feedback-form__checkbox checkbox" tabindex="0"></div>
+          Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+        </label>
+        <button type="submit" class="btn">перезвоните мне</button>
+        <button type="reset" aria-label="Закрыть окно"></button>
+      </form>
+    </section>
+  </div>
   <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

@@ -1,5 +1,1 @@
-<svg width="76" height="132" viewBox="0 0 76 132" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M38 76V131.5" stroke="#ffffff"/>
-<circle cx="38" cy="38" r="26.5" fill="transparent"/>
-<circle cx="38" cy="38" r="37.5" stroke-dasharray="4 4" fill="transparent"/>
-</svg>
+<svg width="76" height="132" xmlns="http://www.w3.org/2000/svg"><path d="M38 76v55.5" stroke="#fff"/><circle cx="38" cy="38" r="26.5" fill="transparent"/><circle cx="38" cy="38" r="37.5" fill="transparent"/></svg>

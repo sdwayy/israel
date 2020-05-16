@@ -377,7 +377,45 @@ template {
   margin: 0 auto;
   max-width: 1366px; }
 
+.btn {
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ffc341;
+  background-image: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+  border: none;
+  border-radius: 80px; }
+  .btn:hover {
+    background-image: linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+    transition: 0.3s; }
+  .btn:active {
+    background-image: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+    transition: 0.3s; }
+
+.input--invalid {
+  border: 2px solid #f57676; }
+
+.input--valid {
+  border: 2px solid #999999; }
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffc341;
+  border-radius: 2px; }
+
+input[type="checkbox"]:checked + .checkbox {
+  background-image: url("../img/check-icon.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .page-header {
+  padding: 32px 0 110px 0;
   background-repeat: no-repeat;
   background-size: 1366px 906px, 1018px 340px, 1366px 906px;
   background-position: center top, center top 160px, center top -15px; }
@@ -418,7 +456,7 @@ template {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 423px;
-  padding: 32px 115px 32px 110px;
+  padding: 0 115px 32px 110px;
   line-height: 18px; }
   .page-header__contacts a {
     font-weight: 500;
@@ -458,21 +496,23 @@ template {
 
 @media (max-width: 1365px) {
   .page-header {
+    padding-top: 15px;
     background-size: 1366px 906px, calc(340px + 50%) 340px, 1366px 906px; }
   .page-header__contacts {
-    padding: 32px 40px; } }
+    padding: 0 40px; } }
 
 @media (max-width: 767px) {
   .page-header {
-    background-size: cover; }
-  .no-webp .page-header {
-    background-image: url("../img/header-background-mobile.jpg"); }
-  .webp .page-header {
-    background-image: url("../img/header-background-mobile.webp"); }
+    background-position: center top 55px, center top 32%, center top -15px;
+    background-size: 850px 550px, 107% auto, 100% 616px; }
+    .page-header p {
+      font-size: 20px;
+      line-height: 24px; }
   .page-header__contacts {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 8px 20px 15px; }
+    margin-bottom: 240px;
+    padding: 0 8px 20px 15px; }
     .page-header__contacts a:not(.page-header__logo) {
       margin-left: auto;
       margin-bottom: 9px;
@@ -487,4 +527,202 @@ template {
     padding-top: 5px; }
     .page-header__logo img {
       width: 120px;
-      height: 42px; } }
+      height: 42px; }
+  .webp .page-header {
+    background-image: url("../img/header-girl-desktop@1x.webp"), url("../img/israel-desktop@1x.webp"), url("../img/header-background-mobile.webp"); } }
+  @media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .webp .page-header {
+      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.webp"), url("../img/header-background-mobile.webp"); } }
+
+@media (max-width: 767px) {
+  .no-webp .page-header {
+    background-image: url("../img/header-girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-background-mobile.jpg"); } }
+  @media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .no-webp .page-header {
+      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.png"), url("../img/header-background-mobile.jpg"); } }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 229, 229, 0.95);
+  z-index: 999; }
+
+.feedback-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 480px;
+  padding: 55px 48px 40px 48px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%); }
+  .feedback-form h2 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1fc0fc; }
+  .feedback-form p {
+    margin: 0;
+    padding-right: 30px;
+    opacity: 0.87; }
+    .feedback-form p:first-of-type {
+      margin-bottom: 30px; }
+  .feedback-form form {
+    display: flex;
+    flex-direction: column; }
+  .feedback-form input[type="text"],
+  .feedback-form input[type="tel"] {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 23px 40px 18px 40px;
+    border: 2px solid #e3e3e3;
+    border-radius: 80px;
+    font-size: 17px;
+    line-height: 20px;
+    font-variant: small-caps;
+    opacity: 0.87; }
+    .feedback-form input[type="text"]:focus, .feedback-form input[type="text"]:invalid:focus, .feedback-form input[type="text"]:valid:focus,
+    .feedback-form input[type="tel"]:focus,
+    .feedback-form input[type="tel"]:invalid:focus,
+    .feedback-form input[type="tel"]:valid:focus {
+      border: 2px solid #ffc341;
+      transition: 0.3s; }
+    .feedback-form input[type="text"]:invalid,
+    .feedback-form input[type="tel"]:invalid {
+      border-color: #f57676;
+      transition: 0.3s; }
+    .feedback-form input[type="text"]:valid,
+    .feedback-form input[type="tel"]:valid {
+      border-color: #999999;
+      transition: 0.3s; }
+  .feedback-form label {
+    padding-right: 25px; }
+    .feedback-form label:last-of-type {
+      display: flex;
+      padding: 0;
+      padding-left: 60px;
+      padding-right: 55px;
+      order: 999;
+      font-size: 13px;
+      line-height: 19px;
+      color: rgba(72, 72, 72, 0.74);
+      cursor: pointer; }
+  .feedback-form input::placeholder {
+    font-weight: 500;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    opacity: 0.5; }
+  .feedback-form button[type="submit"] {
+    width: 264px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 15px; }
+    .feedback-form button[type="submit"] svg {
+      stroke: #ffc341;
+      fill: #ffc341; }
+  .feedback-form button[type="reset"] {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    background-image: url("../img/close-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: 0.3s; }
+    .feedback-form button[type="reset"]:hover {
+      opacity: 0.7; }
+    .feedback-form button[type="reset"]:active {
+      opacity: 0.4; }
+
+.feedback-form__checkbox {
+  flex-shrink: 0;
+  margin-right: 10px; }
+
+@media (max-width: 767px) {
+  .feedback-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0 15px;
+    padding-top: 169px;
+    text-align: center; }
+    .feedback-form form {
+      align-items: center; }
+    .feedback-form label {
+      width: 290px;
+      padding: 0; }
+      .feedback-form label:last-of-type {
+        padding: 0 10px;
+        text-align: left; }
+    .feedback-form button[type="reset"] {
+      top: 22px;
+      right: 23px; }
+    .feedback-form h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px; }
+    .feedback-form h2 + p {
+      width: 290px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 5px;
+      font-size: 14px;
+      line-height: 22px; }
+    .feedback-form button[type="submit"] {
+      margin-top: 6px; } }
+
+.about-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .about-program h2 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc; }
+  .about-program h2 + p {
+    width: 720px;
+    text-align: center; }
+
+.webp .about-program {
+  background-image: url("../img/about-background-desktop@1x.webp"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .about-program {
+      background-image: url("../img/about-background-desktop@2x.webp"); } }
+
+.no-webp .about-program {
+  background-image: url("../img/about-background-desktop@1x.jpg"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .about-program {
+      background-image: url("../img/about-backrgound-desktop@2x.jpg"); } }
+
+.about-program__video {
+  position: relative; }
+  .about-program__video button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
+
+@media (max-width: 767px) {
+  .about-program h2 + p {
+    width: auto; } }

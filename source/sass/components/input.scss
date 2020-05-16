@@ -1,0 +1,9 @@
+.input {
+  &--invalid {
+    border: 2px solid #f57676;
+  }
+
+  &--valid {
+    border: 2px solid #999999;
+  }
+}

@@ -1,0 +1,23 @@
+.btn {
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $decor-color;
+  background-image: $gradient;
+  border: none;
+  border-radius: 80px;
+
+  &:hover {
+    background-image: $gradient-hover;
+    transition: $transition;
+  }
+
+  &:active {
+    background-image: $gradient-active;
+    transition: $transition;
+  }
+}

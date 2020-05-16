@@ -55,5 +55,7 @@
   "engines": {
     "node": "8.15"
   },
-  "dependencies": {}
+  "dependencies": {
+    "imask": "^6.0.3"
+  }
 }

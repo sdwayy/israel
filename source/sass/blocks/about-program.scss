@@ -1,0 +1,56 @@
+.about-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    @include desktop-title;
+    color: $title-color;
+  }
+
+  h2 + p {
+    width: 720px;
+    text-align: center;
+  }
+}
+
+.webp .about-program {
+  background-image: url("../img/about-background-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-background-desktop@2x.webp");
+  }
+}
+
+.no-webp .about-program {
+  background-image: url("../img/about-background-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-backrgound-desktop@2x.jpg");
+  }
+}
+
+.about-program__video {
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: $mobile-width-max) {
+  .about-program {
+    h2 + p {
+      width: auto;
+    }
+  }
+}

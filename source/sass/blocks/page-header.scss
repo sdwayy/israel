@@ -1,4 +1,5 @@
 .page-header {
+  padding: 32px 0 110px 0;
   background-repeat: no-repeat;
   background-size: 1366px 906px, 1018px 340px, 1366px 906px;
   background-position: center top, center top 160px, center top -15px;
@@ -43,7 +44,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 423px;
-  padding: 32px 115px 32px 110px;
+  padding: 0 115px 32px 110px;
   line-height: 18px;
 
   a {
@@ -97,32 +98,32 @@
 
 @media (max-width: $tablet-width-max) {
   .page-header {
+    padding-top: 15px;
     background-size: 1366px 906px, calc(340px + 50%) 340px, 1366px 906px;
   }
 
   .page-header__contacts {
-    padding: 32px 40px;
+    padding: 0 40px;
   }
 }
 
 
 @media (max-width: $mobile-width-max) {
   .page-header {
-    background-size: cover;
-  }
+    background-position: center top 55px, center top 32%, center top -15px;
+    background-size: 850px 550px, 107% auto, 100% 616px;
 
-  .no-webp .page-header {
-    background-image: url("../img/header-background-mobile.jpg");
-  }
-
-  .webp .page-header {
-    background-image: url("../img/header-background-mobile.webp");
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   .page-header__contacts {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 8px 20px 15px;
+    margin-bottom: 240px;
+    padding: 0 8px 20px 15px;
 
     a:not(.page-header__logo) {
       margin-left: auto;
@@ -145,6 +146,22 @@
     img {
       width: 120px;
       height: 42px;
+    }
+  }
+
+  .webp .page-header {
+    background-image: url("../img/header-girl-desktop@1x.webp"), url("../img/israel-desktop@1x.webp"), url("../img/header-background-mobile.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.webp"), url("../img/header-background-mobile.webp"),
+    }
+  }
+
+  .no-webp .page-header {
+    background-image: url("../img/header-girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-background-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.png"), url("../img/header-background-mobile.jpg");
     }
   }
 }
