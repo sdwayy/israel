@@ -36,7 +36,7 @@
   <main class="page-main">
     <section class="about-program">
       <h2>О программе</h2>
-      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
       <div class="about-program__video">
         <picture>
           <source type="image/webp" srcset="img/about-photo-desktop@1x.webp 1x, img/about-photo-desktop@2x.webp 2x">
@@ -57,7 +57,7 @@
       <p>Оставьте ваши контактные данные, <br> мы свяжемся c вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form action="#" method="POST" autocomplete="off">
         <label aria-label="Введите ваше имя">
-          <input type="text" name="user-name" placeholder="Имя" required id="feedback-form__user-name" minlength="3">
+          <input type="text" name="user-name" placeholder="Имя" required id="feedback-form__user-name" minlength="2" pattern="^[А-Яа-яЁё]+$">
         </label>
         <label aria-label="Введите ваш телефон">
           <input type="tel" name="user-phone" placeholder="Телефон" required id="feedback-form__user-phone">
@@ -67,9 +67,15 @@
           <div class="feedback-form__checkbox checkbox" tabindex="0"></div>
           Нажимая на кнопку, вы даёте согласие на обработку персональных данных
         </label>
-        <button type="submit" class="btn">перезвоните мне</button>
-        <button type="reset" aria-label="Закрыть окно"></button>
+        <button type="submit" class="btn btn--gradient">перезвоните мне</button>
+        <button type="reset" class="btn btn--close" aria-label="Закрыть окно"></button>
       </form>
+    </section>
+    <section class="accept visually-hidden">
+      <b>Заявка принята</b>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+      <button type="button" class="accept__btn-accept btn btn--gradient">Понятно</button>
+      <button type="button" class="btn btn--close" aria-label="Закрыть окно"></button>
     </section>
   </div>
   <script src="js/vendor.js" defer></script>

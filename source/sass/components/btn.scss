@@ -1,23 +1,58 @@
 .btn {
-  padding: 20px 0;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 20px;
-  font-variant: small-caps;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: $decor-color;
-  background-image: $gradient;
+  padding: 0;
   border: none;
-  border-radius: 80px;
+  background-color: transparent;
 
-  &:hover {
-    background-image: $gradient-hover;
-    transition: $transition;
+  &--gradient {
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $decor-color;
+    background-image: $gradient;
+    border-radius: 80px;
+
+    &:hover {
+      background-image: $gradient-hover;
+      transition: $transition;
+    }
+
+    &:active {
+      background-image: $gradient-active;
+      transition: $transition;
+    }
   }
 
-  &:active {
-    background-image: $gradient-active;
+  &--close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 18px;
+    height: 17px;
+    background-image: url("../img/close-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     transition: $transition;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .btn {
+    &--close {
+      top: 22px;
+      right: 23px;
+    }
   }
 }

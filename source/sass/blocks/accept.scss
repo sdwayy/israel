@@ -1,0 +1,45 @@
+.accept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 215px;
+  padding-bottom: 112px;
+  background-image: url("../img/accepted-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center top 115px;
+  background-size: 70px 75px;
+
+  b {
+    @include desktop-subtitle;
+    color: $title-color;
+  }
+
+  p {
+    margin-bottom: 35px;
+    padding: 0 30px;
+    text-align: center;
+    opacity: 0.87;
+  }
+}
+.accept__btn-accept {
+  width: 264px;
+}
+
+@media (max-width: $mobile-width-max) {
+  .accept {
+    padding-top: 295px;
+    background-position: center top 195px;
+
+    b {
+      @include mobile-title;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

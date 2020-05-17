@@ -4,7 +4,7 @@ const path = require(`path`);
 
 module.exports = {
   mode: `development`,
-  devtool: `eval-sourse-map`,
+  devtool: `source-map`,
   entry: {
     main: `./source/js/main.js`,
   },

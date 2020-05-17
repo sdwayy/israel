@@ -1,78 +1,46 @@
 import imask from 'imask';
 
-const ESC_KEYCODE = 27;
+import {
+  openOverlay,
+  closeOverlay
+} from './module/overlay';
 
+import {
+  phoneInputHandler,
+  submitHandler
+} from './module/feedback-form';
+
+
+const feedbackForm = document.querySelector(`.feedback-form`);
 const feedbackLink = document.querySelector(`.page-header__feedback-link`);
-const overlay = document.querySelector(`.overlay`);
-const body = document.querySelector(`body`);
+const acceptedBlock = document.querySelector(`.accept`);
 
-
-if (overlay) {
-  const phoneInput = overlay.querySelector(`input[type="tel"]`);
-  const sumbitBtn = overlay.querySelector(`button[type="submit"]`);
-  const closeBtn = overlay.querySelector(`button[type="reset"]`);
-  const inputs = overlay.querySelectorAll(`input`);
-
-  const closeOverlay = () => {
-    overlay.classList.add(`visually-hidden`);
-    removeHandlers();
-    body.style.overflow = `visible`;
-  };
-
-  const escPressHandler = (evt) => {
-    if (evt.keyCode === ESC_KEYCODE) {
-      closeOverlay();
-    }
-  };
-
-  const openOverlay = () => {
-    addHandlers();
-    body.style.overflow = `hidden`;
-    overlay.classList.remove(`visually-hidden`);
-  };
-
-  const overlayClickHandled = (evt) => {
-    if (evt.target === overlay) {
-      closeOverlay();
-    }
-  };
-
-  const feedbackLinkClickHandler = (evt) => {
-    evt.preventDefault();
+if (feedbackLink) {
+  const feedbackLinkClickHandler = () => {
     openOverlay();
   };
 
-  const phoneInputHandler = (evt) => {
-    evt.preventDefault();
-    const phoneInputLength = phoneInput.value.length;
-    const minInputLength = 16;
+  feedbackLink.addEventListener(`click`, feedbackLinkClickHandler);
+}
 
-    if (phoneInputLength < minInputLength) {
-      phoneInput.setCustomValidity(`Введите корректный номер`);
-    } else {
-      phoneInput.setCustomValidity(``);
-    }
+if (acceptedBlock) {
+  const acceptBtn = acceptedBlock.querySelector(`.accept__btn-accept`);
+
+  const acceptBtnClickHandler = () => {
+    closeOverlay();
   };
 
-  const submitClickHandler = (evt) => {
-    evt.preventDefault();
-  };
+  acceptBtn.addEventListener(`click`, acceptBtnClickHandler);
+}
 
-  const removeHandlers = () => {
-    closeBtn.removeEventListener(`click`, closeOverlay);
-    document.removeEventListener(`keydown`, escPressHandler);
-    overlay.removeEventListener(`click`, overlayClickHandled);
-    sumbitBtn.removeEventListener(`click`, submitClickHandler);
-  }
-
-  const addHandlers = () => {
-    document.addEventListener(`keydown`, escPressHandler);
-    closeBtn.addEventListener(`click`, closeOverlay);
-    overlay.addEventListener(`click`, overlayClickHandled);
-    sumbitBtn.addEventListener(`click`, submitClickHandler);
-  };
+if (feedbackForm) {
+  const form = feedbackForm.querySelector(`form`);
+  const phoneInput = feedbackForm.querySelector(`input[type="tel"]`);
 
   imask(phoneInput, {mask: `+{7}(000)000-00-00`});
-  phoneInput.addEventListener(`input`, phoneInputHandler);
-  feedbackLink.addEventListener(`click`, feedbackLinkClickHandler);
+  phoneInput.addEventListener(`input`, () => phoneInputHandler(phoneInput));
+  form.addEventListener(`submit`, (evt) => {
+    evt.preventDefault();
+    submitHandler(feedbackForm, acceptedBlock);
+  });
 }
