@@ -1,32 +1,54 @@
-const phoneInputHandler = (phoneInput) => {
-  const phoneInputLength = phoneInput.value.length;
-  const minInputLength = 16;
-
-  if (phoneInputLength < minInputLength) {
-    phoneInput.setCustomValidity(`Введите корректный номер`);
+const checkNameInput = (input) => {
+  if (input.value.length === 0) {
+    setErrorFor(input, `Пожалуйста, представьтесь`);
+    return false;
+  } else if (input.value.length < 2) {
+    setErrorFor(input, `Введите корректное имя`);
+    return false;
   } else {
-    phoneInput.setCustomValidity(``);
+    setSuccesFor(input);
+    return true;
   }
 };
 
-// const validateInputs = (inputs) => {
-//   for (const input of inputs) {
-//     if (!input.checkValidity()) {
-//       console.log(input);
-//     }
-//   }
-// };
+const checkPhoneInput = (input) => {
+  if (!input.checkValidity()) {
+    setErrorFor(input, `Проверьте введеный номер`);
+    return false;
+  } else if (input.value.length === 0) {
+    setErrorFor(input, `Введите ваш номер`);
+    return false;
+  } else if (input.value.length < 16) {
+    setErrorFor(input, `Введите полный номер`);
+    return false;
+  } else {
+    setSuccesFor(input);
+    return true;
+  }
+};
 
-// const submitClickHandler = () => {
-//   validateInputs();
-// };
 
 const submitHandler = (form, accept) => {
   form.classList.add(`visually-hidden`);
   accept.classList.remove(`visually-hidden`);
 };
 
+const setSuccesFor = (input) => {
+  const errorMessage = input.parentElement.querySelector(`span`);
+
+  input.className = `feedback-form__input--valid`;
+  errorMessage.innerText = ``;
+};
+
+const setErrorFor = (input, message) => {
+  const errorMessage = input.parentElement.querySelector(`span`);
+
+  input.className = `feedback-form__input--invalid`;
+  errorMessage.innerText = message;
+};
+
 export {
-  phoneInputHandler,
-  submitHandler
+  submitHandler,
+  checkNameInput,
+  checkPhoneInput
 };

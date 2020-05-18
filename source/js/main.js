@@ -6,8 +6,9 @@ import {
 } from './module/overlay';
 
 import {
-  phoneInputHandler,
-  submitHandler
+  submitHandler,
+  checkNameInput,
+  checkPhoneInput
 } from './module/feedback-form';
 
 
@@ -36,11 +37,25 @@ if (acceptedBlock) {
 if (feedbackForm) {
   const form = feedbackForm.querySelector(`form`);
   const phoneInput = feedbackForm.querySelector(`input[type="tel"]`);
+  const nameInput = feedbackForm.querySelector(`#feedback-form__user-name`);
+
+  const checkInputs = () => {
+    let validState = false;
+    const nameInputValid = checkNameInput(nameInput);
+    const phoneInputValid = checkPhoneInput(phoneInput);
+
+    if (nameInputValid && phoneInputValid) {
+      validState = true;
+    }
+
+    return validState;
+  };
 
   imask(phoneInput, {mask: `+{7}(000)000-00-00`});
-  phoneInput.addEventListener(`input`, () => phoneInputHandler(phoneInput));
   form.addEventListener(`submit`, (evt) => {
     evt.preventDefault();
-    submitHandler(feedbackForm, acceptedBlock);
+    if (checkInputs()) {
+      submitHandler(feedbackForm, acceptedBlock);
+    }
   });
 }

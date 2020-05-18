@@ -602,6 +602,9 @@ input[type="checkbox"]:checked + .checkbox {
   .feedback-form p:first-of-type {
     margin-bottom: 30px; }
 
+.feedback-form br {
+  display: none; }
+
 .feedback-form form {
   display: flex;
   flex-direction: column; }
@@ -611,21 +614,16 @@ input[type="checkbox"]:checked + .checkbox {
   width: 100%;
   margin-bottom: 8px;
   padding: 23px 40px 18px 40px;
-  border: 2px solid #e3e3e3;
   border-radius: 80px;
   font-size: 17px;
   line-height: 20px;
   font-variant: small-caps;
+  color: #999999;
   opacity: 0.87; }
-  .feedback-form input[type="text"]:focus, .feedback-form input[type="text"]:invalid:focus, .feedback-form input[type="text"]:valid:focus,
-  .feedback-form input[type="tel"]:focus,
-  .feedback-form input[type="tel"]:invalid:focus,
-  .feedback-form input[type="tel"]:valid:focus {
+  .feedback-form input[type="text"]:focus,
+  .feedback-form input[type="tel"]:focus {
     border: 2px solid #ffc341;
-    transition: 0.3s; }
-  .feedback-form input[type="text"]:required:valid,
-  .feedback-form input[type="tel"]:required:valid {
-    border-color: #999999;
+    color: #484848;
     transition: 0.3s; }
 
 .feedback-form label {
@@ -659,6 +657,22 @@ input[type="checkbox"]:checked + .checkbox {
 .feedback-form__checkbox {
   flex-shrink: 0;
   margin-right: 10px; }
+
+.feedback-form__input--default {
+  border: 2px solid #e3e3e3; }
+
+.feedback-form__input--valid {
+  border: 2px solid #999999; }
+
+.feedback-form__input--invalid {
+  border: 2px solid #FF0000; }
+
+.feedback-form__error-message {
+  margin-left: 30px;
+  font-size: 13px;
+  line-height: 150%;
+  color: #FF0000;
+  opacity: 0.75; }
 
 @media (max-width: 767px) {
   .feedback-form form {

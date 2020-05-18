@@ -94,7 +94,277 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_\", function() { return _typeof; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return _createClass; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return _classCallCheck; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return _objectWithoutProperties; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"d\", function() { return _inherits; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"e\", function() { return _possibleConstructorReturn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"f\", function() { return _getPrototypeOf; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"g\", function() { return _get; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"h\", function() { return _set; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"i\", function() { return _slicedToArray; });\nfunction _typeof(obj) {\n  \"@babel/helpers - typeof\";\n\n  if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") {\n    _typeof = function (obj) {\n      return typeof obj;\n    };\n  } else {\n    _typeof = function (obj) {\n      return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj;\n    };\n  }\n\n  return _typeof(obj);\n}\n\nfunction _classCallCheck(instance, Constructor) {\n  if (!(instance instanceof Constructor)) {\n    throw new TypeError(\"Cannot call a class as a function\");\n  }\n}\n\nfunction _defineProperties(target, props) {\n  for (var i = 0; i < props.length; i++) {\n    var descriptor = props[i];\n    descriptor.enumerable = descriptor.enumerable || false;\n    descriptor.configurable = true;\n    if (\"value\" in descriptor) descriptor.writable = true;\n    Object.defineProperty(target, descriptor.key, descriptor);\n  }\n}\n\nfunction _createClass(Constructor, protoProps, staticProps) {\n  if (protoProps) _defineProperties(Constructor.prototype, protoProps);\n  if (staticProps) _defineProperties(Constructor, staticProps);\n  return Constructor;\n}\n\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nfunction _inherits(subClass, superClass) {\n  if (typeof superClass !== \"function\" && superClass !== null) {\n    throw new TypeError(\"Super expression must either be null or a function\");\n  }\n\n  subClass.prototype = Object.create(superClass && superClass.prototype, {\n    constructor: {\n      value: subClass,\n      writable: true,\n      configurable: true\n    }\n  });\n  if (superClass) _setPrototypeOf(subClass, superClass);\n}\n\nfunction _getPrototypeOf(o) {\n  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {\n    return o.__proto__ || Object.getPrototypeOf(o);\n  };\n  return _getPrototypeOf(o);\n}\n\nfunction _setPrototypeOf(o, p) {\n  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {\n    o.__proto__ = p;\n    return o;\n  };\n\n  return _setPrototypeOf(o, p);\n}\n\nfunction _objectWithoutPropertiesLoose(source, excluded) {\n  if (source == null) return {};\n  var target = {};\n  var sourceKeys = Object.keys(source);\n  var key, i;\n\n  for (i = 0; i < sourceKeys.length; i++) {\n    key = sourceKeys[i];\n    if (excluded.indexOf(key) >= 0) continue;\n    target[key] = source[key];\n  }\n\n  return target;\n}\n\nfunction _objectWithoutProperties(source, excluded) {\n  if (source == null) return {};\n\n  var target = _objectWithoutPropertiesLoose(source, excluded);\n\n  var key, i;\n\n  if (Object.getOwnPropertySymbols) {\n    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);\n\n    for (i = 0; i < sourceSymbolKeys.length; i++) {\n      key = sourceSymbolKeys[i];\n      if (excluded.indexOf(key) >= 0) continue;\n      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;\n      target[key] = source[key];\n    }\n  }\n\n  return target;\n}\n\nfunction _assertThisInitialized(self) {\n  if (self === void 0) {\n    throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\");\n  }\n\n  return self;\n}\n\nfunction _possibleConstructorReturn(self, call) {\n  if (call && (typeof call === \"object\" || typeof call === \"function\")) {\n    return call;\n  }\n\n  return _assertThisInitialized(self);\n}\n\nfunction _superPropBase(object, property) {\n  while (!Object.prototype.hasOwnProperty.call(object, property)) {\n    object = _getPrototypeOf(object);\n    if (object === null) break;\n  }\n\n  return object;\n}\n\nfunction _get(target, property, receiver) {\n  if (typeof Reflect !== \"undefined\" && Reflect.get) {\n    _get = Reflect.get;\n  } else {\n    _get = function _get(target, property, receiver) {\n      var base = _superPropBase(target, property);\n\n      if (!base) return;\n      var desc = Object.getOwnPropertyDescriptor(base, property);\n\n      if (desc.get) {\n        return desc.get.call(receiver);\n      }\n\n      return desc.value;\n    };\n  }\n\n  return _get(target, property, receiver || target);\n}\n\nfunction set(target, property, value, receiver) {\n  if (typeof Reflect !== \"undefined\" && Reflect.set) {\n    set = Reflect.set;\n  } else {\n    set = function set(target, property, value, receiver) {\n      var base = _superPropBase(target, property);\n\n      var desc;\n\n      if (base) {\n        desc = Object.getOwnPropertyDescriptor(base, property);\n\n        if (desc.set) {\n          desc.set.call(receiver, value);\n          return true;\n        } else if (!desc.writable) {\n          return false;\n        }\n      }\n\n      desc = Object.getOwnPropertyDescriptor(receiver, property);\n\n      if (desc) {\n        if (!desc.writable) {\n          return false;\n        }\n\n        desc.value = value;\n        Object.defineProperty(receiver, property, desc);\n      } else {\n        _defineProperty(receiver, property, value);\n      }\n\n      return true;\n    };\n  }\n\n  return set(target, property, value, receiver);\n}\n\nfunction _set(target, property, value, receiver, isStrict) {\n  var s = set(target, property, value, receiver || target);\n\n  if (!s && isStrict) {\n    throw new Error('failed to set property');\n  }\n\n  return value;\n}\n\nfunction _slicedToArray(arr, i) {\n  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();\n}\n\nfunction _arrayWithHoles(arr) {\n  if (Array.isArray(arr)) return arr;\n}\n\nfunction _iterableToArrayLimit(arr, i) {\n  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === \"[object Arguments]\")) {\n    return;\n  }\n\n  var _arr = [];\n  var _n = true;\n  var _d = false;\n  var _e = undefined;\n\n  try {\n    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {\n      _arr.push(_s.value);\n\n      if (i && _arr.length === i) break;\n    }\n  } catch (err) {\n    _d = true;\n    _e = err;\n  } finally {\n    try {\n      if (!_n && _i[\"return\"] != null) _i[\"return\"]();\n    } finally {\n      if (_d) throw _e;\n    }\n  }\n\n  return _arr;\n}\n\nfunction _nonIterableRest() {\n  throw new TypeError(\"Invalid attempt to destructure non-iterable instance\");\n}\n\n\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _typeof; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _classCallCheck; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _objectWithoutProperties; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _inherits; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _possibleConstructorReturn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _getPrototypeOf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _get; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _set; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return _slicedToArray; });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _superPropBase(object, property) {
+  while (!Object.prototype.hasOwnProperty.call(object, property)) {
+    object = _getPrototypeOf(object);
+    if (object === null) break;
+  }
+
+  return object;
+}
+
+function _get(target, property, receiver) {
+  if (typeof Reflect !== "undefined" && Reflect.get) {
+    _get = Reflect.get;
+  } else {
+    _get = function _get(target, property, receiver) {
+      var base = _superPropBase(target, property);
+
+      if (!base) return;
+      var desc = Object.getOwnPropertyDescriptor(base, property);
+
+      if (desc.get) {
+        return desc.get.call(receiver);
+      }
+
+      return desc.value;
+    };
+  }
+
+  return _get(target, property, receiver || target);
+}
+
+function set(target, property, value, receiver) {
+  if (typeof Reflect !== "undefined" && Reflect.set) {
+    set = Reflect.set;
+  } else {
+    set = function set(target, property, value, receiver) {
+      var base = _superPropBase(target, property);
+
+      var desc;
+
+      if (base) {
+        desc = Object.getOwnPropertyDescriptor(base, property);
+
+        if (desc.set) {
+          desc.set.call(receiver, value);
+          return true;
+        } else if (!desc.writable) {
+          return false;
+        }
+      }
+
+      desc = Object.getOwnPropertyDescriptor(receiver, property);
+
+      if (desc) {
+        if (!desc.writable) {
+          return false;
+        }
+
+        desc.value = value;
+        Object.defineProperty(receiver, property, desc);
+      } else {
+        _defineProperty(receiver, property, value);
+      }
+
+      return true;
+    };
+  }
+
+  return set(target, property, value, receiver);
+}
+
+function _set(target, property, value, receiver, isStrict) {
+  var s = set(target, property, value, receiver || target);
+
+  if (!s && isStrict) {
+    throw new Error('failed to set property');
+  }
+
+  return value;
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+    return;
+  }
+
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+
+
 
 /***/ }),
 
@@ -106,7 +376,93 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mask-element.js */ \"./node_modules/imask/esm/controls/mask-element.js\");\n/* harmony import */ var _html_mask_element_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./html-mask-element.js */ \"./node_modules/imask/esm/controls/html-mask-element.js\");\n\n\n\n\n\nvar HTMLContenteditableMaskElement =\n/*#__PURE__*/\nfunction (_HTMLMaskElement) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(HTMLContenteditableMaskElement, _HTMLMaskElement);\n\n  function HTMLContenteditableMaskElement() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, HTMLContenteditableMaskElement);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(HTMLContenteditableMaskElement).apply(this, arguments));\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(HTMLContenteditableMaskElement, [{\n    key: \"_unsafeSelect\",\n\n    /**\r\n      Sets HTMLElement selection\r\n      @override\r\n    */\n    value: function _unsafeSelect(start, end) {\n      if (!this.rootElement.createRange) return;\n      var range = this.rootElement.createRange();\n      range.setStart(this.input.firstChild || this.input, start);\n      range.setEnd(this.input.lastChild || this.input, end);\n      var root = this.rootElement;\n      var selection = root.getSelection && root.getSelection();\n\n      if (selection) {\n        selection.removeAllRanges();\n        selection.addRange(range);\n      }\n    }\n    /**\r\n      HTMLElement value\r\n      @override\r\n    */\n\n  }, {\n    key: \"_unsafeSelectionStart\",\n\n    /**\r\n      Returns HTMLElement selection start\r\n      @override\r\n    */\n    get: function get() {\n      var root = this.rootElement;\n      var selection = root.getSelection && root.getSelection();\n      return selection && selection.anchorOffset;\n    }\n    /**\r\n      Returns HTMLElement selection end\r\n      @override\r\n    */\n\n  }, {\n    key: \"_unsafeSelectionEnd\",\n    get: function get() {\n      var root = this.rootElement;\n      var selection = root.getSelection && root.getSelection();\n      return selection && this._unsafeSelectionStart + String(selection).length;\n    }\n  }, {\n    key: \"value\",\n    get: function get() {\n      // $FlowFixMe\n      return this.input.textContent;\n    },\n    set: function set(value) {\n      this.input.textContent = value;\n    }\n  }]);\n\n  return HTMLContenteditableMaskElement;\n}(_html_mask_element_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\n_core_holder_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (HTMLContenteditableMaskElement);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/controls/html-contenteditable-mask-element.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mask-element.js */ "./node_modules/imask/esm/controls/mask-element.js");
+/* harmony import */ var _html_mask_element_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./html-mask-element.js */ "./node_modules/imask/esm/controls/html-mask-element.js");
+
+
+
+
+
+var HTMLContenteditableMaskElement =
+/*#__PURE__*/
+function (_HTMLMaskElement) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(HTMLContenteditableMaskElement, _HTMLMaskElement);
+
+  function HTMLContenteditableMaskElement() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, HTMLContenteditableMaskElement);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(HTMLContenteditableMaskElement).apply(this, arguments));
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(HTMLContenteditableMaskElement, [{
+    key: "_unsafeSelect",
+
+    /**
+      Sets HTMLElement selection
+      @override
+    */
+    value: function _unsafeSelect(start, end) {
+      if (!this.rootElement.createRange) return;
+      var range = this.rootElement.createRange();
+      range.setStart(this.input.firstChild || this.input, start);
+      range.setEnd(this.input.lastChild || this.input, end);
+      var root = this.rootElement;
+      var selection = root.getSelection && root.getSelection();
+
+      if (selection) {
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
+    /**
+      HTMLElement value
+      @override
+    */
+
+  }, {
+    key: "_unsafeSelectionStart",
+
+    /**
+      Returns HTMLElement selection start
+      @override
+    */
+    get: function get() {
+      var root = this.rootElement;
+      var selection = root.getSelection && root.getSelection();
+      return selection && selection.anchorOffset;
+    }
+    /**
+      Returns HTMLElement selection end
+      @override
+    */
+
+  }, {
+    key: "_unsafeSelectionEnd",
+    get: function get() {
+      var root = this.rootElement;
+      var selection = root.getSelection && root.getSelection();
+      return selection && this._unsafeSelectionStart + String(selection).length;
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      // $FlowFixMe
+      return this.input.textContent;
+    },
+    set: function set(value) {
+      this.input.textContent = value;
+    }
+  }]);
+
+  return HTMLContenteditableMaskElement;
+}(_html_mask_element_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
+_core_holder_js__WEBPACK_IMPORTED_MODULE_1__["default"].HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (HTMLContenteditableMaskElement);
+
 
 /***/ }),
 
@@ -118,7 +474,160 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mask-element.js */ \"./node_modules/imask/esm/controls/mask-element.js\");\n\n\n\n\n/** Bridge between HTMLElement and {@link Masked} */\n\nvar HTMLMaskElement =\n/*#__PURE__*/\nfunction (_MaskElement) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(HTMLMaskElement, _MaskElement);\n\n  /** Mapping between HTMLElement events and mask internal events */\n\n  /** HTMLElement to use mask on */\n\n  /**\r\n    @param {HTMLInputElement|HTMLTextAreaElement} input\r\n  */\n  function HTMLMaskElement(input) {\n    var _this;\n\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, HTMLMaskElement);\n\n    _this = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(HTMLMaskElement).call(this));\n    _this.input = input;\n    _this._handlers = {};\n    return _this;\n  }\n  /** */\n  // $FlowFixMe https://github.com/facebook/flow/issues/2839\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(HTMLMaskElement, [{\n    key: \"_unsafeSelect\",\n\n    /**\r\n      Sets HTMLElement selection\r\n      @override\r\n    */\n    value: function _unsafeSelect(start, end) {\n      this.input.setSelectionRange(start, end);\n    }\n    /**\r\n      HTMLElement value\r\n      @override\r\n    */\n\n  }, {\n    key: \"bindEvents\",\n\n    /**\r\n      Binds HTMLElement events to mask internal events\r\n      @override\r\n    */\n    value: function bindEvents(handlers) {\n      var _this2 = this;\n\n      Object.keys(handlers).forEach(function (event) {\n        return _this2._toggleEventHandler(HTMLMaskElement.EVENTS_MAP[event], handlers[event]);\n      });\n    }\n    /**\r\n      Unbinds HTMLElement events to mask internal events\r\n      @override\r\n    */\n\n  }, {\n    key: \"unbindEvents\",\n    value: function unbindEvents() {\n      var _this3 = this;\n\n      Object.keys(this._handlers).forEach(function (event) {\n        return _this3._toggleEventHandler(event);\n      });\n    }\n    /** */\n\n  }, {\n    key: \"_toggleEventHandler\",\n    value: function _toggleEventHandler(event, handler) {\n      if (this._handlers[event]) {\n        this.input.removeEventListener(event, this._handlers[event]);\n        delete this._handlers[event];\n      }\n\n      if (handler) {\n        this.input.addEventListener(event, handler);\n        this._handlers[event] = handler;\n      }\n    }\n  }, {\n    key: \"rootElement\",\n    get: function get() {\n      return this.input.getRootNode ? this.input.getRootNode() : document;\n    }\n    /**\r\n      Is element in focus\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"isActive\",\n    get: function get() {\n      //$FlowFixMe\n      return this.input === this.rootElement.activeElement;\n    }\n    /**\r\n      Returns HTMLElement selection start\r\n      @override\r\n    */\n\n  }, {\n    key: \"_unsafeSelectionStart\",\n    get: function get() {\n      return this.input.selectionStart;\n    }\n    /**\r\n      Returns HTMLElement selection end\r\n      @override\r\n    */\n\n  }, {\n    key: \"_unsafeSelectionEnd\",\n    get: function get() {\n      return this.input.selectionEnd;\n    }\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this.input.value;\n    },\n    set: function set(value) {\n      this.input.value = value;\n    }\n  }]);\n\n  return HTMLMaskElement;\n}(_mask_element_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nHTMLMaskElement.EVENTS_MAP = {\n  selectionChange: 'keydown',\n  input: 'input',\n  drop: 'drop',\n  click: 'click',\n  focus: 'focus',\n  commit: 'blur'\n};\n_core_holder_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].HTMLMaskElement = HTMLMaskElement;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (HTMLMaskElement);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/controls/html-mask-element.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mask-element.js */ "./node_modules/imask/esm/controls/mask-element.js");
+
+
+
+
+/** Bridge between HTMLElement and {@link Masked} */
+
+var HTMLMaskElement =
+/*#__PURE__*/
+function (_MaskElement) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(HTMLMaskElement, _MaskElement);
+
+  /** Mapping between HTMLElement events and mask internal events */
+
+  /** HTMLElement to use mask on */
+
+  /**
+    @param {HTMLInputElement|HTMLTextAreaElement} input
+  */
+  function HTMLMaskElement(input) {
+    var _this;
+
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, HTMLMaskElement);
+
+    _this = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(HTMLMaskElement).call(this));
+    _this.input = input;
+    _this._handlers = {};
+    return _this;
+  }
+  /** */
+  // $FlowFixMe https://github.com/facebook/flow/issues/2839
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(HTMLMaskElement, [{
+    key: "_unsafeSelect",
+
+    /**
+      Sets HTMLElement selection
+      @override
+    */
+    value: function _unsafeSelect(start, end) {
+      this.input.setSelectionRange(start, end);
+    }
+    /**
+      HTMLElement value
+      @override
+    */
+
+  }, {
+    key: "bindEvents",
+
+    /**
+      Binds HTMLElement events to mask internal events
+      @override
+    */
+    value: function bindEvents(handlers) {
+      var _this2 = this;
+
+      Object.keys(handlers).forEach(function (event) {
+        return _this2._toggleEventHandler(HTMLMaskElement.EVENTS_MAP[event], handlers[event]);
+      });
+    }
+    /**
+      Unbinds HTMLElement events to mask internal events
+      @override
+    */
+
+  }, {
+    key: "unbindEvents",
+    value: function unbindEvents() {
+      var _this3 = this;
+
+      Object.keys(this._handlers).forEach(function (event) {
+        return _this3._toggleEventHandler(event);
+      });
+    }
+    /** */
+
+  }, {
+    key: "_toggleEventHandler",
+    value: function _toggleEventHandler(event, handler) {
+      if (this._handlers[event]) {
+        this.input.removeEventListener(event, this._handlers[event]);
+        delete this._handlers[event];
+      }
+
+      if (handler) {
+        this.input.addEventListener(event, handler);
+        this._handlers[event] = handler;
+      }
+    }
+  }, {
+    key: "rootElement",
+    get: function get() {
+      return this.input.getRootNode ? this.input.getRootNode() : document;
+    }
+    /**
+      Is element in focus
+      @readonly
+    */
+
+  }, {
+    key: "isActive",
+    get: function get() {
+      //$FlowFixMe
+      return this.input === this.rootElement.activeElement;
+    }
+    /**
+      Returns HTMLElement selection start
+      @override
+    */
+
+  }, {
+    key: "_unsafeSelectionStart",
+    get: function get() {
+      return this.input.selectionStart;
+    }
+    /**
+      Returns HTMLElement selection end
+      @override
+    */
+
+  }, {
+    key: "_unsafeSelectionEnd",
+    get: function get() {
+      return this.input.selectionEnd;
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this.input.value;
+    },
+    set: function set(value) {
+      this.input.value = value;
+    }
+  }]);
+
+  return HTMLMaskElement;
+}(_mask_element_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
+HTMLMaskElement.EVENTS_MAP = {
+  selectionChange: 'keydown',
+  input: 'input',
+  drop: 'drop',
+  click: 'click',
+  focus: 'focus',
+  commit: 'blur'
+};
+_core_holder_js__WEBPACK_IMPORTED_MODULE_1__["default"].HTMLMaskElement = HTMLMaskElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (HTMLMaskElement);
+
 
 /***/ }),
 
@@ -130,7 +639,445 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/action-details.js */ \"./node_modules/imask/esm/core/action-details.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../masked/base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../masked/factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../masked/pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../masked/pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../masked/pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../masked/pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../masked/range.js */ \"./node_modules/imask/esm/masked/range.js\");\n/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../masked/date.js */ \"./node_modules/imask/esm/masked/date.js\");\n/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./mask-element.js */ \"./node_modules/imask/esm/controls/mask-element.js\");\n/* harmony import */ var _html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./html-mask-element.js */ \"./node_modules/imask/esm/controls/html-mask-element.js\");\n/* harmony import */ var _html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./html-contenteditable-mask-element.js */ \"./node_modules/imask/esm/controls/html-contenteditable-mask-element.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/** Listens to element events and controls changes between element and {@link Masked} */\n\nvar InputMask =\n/*#__PURE__*/\nfunction () {\n  /**\r\n    View element\r\n    @readonly\r\n  */\n\n  /**\r\n    Internal {@link Masked} model\r\n    @readonly\r\n  */\n\n  /**\r\n    @param {MaskElement|HTMLInputElement|HTMLTextAreaElement} el\r\n    @param {Object} opts\r\n  */\n  function InputMask(el, opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, InputMask);\n\n    this.el = el instanceof _mask_element_js__WEBPACK_IMPORTED_MODULE_14__[\"default\"] ? el : el.isContentEditable && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' ? new _html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__[\"default\"](el) : new _html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__[\"default\"](el);\n    this.masked = Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])(opts);\n    this._listeners = {};\n    this._value = '';\n    this._unmaskedValue = '';\n    this._saveSelection = this._saveSelection.bind(this);\n    this._onInput = this._onInput.bind(this);\n    this._onChange = this._onChange.bind(this);\n    this._onDrop = this._onDrop.bind(this);\n    this._onFocus = this._onFocus.bind(this);\n    this._onClick = this._onClick.bind(this);\n    this.alignCursor = this.alignCursor.bind(this);\n    this.alignCursorFriendly = this.alignCursorFriendly.bind(this);\n\n    this._bindEvents(); // refresh\n\n\n    this.updateValue();\n\n    this._onChange();\n  }\n  /** Read or update mask */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(InputMask, [{\n    key: \"maskEquals\",\n    value: function maskEquals(mask) {\n      return mask == null || mask === this.masked.mask || mask === Date && this.masked instanceof _masked_date_js__WEBPACK_IMPORTED_MODULE_13__[\"default\"];\n    }\n  }, {\n    key: \"_bindEvents\",\n\n    /**\r\n      Starts listening to element events\r\n      @protected\r\n    */\n    value: function _bindEvents() {\n      this.el.bindEvents({\n        selectionChange: this._saveSelection,\n        input: this._onInput,\n        drop: this._onDrop,\n        click: this._onClick,\n        focus: this._onFocus,\n        commit: this._onChange\n      });\n    }\n    /**\r\n      Stops listening to element events\r\n      @protected\r\n     */\n\n  }, {\n    key: \"_unbindEvents\",\n    value: function _unbindEvents() {\n      if (this.el) this.el.unbindEvents();\n    }\n    /**\r\n      Fires custom event\r\n      @protected\r\n     */\n\n  }, {\n    key: \"_fireEvent\",\n    value: function _fireEvent(ev) {\n      var listeners = this._listeners[ev];\n      if (!listeners) return;\n      listeners.forEach(function (l) {\n        return l();\n      });\n    }\n    /**\r\n      Current selection start\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"_saveSelection\",\n\n    /**\r\n      Stores current selection\r\n      @protected\r\n    */\n    value: function _saveSelection()\n    /* ev */\n    {\n      if (this.value !== this.el.value) {\n        console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console\n      }\n\n      this._selection = {\n        start: this.selectionStart,\n        end: this.cursorPos\n      };\n    }\n    /** Syncronizes model value from view */\n\n  }, {\n    key: \"updateValue\",\n    value: function updateValue() {\n      this.masked.value = this.el.value;\n      this._value = this.masked.value;\n    }\n    /** Syncronizes view from model value, fires change events */\n\n  }, {\n    key: \"updateControl\",\n    value: function updateControl() {\n      var newUnmaskedValue = this.masked.unmaskedValue;\n      var newValue = this.masked.value;\n      var isChanged = this.unmaskedValue !== newUnmaskedValue || this.value !== newValue;\n      this._unmaskedValue = newUnmaskedValue;\n      this._value = newValue;\n      if (this.el.value !== newValue) this.el.value = newValue;\n      if (isChanged) this._fireChangeEvents();\n    }\n    /** Updates options with deep equal check, recreates @{link Masked} model if mask type changes */\n\n  }, {\n    key: \"updateOptions\",\n    value: function updateOptions(opts) {\n      var mask = opts.mask,\n          restOpts = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"c\"])(opts, [\"mask\"]);\n\n      var updateMask = !this.maskEquals(mask);\n      var updateOpts = !Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"objectIncludes\"])(this.masked, restOpts);\n      if (updateMask) this.mask = mask;\n      if (updateOpts) this.masked.updateOptions(restOpts);\n      if (updateMask || updateOpts) this.updateControl();\n    }\n    /** Updates cursor */\n\n  }, {\n    key: \"updateCursor\",\n    value: function updateCursor(cursorPos) {\n      if (cursorPos == null) return;\n      this.cursorPos = cursorPos; // also queue change cursor for mobile browsers\n\n      this._delayUpdateCursor(cursorPos);\n    }\n    /**\r\n      Delays cursor update to support mobile browsers\r\n      @private\r\n    */\n\n  }, {\n    key: \"_delayUpdateCursor\",\n    value: function _delayUpdateCursor(cursorPos) {\n      var _this = this;\n\n      this._abortUpdateCursor();\n\n      this._changingCursorPos = cursorPos;\n      this._cursorChanging = setTimeout(function () {\n        if (!_this.el) return; // if was destroyed\n\n        _this.cursorPos = _this._changingCursorPos;\n\n        _this._abortUpdateCursor();\n      }, 10);\n    }\n    /**\r\n      Fires custom events\r\n      @protected\r\n    */\n\n  }, {\n    key: \"_fireChangeEvents\",\n    value: function _fireChangeEvents() {\n      this._fireEvent('accept');\n\n      if (this.masked.isComplete) this._fireEvent('complete');\n    }\n    /**\r\n      Aborts delayed cursor update\r\n      @private\r\n    */\n\n  }, {\n    key: \"_abortUpdateCursor\",\n    value: function _abortUpdateCursor() {\n      if (this._cursorChanging) {\n        clearTimeout(this._cursorChanging);\n        delete this._cursorChanging;\n      }\n    }\n    /** Aligns cursor to nearest available position */\n\n  }, {\n    key: \"alignCursor\",\n    value: function alignCursor() {\n      this.cursorPos = this.masked.nearestInputPos(this.cursorPos, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT);\n    }\n    /** Aligns cursor only if selection is empty */\n\n  }, {\n    key: \"alignCursorFriendly\",\n    value: function alignCursorFriendly() {\n      if (this.selectionStart !== this.cursorPos) return; // skip if range is selected\n\n      this.alignCursor();\n    }\n    /** Adds listener on custom event */\n\n  }, {\n    key: \"on\",\n    value: function on(ev, handler) {\n      if (!this._listeners[ev]) this._listeners[ev] = [];\n\n      this._listeners[ev].push(handler);\n\n      return this;\n    }\n    /** Removes custom event listener */\n\n  }, {\n    key: \"off\",\n    value: function off(ev, handler) {\n      if (!this._listeners[ev]) return this;\n\n      if (!handler) {\n        delete this._listeners[ev];\n        return this;\n      }\n\n      var hIndex = this._listeners[ev].indexOf(handler);\n\n      if (hIndex >= 0) this._listeners[ev].splice(hIndex, 1);\n      return this;\n    }\n    /** Handles view input event */\n\n  }, {\n    key: \"_onInput\",\n    value: function _onInput() {\n      this._abortUpdateCursor(); // fix strange IE behavior\n\n\n      if (!this._selection) return this.updateValue();\n      var details = new _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]( // new state\n      this.el.value, this.cursorPos, // old state\n      this.value, this._selection);\n      var oldRawValue = this.masked.rawInputValue;\n      var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection).offset; // force align in remove direction only if no input chars were removed\n      // otherwise we still need to align with NONE (to get out from fixed symbols for instance)\n\n      var removeDirection = oldRawValue === this.masked.rawInputValue ? details.removeDirection : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE;\n      var cursorPos = this.masked.nearestInputPos(details.startChangePos + offset, removeDirection);\n      this.updateControl();\n      this.updateCursor(cursorPos);\n    }\n    /** Handles view change event and commits model value */\n\n  }, {\n    key: \"_onChange\",\n    value: function _onChange() {\n      if (this.value !== this.el.value) {\n        this.updateValue();\n      }\n\n      this.masked.doCommit();\n      this.updateControl();\n\n      this._saveSelection();\n    }\n    /** Handles view drop event, prevents by default */\n\n  }, {\n    key: \"_onDrop\",\n    value: function _onDrop(ev) {\n      ev.preventDefault();\n      ev.stopPropagation();\n    }\n    /** Restore last selection on focus */\n\n  }, {\n    key: \"_onFocus\",\n    value: function _onFocus(ev) {\n      this.alignCursorFriendly();\n    }\n    /** Restore last selection on focus */\n\n  }, {\n    key: \"_onClick\",\n    value: function _onClick(ev) {\n      this.alignCursorFriendly();\n    }\n    /** Unbind view events and removes element reference */\n\n  }, {\n    key: \"destroy\",\n    value: function destroy() {\n      this._unbindEvents(); // $FlowFixMe why not do so?\n\n\n      this._listeners.length = 0; // $FlowFixMe\n\n      delete this.el;\n    }\n  }, {\n    key: \"mask\",\n    get: function get() {\n      return this.masked.mask;\n    },\n    set: function set(mask) {\n      if (this.maskEquals(mask)) return;\n\n      if (this.masked.constructor === Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__[\"maskedClass\"])(mask)) {\n        this.masked.updateOptions({\n          mask: mask\n        });\n        return;\n      }\n\n      var masked = Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])({\n        mask: mask\n      });\n      masked.unmaskedValue = this.masked.unmaskedValue;\n      this.masked = masked;\n    }\n    /** Raw value */\n\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this._value;\n    },\n    set: function set(str) {\n      this.masked.value = str;\n      this.updateControl();\n      this.alignCursor();\n    }\n    /** Unmasked value */\n\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this._unmaskedValue;\n    },\n    set: function set(str) {\n      this.masked.unmaskedValue = str;\n      this.updateControl();\n      this.alignCursor();\n    }\n    /** Typed unmasked value */\n\n  }, {\n    key: \"typedValue\",\n    get: function get() {\n      return this.masked.typedValue;\n    },\n    set: function set(val) {\n      this.masked.typedValue = val;\n      this.updateControl();\n      this.alignCursor();\n    }\n  }, {\n    key: \"selectionStart\",\n    get: function get() {\n      return this._cursorChanging ? this._changingCursorPos : this.el.selectionStart;\n    }\n    /** Current cursor position */\n\n  }, {\n    key: \"cursorPos\",\n    get: function get() {\n      return this._cursorChanging ? this._changingCursorPos : this.el.selectionEnd;\n    },\n    set: function set(pos) {\n      if (!this.el.isActive) return;\n      this.el.select(pos, pos);\n\n      this._saveSelection();\n    }\n  }]);\n\n  return InputMask;\n}();\n_core_holder_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"].InputMask = InputMask;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (InputMask);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/controls/input.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/action-details.js */ "./node_modules/imask/esm/core/action-details.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../masked/base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../masked/factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../masked/pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../masked/pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../masked/pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../masked/pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../masked/range.js */ "./node_modules/imask/esm/masked/range.js");
+/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../masked/date.js */ "./node_modules/imask/esm/masked/date.js");
+/* harmony import */ var _mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./mask-element.js */ "./node_modules/imask/esm/controls/mask-element.js");
+/* harmony import */ var _html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./html-mask-element.js */ "./node_modules/imask/esm/controls/html-mask-element.js");
+/* harmony import */ var _html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./html-contenteditable-mask-element.js */ "./node_modules/imask/esm/controls/html-contenteditable-mask-element.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Listens to element events and controls changes between element and {@link Masked} */
+
+var InputMask =
+/*#__PURE__*/
+function () {
+  /**
+    View element
+    @readonly
+  */
+
+  /**
+    Internal {@link Masked} model
+    @readonly
+  */
+
+  /**
+    @param {MaskElement|HTMLInputElement|HTMLTextAreaElement} el
+    @param {Object} opts
+  */
+  function InputMask(el, opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, InputMask);
+
+    this.el = el instanceof _mask_element_js__WEBPACK_IMPORTED_MODULE_14__["default"] ? el : el.isContentEditable && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' ? new _html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__["default"](el) : new _html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__["default"](el);
+    this.masked = Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__["default"])(opts);
+    this._listeners = {};
+    this._value = '';
+    this._unmaskedValue = '';
+    this._saveSelection = this._saveSelection.bind(this);
+    this._onInput = this._onInput.bind(this);
+    this._onChange = this._onChange.bind(this);
+    this._onDrop = this._onDrop.bind(this);
+    this._onFocus = this._onFocus.bind(this);
+    this._onClick = this._onClick.bind(this);
+    this.alignCursor = this.alignCursor.bind(this);
+    this.alignCursorFriendly = this.alignCursorFriendly.bind(this);
+
+    this._bindEvents(); // refresh
+
+
+    this.updateValue();
+
+    this._onChange();
+  }
+  /** Read or update mask */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(InputMask, [{
+    key: "maskEquals",
+    value: function maskEquals(mask) {
+      return mask == null || mask === this.masked.mask || mask === Date && this.masked instanceof _masked_date_js__WEBPACK_IMPORTED_MODULE_13__["default"];
+    }
+  }, {
+    key: "_bindEvents",
+
+    /**
+      Starts listening to element events
+      @protected
+    */
+    value: function _bindEvents() {
+      this.el.bindEvents({
+        selectionChange: this._saveSelection,
+        input: this._onInput,
+        drop: this._onDrop,
+        click: this._onClick,
+        focus: this._onFocus,
+        commit: this._onChange
+      });
+    }
+    /**
+      Stops listening to element events
+      @protected
+     */
+
+  }, {
+    key: "_unbindEvents",
+    value: function _unbindEvents() {
+      if (this.el) this.el.unbindEvents();
+    }
+    /**
+      Fires custom event
+      @protected
+     */
+
+  }, {
+    key: "_fireEvent",
+    value: function _fireEvent(ev) {
+      var listeners = this._listeners[ev];
+      if (!listeners) return;
+      listeners.forEach(function (l) {
+        return l();
+      });
+    }
+    /**
+      Current selection start
+      @readonly
+    */
+
+  }, {
+    key: "_saveSelection",
+
+    /**
+      Stores current selection
+      @protected
+    */
+    value: function _saveSelection()
+    /* ev */
+    {
+      if (this.value !== this.el.value) {
+        console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
+      }
+
+      this._selection = {
+        start: this.selectionStart,
+        end: this.cursorPos
+      };
+    }
+    /** Syncronizes model value from view */
+
+  }, {
+    key: "updateValue",
+    value: function updateValue() {
+      this.masked.value = this.el.value;
+      this._value = this.masked.value;
+    }
+    /** Syncronizes view from model value, fires change events */
+
+  }, {
+    key: "updateControl",
+    value: function updateControl() {
+      var newUnmaskedValue = this.masked.unmaskedValue;
+      var newValue = this.masked.value;
+      var isChanged = this.unmaskedValue !== newUnmaskedValue || this.value !== newValue;
+      this._unmaskedValue = newUnmaskedValue;
+      this._value = newValue;
+      if (this.el.value !== newValue) this.el.value = newValue;
+      if (isChanged) this._fireChangeEvents();
+    }
+    /** Updates options with deep equal check, recreates @{link Masked} model if mask type changes */
+
+  }, {
+    key: "updateOptions",
+    value: function updateOptions(opts) {
+      var mask = opts.mask,
+          restOpts = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["c"])(opts, ["mask"]);
+
+      var updateMask = !this.maskEquals(mask);
+      var updateOpts = !Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["objectIncludes"])(this.masked, restOpts);
+      if (updateMask) this.mask = mask;
+      if (updateOpts) this.masked.updateOptions(restOpts);
+      if (updateMask || updateOpts) this.updateControl();
+    }
+    /** Updates cursor */
+
+  }, {
+    key: "updateCursor",
+    value: function updateCursor(cursorPos) {
+      if (cursorPos == null) return;
+      this.cursorPos = cursorPos; // also queue change cursor for mobile browsers
+
+      this._delayUpdateCursor(cursorPos);
+    }
+    /**
+      Delays cursor update to support mobile browsers
+      @private
+    */
+
+  }, {
+    key: "_delayUpdateCursor",
+    value: function _delayUpdateCursor(cursorPos) {
+      var _this = this;
+
+      this._abortUpdateCursor();
+
+      this._changingCursorPos = cursorPos;
+      this._cursorChanging = setTimeout(function () {
+        if (!_this.el) return; // if was destroyed
+
+        _this.cursorPos = _this._changingCursorPos;
+
+        _this._abortUpdateCursor();
+      }, 10);
+    }
+    /**
+      Fires custom events
+      @protected
+    */
+
+  }, {
+    key: "_fireChangeEvents",
+    value: function _fireChangeEvents() {
+      this._fireEvent('accept');
+
+      if (this.masked.isComplete) this._fireEvent('complete');
+    }
+    /**
+      Aborts delayed cursor update
+      @private
+    */
+
+  }, {
+    key: "_abortUpdateCursor",
+    value: function _abortUpdateCursor() {
+      if (this._cursorChanging) {
+        clearTimeout(this._cursorChanging);
+        delete this._cursorChanging;
+      }
+    }
+    /** Aligns cursor to nearest available position */
+
+  }, {
+    key: "alignCursor",
+    value: function alignCursor() {
+      this.cursorPos = this.masked.nearestInputPos(this.cursorPos, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT);
+    }
+    /** Aligns cursor only if selection is empty */
+
+  }, {
+    key: "alignCursorFriendly",
+    value: function alignCursorFriendly() {
+      if (this.selectionStart !== this.cursorPos) return; // skip if range is selected
+
+      this.alignCursor();
+    }
+    /** Adds listener on custom event */
+
+  }, {
+    key: "on",
+    value: function on(ev, handler) {
+      if (!this._listeners[ev]) this._listeners[ev] = [];
+
+      this._listeners[ev].push(handler);
+
+      return this;
+    }
+    /** Removes custom event listener */
+
+  }, {
+    key: "off",
+    value: function off(ev, handler) {
+      if (!this._listeners[ev]) return this;
+
+      if (!handler) {
+        delete this._listeners[ev];
+        return this;
+      }
+
+      var hIndex = this._listeners[ev].indexOf(handler);
+
+      if (hIndex >= 0) this._listeners[ev].splice(hIndex, 1);
+      return this;
+    }
+    /** Handles view input event */
+
+  }, {
+    key: "_onInput",
+    value: function _onInput() {
+      this._abortUpdateCursor(); // fix strange IE behavior
+
+
+      if (!this._selection) return this.updateValue();
+      var details = new _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]( // new state
+      this.el.value, this.cursorPos, // old state
+      this.value, this._selection);
+      var oldRawValue = this.masked.rawInputValue;
+      var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection).offset; // force align in remove direction only if no input chars were removed
+      // otherwise we still need to align with NONE (to get out from fixed symbols for instance)
+
+      var removeDirection = oldRawValue === this.masked.rawInputValue ? details.removeDirection : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE;
+      var cursorPos = this.masked.nearestInputPos(details.startChangePos + offset, removeDirection);
+      this.updateControl();
+      this.updateCursor(cursorPos);
+    }
+    /** Handles view change event and commits model value */
+
+  }, {
+    key: "_onChange",
+    value: function _onChange() {
+      if (this.value !== this.el.value) {
+        this.updateValue();
+      }
+
+      this.masked.doCommit();
+      this.updateControl();
+
+      this._saveSelection();
+    }
+    /** Handles view drop event, prevents by default */
+
+  }, {
+    key: "_onDrop",
+    value: function _onDrop(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+    }
+    /** Restore last selection on focus */
+
+  }, {
+    key: "_onFocus",
+    value: function _onFocus(ev) {
+      this.alignCursorFriendly();
+    }
+    /** Restore last selection on focus */
+
+  }, {
+    key: "_onClick",
+    value: function _onClick(ev) {
+      this.alignCursorFriendly();
+    }
+    /** Unbind view events and removes element reference */
+
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this._unbindEvents(); // $FlowFixMe why not do so?
+
+
+      this._listeners.length = 0; // $FlowFixMe
+
+      delete this.el;
+    }
+  }, {
+    key: "mask",
+    get: function get() {
+      return this.masked.mask;
+    },
+    set: function set(mask) {
+      if (this.maskEquals(mask)) return;
+
+      if (this.masked.constructor === Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__["maskedClass"])(mask)) {
+        this.masked.updateOptions({
+          mask: mask
+        });
+        return;
+      }
+
+      var masked = Object(_masked_factory_js__WEBPACK_IMPORTED_MODULE_7__["default"])({
+        mask: mask
+      });
+      masked.unmaskedValue = this.masked.unmaskedValue;
+      this.masked = masked;
+    }
+    /** Raw value */
+
+  }, {
+    key: "value",
+    get: function get() {
+      return this._value;
+    },
+    set: function set(str) {
+      this.masked.value = str;
+      this.updateControl();
+      this.alignCursor();
+    }
+    /** Unmasked value */
+
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this._unmaskedValue;
+    },
+    set: function set(str) {
+      this.masked.unmaskedValue = str;
+      this.updateControl();
+      this.alignCursor();
+    }
+    /** Typed unmasked value */
+
+  }, {
+    key: "typedValue",
+    get: function get() {
+      return this.masked.typedValue;
+    },
+    set: function set(val) {
+      this.masked.typedValue = val;
+      this.updateControl();
+      this.alignCursor();
+    }
+  }, {
+    key: "selectionStart",
+    get: function get() {
+      return this._cursorChanging ? this._changingCursorPos : this.el.selectionStart;
+    }
+    /** Current cursor position */
+
+  }, {
+    key: "cursorPos",
+    get: function get() {
+      return this._cursorChanging ? this._changingCursorPos : this.el.selectionEnd;
+    },
+    set: function set(pos) {
+      if (!this.el.isActive) return;
+      this.el.select(pos, pos);
+
+      this._saveSelection();
+    }
+  }]);
+
+  return InputMask;
+}();
+_core_holder_js__WEBPACK_IMPORTED_MODULE_5__["default"].InputMask = InputMask;
+
+/* harmony default export */ __webpack_exports__["default"] = (InputMask);
+
 
 /***/ }),
 
@@ -142,7 +1089,96 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n\n\n\n/**\r\n  Generic element API to use with mask\r\n  @interface\r\n*/\nvar MaskElement =\n/*#__PURE__*/\nfunction () {\n  function MaskElement() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskElement);\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskElement, [{\n    key: \"select\",\n\n    /** Safely sets element selection */\n    value: function select(start, end) {\n      if (start == null || end == null || start === this.selectionStart && end === this.selectionEnd) return;\n\n      try {\n        this._unsafeSelect(start, end);\n      } catch (e) {}\n    }\n    /** Should be overriden in subclasses */\n\n  }, {\n    key: \"_unsafeSelect\",\n    value: function _unsafeSelect(start, end) {}\n    /** Should be overriden in subclasses */\n\n  }, {\n    key: \"bindEvents\",\n\n    /** Should be overriden in subclasses */\n    value: function bindEvents(handlers) {}\n    /** Should be overriden in subclasses */\n\n  }, {\n    key: \"unbindEvents\",\n    value: function unbindEvents() {}\n  }, {\n    key: \"selectionStart\",\n\n    /** */\n\n    /** */\n\n    /** */\n\n    /** Safely returns selection start */\n    get: function get() {\n      var start;\n\n      try {\n        start = this._unsafeSelectionStart;\n      } catch (e) {}\n\n      return start != null ? start : this.value.length;\n    }\n    /** Safely returns selection end */\n\n  }, {\n    key: \"selectionEnd\",\n    get: function get() {\n      var end;\n\n      try {\n        end = this._unsafeSelectionEnd;\n      } catch (e) {}\n\n      return end != null ? end : this.value.length;\n    }\n  }, {\n    key: \"isActive\",\n    get: function get() {\n      return false;\n    }\n  }]);\n\n  return MaskElement;\n}();\n_core_holder_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].MaskElement = MaskElement;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskElement);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/controls/mask-element.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+
+
+
+/**
+  Generic element API to use with mask
+  @interface
+*/
+var MaskElement =
+/*#__PURE__*/
+function () {
+  function MaskElement() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskElement);
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskElement, [{
+    key: "select",
+
+    /** Safely sets element selection */
+    value: function select(start, end) {
+      if (start == null || end == null || start === this.selectionStart && end === this.selectionEnd) return;
+
+      try {
+        this._unsafeSelect(start, end);
+      } catch (e) {}
+    }
+    /** Should be overriden in subclasses */
+
+  }, {
+    key: "_unsafeSelect",
+    value: function _unsafeSelect(start, end) {}
+    /** Should be overriden in subclasses */
+
+  }, {
+    key: "bindEvents",
+
+    /** Should be overriden in subclasses */
+    value: function bindEvents(handlers) {}
+    /** Should be overriden in subclasses */
+
+  }, {
+    key: "unbindEvents",
+    value: function unbindEvents() {}
+  }, {
+    key: "selectionStart",
+
+    /** */
+
+    /** */
+
+    /** */
+
+    /** Safely returns selection start */
+    get: function get() {
+      var start;
+
+      try {
+        start = this._unsafeSelectionStart;
+      } catch (e) {}
+
+      return start != null ? start : this.value.length;
+    }
+    /** Safely returns selection end */
+
+  }, {
+    key: "selectionEnd",
+    get: function get() {
+      var end;
+
+      try {
+        end = this._unsafeSelectionEnd;
+      } catch (e) {}
+
+      return end != null ? end : this.value.length;
+    }
+  }, {
+    key: "isActive",
+    get: function get() {
+      return false;
+    }
+  }]);
+
+  return MaskElement;
+}();
+_core_holder_js__WEBPACK_IMPORTED_MODULE_1__["default"].MaskElement = MaskElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskElement);
+
 
 /***/ }),
 
@@ -154,7 +1190,128 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n\n\n\n/** Provides details of changing input */\n\nvar ActionDetails =\n/*#__PURE__*/\nfunction () {\n  /** Current input value */\n\n  /** Current cursor position */\n\n  /** Old input value */\n\n  /** Old selection */\n  function ActionDetails(value, cursorPos, oldValue, oldSelection) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, ActionDetails);\n\n    this.value = value;\n    this.cursorPos = cursorPos;\n    this.oldValue = oldValue;\n    this.oldSelection = oldSelection; // double check if left part was changed (autofilling, other non-standard input triggers)\n\n    while (this.value.slice(0, this.startChangePos) !== this.oldValue.slice(0, this.startChangePos)) {\n      --this.oldSelection.start;\n    }\n  }\n  /**\r\n    Start changing position\r\n    @readonly\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(ActionDetails, [{\n    key: \"startChangePos\",\n    get: function get() {\n      return Math.min(this.cursorPos, this.oldSelection.start);\n    }\n    /**\r\n      Inserted symbols count\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"insertedCount\",\n    get: function get() {\n      return this.cursorPos - this.startChangePos;\n    }\n    /**\r\n      Inserted symbols\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"inserted\",\n    get: function get() {\n      return this.value.substr(this.startChangePos, this.insertedCount);\n    }\n    /**\r\n      Removed symbols count\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"removedCount\",\n    get: function get() {\n      // Math.max for opposite operation\n      return Math.max(this.oldSelection.end - this.startChangePos || // for Delete\n      this.oldValue.length - this.value.length, 0);\n    }\n    /**\r\n      Removed symbols\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"removed\",\n    get: function get() {\n      return this.oldValue.substr(this.startChangePos, this.removedCount);\n    }\n    /**\r\n      Unchanged head symbols\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"head\",\n    get: function get() {\n      return this.value.substring(0, this.startChangePos);\n    }\n    /**\r\n      Unchanged tail symbols\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"tail\",\n    get: function get() {\n      return this.value.substring(this.startChangePos + this.insertedCount);\n    }\n    /**\r\n      Remove direction\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"removeDirection\",\n    get: function get() {\n      if (!this.removedCount || this.insertedCount) return _utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE; // align right if delete at right or if range removed (event with backspace)\n\n      return this.oldSelection.end === this.cursorPos || this.oldSelection.start === this.cursorPos ? _utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT : _utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT;\n    }\n  }]);\n\n  return ActionDetails;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ActionDetails);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/core/action-details.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ "./node_modules/imask/esm/core/utils.js");
+
+
+
+/** Provides details of changing input */
+
+var ActionDetails =
+/*#__PURE__*/
+function () {
+  /** Current input value */
+
+  /** Current cursor position */
+
+  /** Old input value */
+
+  /** Old selection */
+  function ActionDetails(value, cursorPos, oldValue, oldSelection) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, ActionDetails);
+
+    this.value = value;
+    this.cursorPos = cursorPos;
+    this.oldValue = oldValue;
+    this.oldSelection = oldSelection; // double check if left part was changed (autofilling, other non-standard input triggers)
+
+    while (this.value.slice(0, this.startChangePos) !== this.oldValue.slice(0, this.startChangePos)) {
+      --this.oldSelection.start;
+    }
+  }
+  /**
+    Start changing position
+    @readonly
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(ActionDetails, [{
+    key: "startChangePos",
+    get: function get() {
+      return Math.min(this.cursorPos, this.oldSelection.start);
+    }
+    /**
+      Inserted symbols count
+      @readonly
+    */
+
+  }, {
+    key: "insertedCount",
+    get: function get() {
+      return this.cursorPos - this.startChangePos;
+    }
+    /**
+      Inserted symbols
+      @readonly
+    */
+
+  }, {
+    key: "inserted",
+    get: function get() {
+      return this.value.substr(this.startChangePos, this.insertedCount);
+    }
+    /**
+      Removed symbols count
+      @readonly
+    */
+
+  }, {
+    key: "removedCount",
+    get: function get() {
+      // Math.max for opposite operation
+      return Math.max(this.oldSelection.end - this.startChangePos || // for Delete
+      this.oldValue.length - this.value.length, 0);
+    }
+    /**
+      Removed symbols
+      @readonly
+    */
+
+  }, {
+    key: "removed",
+    get: function get() {
+      return this.oldValue.substr(this.startChangePos, this.removedCount);
+    }
+    /**
+      Unchanged head symbols
+      @readonly
+    */
+
+  }, {
+    key: "head",
+    get: function get() {
+      return this.value.substring(0, this.startChangePos);
+    }
+    /**
+      Unchanged tail symbols
+      @readonly
+    */
+
+  }, {
+    key: "tail",
+    get: function get() {
+      return this.value.substring(this.startChangePos + this.insertedCount);
+    }
+    /**
+      Remove direction
+      @readonly
+    */
+
+  }, {
+    key: "removeDirection",
+    get: function get() {
+      if (!this.removedCount || this.insertedCount) return _utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE; // align right if delete at right or if range removed (event with backspace)
+
+      return this.oldSelection.end === this.cursorPos || this.oldSelection.start === this.cursorPos ? _utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT : _utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT;
+    }
+  }]);
+
+  return ActionDetails;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ActionDetails);
+
 
 /***/ }),
 
@@ -166,7 +1323,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n\n\n/**\r\n  Provides details of changing model value\r\n  @param {Object} [details]\r\n  @param {string} [details.inserted] - Inserted symbols\r\n  @param {boolean} [details.skip] - Can skip chars\r\n  @param {number} [details.removeCount] - Removed symbols count\r\n  @param {number} [details.tailShift] - Additional offset if any changes occurred before tail\r\n*/\nvar ChangeDetails =\n/*#__PURE__*/\nfunction () {\n  /** Inserted symbols */\n\n  /** Can skip chars */\n\n  /** Additional offset if any changes occurred before tail */\n\n  /** Raw inserted is used by dynamic mask */\n  function ChangeDetails(details) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, ChangeDetails);\n\n    Object.assign(this, {\n      inserted: '',\n      rawInserted: '',\n      skip: false,\n      tailShift: 0\n    }, details);\n  }\n  /**\r\n    Aggregate changes\r\n    @returns {ChangeDetails} `this`\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(ChangeDetails, [{\n    key: \"aggregate\",\n    value: function aggregate(details) {\n      this.rawInserted += details.rawInserted;\n      this.skip = this.skip || details.skip;\n      this.inserted += details.inserted;\n      this.tailShift += details.tailShift;\n      return this;\n    }\n    /** Total offset considering all changes */\n\n  }, {\n    key: \"offset\",\n    get: function get() {\n      return this.tailShift + this.inserted.length;\n    }\n  }]);\n\n  return ChangeDetails;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ChangeDetails);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/core/change-details.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+
+
+/**
+  Provides details of changing model value
+  @param {Object} [details]
+  @param {string} [details.inserted] - Inserted symbols
+  @param {boolean} [details.skip] - Can skip chars
+  @param {number} [details.removeCount] - Removed symbols count
+  @param {number} [details.tailShift] - Additional offset if any changes occurred before tail
+*/
+var ChangeDetails =
+/*#__PURE__*/
+function () {
+  /** Inserted symbols */
+
+  /** Can skip chars */
+
+  /** Additional offset if any changes occurred before tail */
+
+  /** Raw inserted is used by dynamic mask */
+  function ChangeDetails(details) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, ChangeDetails);
+
+    Object.assign(this, {
+      inserted: '',
+      rawInserted: '',
+      skip: false,
+      tailShift: 0
+    }, details);
+  }
+  /**
+    Aggregate changes
+    @returns {ChangeDetails} `this`
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(ChangeDetails, [{
+    key: "aggregate",
+    value: function aggregate(details) {
+      this.rawInserted += details.rawInserted;
+      this.skip = this.skip || details.skip;
+      this.inserted += details.inserted;
+      this.tailShift += details.tailShift;
+      return this;
+    }
+    /** Total offset considering all changes */
+
+  }, {
+    key: "offset",
+    get: function get() {
+      return this.tailShift + this.inserted.length;
+    }
+  }]);
+
+  return ChangeDetails;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ChangeDetails);
+
 
 /***/ }),
 
@@ -178,7 +1395,75 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n\n\n/** Provides details of continuous extracted tail */\nvar ContinuousTailDetails =\n/*#__PURE__*/\nfunction () {\n  /** Tail value as string */\n\n  /** Tail start position */\n\n  /** Start position */\n  function ContinuousTailDetails() {\n    var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n    var stop = arguments.length > 2 ? arguments[2] : undefined;\n\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, ContinuousTailDetails);\n\n    this.value = value;\n    this.from = from;\n    this.stop = stop;\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(ContinuousTailDetails, [{\n    key: \"toString\",\n    value: function toString() {\n      return this.value;\n    }\n  }, {\n    key: \"extend\",\n    value: function extend(tail) {\n      this.value += String(tail);\n    }\n  }, {\n    key: \"appendTo\",\n    value: function appendTo(masked) {\n      return masked.append(this.toString(), {\n        tail: true\n      }).aggregate(masked._appendPlaceholder());\n    }\n  }, {\n    key: \"shiftBefore\",\n    value: function shiftBefore(pos) {\n      if (this.from >= pos || !this.value.length) return '';\n      var shiftChar = this.value[0];\n      this.value = this.value.slice(1);\n      return shiftChar;\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return {\n        value: this.value,\n        from: this.from,\n        stop: this.stop\n      };\n    },\n    set: function set(state) {\n      Object.assign(this, state);\n    }\n  }]);\n\n  return ContinuousTailDetails;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ContinuousTailDetails);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/core/continuous-tail-details.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+
+
+/** Provides details of continuous extracted tail */
+var ContinuousTailDetails =
+/*#__PURE__*/
+function () {
+  /** Tail value as string */
+
+  /** Tail start position */
+
+  /** Start position */
+  function ContinuousTailDetails() {
+    var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var stop = arguments.length > 2 ? arguments[2] : undefined;
+
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, ContinuousTailDetails);
+
+    this.value = value;
+    this.from = from;
+    this.stop = stop;
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(ContinuousTailDetails, [{
+    key: "toString",
+    value: function toString() {
+      return this.value;
+    }
+  }, {
+    key: "extend",
+    value: function extend(tail) {
+      this.value += String(tail);
+    }
+  }, {
+    key: "appendTo",
+    value: function appendTo(masked) {
+      return masked.append(this.toString(), {
+        tail: true
+      }).aggregate(masked._appendPlaceholder());
+    }
+  }, {
+    key: "shiftBefore",
+    value: function shiftBefore(pos) {
+      if (this.from >= pos || !this.value.length) return '';
+      var shiftChar = this.value[0];
+      this.value = this.value.slice(1);
+      return shiftChar;
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return {
+        value: this.value,
+        from: this.from,
+        stop: this.stop
+      };
+    },
+    set: function set(state) {
+      Object.assign(this, state);
+    }
+  }]);
+
+  return ContinuousTailDetails;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ContinuousTailDetails);
+
 
 /***/ }),
 
@@ -190,7 +1475,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/**\r\n * Applies mask on element.\r\n * @constructor\r\n * @param {HTMLInputElement|HTMLTextAreaElement|MaskElement} el - Element to apply mask\r\n * @param {Object} opts - Custom mask options\r\n * @return {InputMask}\r\n */\nfunction IMask(el) {\n  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n  // currently available only for input-like elements\n  return new IMask.InputMask(el, opts);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (IMask);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/core/holder.js?");
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Applies mask on element.
+ * @constructor
+ * @param {HTMLInputElement|HTMLTextAreaElement|MaskElement} el - Element to apply mask
+ * @param {Object} opts - Custom mask options
+ * @return {InputMask}
+ */
+function IMask(el) {
+  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  // currently available only for input-like elements
+  return new IMask.InputMask(el, opts);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (IMask);
+
 
 /***/ }),
 
@@ -202,7 +1502,131 @@ eval("__webpack_require__.r(__webpack_exports__);\n/**\r\n * Applies mask on ele
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DIRECTION\", function() { return DIRECTION; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"escapeRegExp\", function() { return escapeRegExp; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"forceDirection\", function() { return forceDirection; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"indexInDirection\", function() { return indexInDirection; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isString\", function() { return isString; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"objectIncludes\", function() { return objectIncludes; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"posInDirection\", function() { return posInDirection; });\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n\n\n/** Checks if value is string */\nfunction isString(str) {\n  return typeof str === 'string' || str instanceof String;\n}\n/**\r\n  Direction\r\n  @prop {string} NONE\r\n  @prop {string} LEFT\r\n  @prop {string} FORCE_LEFT\r\n  @prop {string} RIGHT\r\n  @prop {string} FORCE_RIGHT\r\n*/\n\nvar DIRECTION = {\n  NONE: 'NONE',\n  LEFT: 'LEFT',\n  FORCE_LEFT: 'FORCE_LEFT',\n  RIGHT: 'RIGHT',\n  FORCE_RIGHT: 'FORCE_RIGHT'\n};\n/**\r\n  Direction\r\n  @enum {string}\r\n*/\n\n/** Returns next char index in direction */\nfunction indexInDirection(pos, direction) {\n  if (direction === DIRECTION.LEFT) --pos;\n  return pos;\n}\n/** Returns next char position in direction */\n\nfunction posInDirection(pos, direction) {\n  switch (direction) {\n    case DIRECTION.LEFT:\n    case DIRECTION.FORCE_LEFT:\n      return --pos;\n\n    case DIRECTION.RIGHT:\n    case DIRECTION.FORCE_RIGHT:\n      return ++pos;\n\n    default:\n      return pos;\n  }\n}\n/** */\n\nfunction forceDirection(direction) {\n  switch (direction) {\n    case DIRECTION.LEFT:\n      return DIRECTION.FORCE_LEFT;\n\n    case DIRECTION.RIGHT:\n      return DIRECTION.FORCE_RIGHT;\n\n    default:\n      return direction;\n  }\n}\n/** Escapes regular expression control chars */\n\nfunction escapeRegExp(str) {\n  return str.replace(/([.*+?^=!:${}()|[\\]/\\\\])/g, '\\\\$1');\n} // cloned from https://github.com/epoberezkin/fast-deep-equal with small changes\n\nfunction objectIncludes(b, a) {\n  if (a === b) return true;\n  var arrA = Array.isArray(a),\n      arrB = Array.isArray(b),\n      i;\n\n  if (arrA && arrB) {\n    if (a.length != b.length) return false;\n\n    for (i = 0; i < a.length; i++) {\n      if (!objectIncludes(a[i], b[i])) return false;\n    }\n\n    return true;\n  }\n\n  if (arrA != arrB) return false;\n\n  if (a && b && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"_\"])(a) === 'object' && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"_\"])(b) === 'object') {\n    var dateA = a instanceof Date,\n        dateB = b instanceof Date;\n    if (dateA && dateB) return a.getTime() == b.getTime();\n    if (dateA != dateB) return false;\n    var regexpA = a instanceof RegExp,\n        regexpB = b instanceof RegExp;\n    if (regexpA && regexpB) return a.toString() == b.toString();\n    if (regexpA != regexpB) return false;\n    var keys = Object.keys(a); // if (keys.length !== Object.keys(b).length) return false;\n\n    for (i = 0; i < keys.length; i++) {\n      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;\n    }\n\n    for (i = 0; i < keys.length; i++) {\n      if (!objectIncludes(b[keys[i]], a[keys[i]])) return false;\n    }\n\n    return true;\n  } else if (a && b && typeof a === 'function' && typeof b === 'function') {\n    return a.toString() === b.toString();\n  }\n\n  return false;\n}\n/** Selection range */\n\n\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/core/utils.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DIRECTION", function() { return DIRECTION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "escapeRegExp", function() { return escapeRegExp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forceDirection", function() { return forceDirection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexInDirection", function() { return indexInDirection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return isString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectIncludes", function() { return objectIncludes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "posInDirection", function() { return posInDirection; });
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+
+
+/** Checks if value is string */
+function isString(str) {
+  return typeof str === 'string' || str instanceof String;
+}
+/**
+  Direction
+  @prop {string} NONE
+  @prop {string} LEFT
+  @prop {string} FORCE_LEFT
+  @prop {string} RIGHT
+  @prop {string} FORCE_RIGHT
+*/
+
+var DIRECTION = {
+  NONE: 'NONE',
+  LEFT: 'LEFT',
+  FORCE_LEFT: 'FORCE_LEFT',
+  RIGHT: 'RIGHT',
+  FORCE_RIGHT: 'FORCE_RIGHT'
+};
+/**
+  Direction
+  @enum {string}
+*/
+
+/** Returns next char index in direction */
+function indexInDirection(pos, direction) {
+  if (direction === DIRECTION.LEFT) --pos;
+  return pos;
+}
+/** Returns next char position in direction */
+
+function posInDirection(pos, direction) {
+  switch (direction) {
+    case DIRECTION.LEFT:
+    case DIRECTION.FORCE_LEFT:
+      return --pos;
+
+    case DIRECTION.RIGHT:
+    case DIRECTION.FORCE_RIGHT:
+      return ++pos;
+
+    default:
+      return pos;
+  }
+}
+/** */
+
+function forceDirection(direction) {
+  switch (direction) {
+    case DIRECTION.LEFT:
+      return DIRECTION.FORCE_LEFT;
+
+    case DIRECTION.RIGHT:
+      return DIRECTION.FORCE_RIGHT;
+
+    default:
+      return direction;
+  }
+}
+/** Escapes regular expression control chars */
+
+function escapeRegExp(str) {
+  return str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
+} // cloned from https://github.com/epoberezkin/fast-deep-equal with small changes
+
+function objectIncludes(b, a) {
+  if (a === b) return true;
+  var arrA = Array.isArray(a),
+      arrB = Array.isArray(b),
+      i;
+
+  if (arrA && arrB) {
+    if (a.length != b.length) return false;
+
+    for (i = 0; i < a.length; i++) {
+      if (!objectIncludes(a[i], b[i])) return false;
+    }
+
+    return true;
+  }
+
+  if (arrA != arrB) return false;
+
+  if (a && b && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["_"])(a) === 'object' && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["_"])(b) === 'object') {
+    var dateA = a instanceof Date,
+        dateB = b instanceof Date;
+    if (dateA && dateB) return a.getTime() == b.getTime();
+    if (dateA != dateB) return false;
+    var regexpA = a instanceof RegExp,
+        regexpB = b instanceof RegExp;
+    if (regexpA && regexpB) return a.toString() == b.toString();
+    if (regexpA != regexpB) return false;
+    var keys = Object.keys(a); // if (keys.length !== Object.keys(b).length) return false;
+
+    for (i = 0; i < keys.length; i++) {
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+    }
+
+    for (i = 0; i < keys.length; i++) {
+      if (!objectIncludes(b[keys[i]], a[keys[i]])) return false;
+    }
+
+    return true;
+  } else if (a && b && typeof a === 'function' && typeof b === 'function') {
+    return a.toString() === b.toString();
+  }
+
+  return false;
+}
+/** Selection range */
+
+
+
 
 /***/ }),
 
@@ -214,7 +1638,48 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/action-details.js */ \"./node_modules/imask/esm/core/action-details.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./masked/base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./masked/factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./masked/pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./masked/pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./masked/pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./masked/pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./masked/range.js */ \"./node_modules/imask/esm/masked/range.js\");\n/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./masked/date.js */ \"./node_modules/imask/esm/masked/date.js\");\n/* harmony import */ var _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./controls/mask-element.js */ \"./node_modules/imask/esm/controls/mask-element.js\");\n/* harmony import */ var _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./controls/html-mask-element.js */ \"./node_modules/imask/esm/controls/html-mask-element.js\");\n/* harmony import */ var _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./controls/html-contenteditable-mask-element.js */ \"./node_modules/imask/esm/controls/html-contenteditable-mask-element.js\");\n/* harmony import */ var _controls_input_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./controls/input.js */ \"./node_modules/imask/esm/controls/input.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_core_holder_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/imask.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/action-details.js */ "./node_modules/imask/esm/core/action-details.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./masked/base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./masked/factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./masked/pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./masked/pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./masked/pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./masked/pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./masked/range.js */ "./node_modules/imask/esm/masked/range.js");
+/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./masked/date.js */ "./node_modules/imask/esm/masked/date.js");
+/* harmony import */ var _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./controls/mask-element.js */ "./node_modules/imask/esm/controls/mask-element.js");
+/* harmony import */ var _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./controls/html-mask-element.js */ "./node_modules/imask/esm/controls/html-mask-element.js");
+/* harmony import */ var _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./controls/html-contenteditable-mask-element.js */ "./node_modules/imask/esm/controls/html-contenteditable-mask-element.js");
+/* harmony import */ var _controls_input_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./controls/input.js */ "./node_modules/imask/esm/controls/input.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_core_holder_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
 
 /***/ }),
 
@@ -226,7 +1691,96 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/action-details.js */ \"./node_modules/imask/esm/core/action-details.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./masked/base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Masked\", function() { return _masked_base_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"]; });\n\n/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./masked/factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createMask\", function() { return _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"]; });\n\n/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./masked/pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./masked/pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./masked/pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./masked/pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedPattern\", function() { return _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__[\"default\"]; });\n\n/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./masked/range.js */ \"./node_modules/imask/esm/masked/range.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedRange\", function() { return _masked_range_js__WEBPACK_IMPORTED_MODULE_12__[\"default\"]; });\n\n/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./masked/date.js */ \"./node_modules/imask/esm/masked/date.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedDate\", function() { return _masked_date_js__WEBPACK_IMPORTED_MODULE_13__[\"default\"]; });\n\n/* harmony import */ var _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./controls/mask-element.js */ \"./node_modules/imask/esm/controls/mask-element.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskElement\", function() { return _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__[\"default\"]; });\n\n/* harmony import */ var _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./controls/html-mask-element.js */ \"./node_modules/imask/esm/controls/html-mask-element.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"HTMLMaskElement\", function() { return _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__[\"default\"]; });\n\n/* harmony import */ var _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./controls/html-contenteditable-mask-element.js */ \"./node_modules/imask/esm/controls/html-contenteditable-mask-element.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"HTMLContenteditableMaskElement\", function() { return _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__[\"default\"]; });\n\n/* harmony import */ var _controls_input_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./controls/input.js */ \"./node_modules/imask/esm/controls/input.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"InputMask\", function() { return _controls_input_js__WEBPACK_IMPORTED_MODULE_17__[\"default\"]; });\n\n/* harmony import */ var _imask_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./imask.js */ \"./node_modules/imask/esm/imask.js\");\n/* harmony import */ var _masked_enum_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./masked/enum.js */ \"./node_modules/imask/esm/masked/enum.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedEnum\", function() { return _masked_enum_js__WEBPACK_IMPORTED_MODULE_19__[\"default\"]; });\n\n/* harmony import */ var _masked_number_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./masked/number.js */ \"./node_modules/imask/esm/masked/number.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedNumber\", function() { return _masked_number_js__WEBPACK_IMPORTED_MODULE_20__[\"default\"]; });\n\n/* harmony import */ var _masked_regexp_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./masked/regexp.js */ \"./node_modules/imask/esm/masked/regexp.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedRegExp\", function() { return _masked_regexp_js__WEBPACK_IMPORTED_MODULE_21__[\"default\"]; });\n\n/* harmony import */ var _masked_function_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./masked/function.js */ \"./node_modules/imask/esm/masked/function.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedFunction\", function() { return _masked_function_js__WEBPACK_IMPORTED_MODULE_22__[\"default\"]; });\n\n/* harmony import */ var _masked_dynamic_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./masked/dynamic.js */ \"./node_modules/imask/esm/masked/dynamic.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MaskedDynamic\", function() { return _masked_dynamic_js__WEBPACK_IMPORTED_MODULE_23__[\"default\"]; });\n\n/* harmony import */ var _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./masked/pipe.js */ \"./node_modules/imask/esm/masked/pipe.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"PIPE_TYPE\", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__[\"PIPE_TYPE\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"createPipe\", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__[\"createPipe\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"pipe\", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__[\"pipe\"]; });\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobalThis.IMask = _imask_js__WEBPACK_IMPORTED_MODULE_18__[\"default\"];\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_imask_js__WEBPACK_IMPORTED_MODULE_18__[\"default\"]);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/index.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_action_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core/action-details.js */ "./node_modules/imask/esm/core/action-details.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _masked_base_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./masked/base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Masked", function() { return _masked_base_js__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./masked/factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createMask", function() { return _masked_factory_js__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _masked_pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./masked/pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _masked_pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./masked/pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _masked_pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./masked/pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./masked/pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedPattern", function() { return _masked_pattern_js__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony import */ var _masked_range_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./masked/range.js */ "./node_modules/imask/esm/masked/range.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedRange", function() { return _masked_range_js__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+
+/* harmony import */ var _masked_date_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./masked/date.js */ "./node_modules/imask/esm/masked/date.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedDate", function() { return _masked_date_js__WEBPACK_IMPORTED_MODULE_13__["default"]; });
+
+/* harmony import */ var _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./controls/mask-element.js */ "./node_modules/imask/esm/controls/mask-element.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskElement", function() { return _controls_mask_element_js__WEBPACK_IMPORTED_MODULE_14__["default"]; });
+
+/* harmony import */ var _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./controls/html-mask-element.js */ "./node_modules/imask/esm/controls/html-mask-element.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HTMLMaskElement", function() { return _controls_html_mask_element_js__WEBPACK_IMPORTED_MODULE_15__["default"]; });
+
+/* harmony import */ var _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./controls/html-contenteditable-mask-element.js */ "./node_modules/imask/esm/controls/html-contenteditable-mask-element.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HTMLContenteditableMaskElement", function() { return _controls_html_contenteditable_mask_element_js__WEBPACK_IMPORTED_MODULE_16__["default"]; });
+
+/* harmony import */ var _controls_input_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./controls/input.js */ "./node_modules/imask/esm/controls/input.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InputMask", function() { return _controls_input_js__WEBPACK_IMPORTED_MODULE_17__["default"]; });
+
+/* harmony import */ var _imask_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./imask.js */ "./node_modules/imask/esm/imask.js");
+/* harmony import */ var _masked_enum_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./masked/enum.js */ "./node_modules/imask/esm/masked/enum.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedEnum", function() { return _masked_enum_js__WEBPACK_IMPORTED_MODULE_19__["default"]; });
+
+/* harmony import */ var _masked_number_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./masked/number.js */ "./node_modules/imask/esm/masked/number.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedNumber", function() { return _masked_number_js__WEBPACK_IMPORTED_MODULE_20__["default"]; });
+
+/* harmony import */ var _masked_regexp_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./masked/regexp.js */ "./node_modules/imask/esm/masked/regexp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedRegExp", function() { return _masked_regexp_js__WEBPACK_IMPORTED_MODULE_21__["default"]; });
+
+/* harmony import */ var _masked_function_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./masked/function.js */ "./node_modules/imask/esm/masked/function.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedFunction", function() { return _masked_function_js__WEBPACK_IMPORTED_MODULE_22__["default"]; });
+
+/* harmony import */ var _masked_dynamic_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./masked/dynamic.js */ "./node_modules/imask/esm/masked/dynamic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaskedDynamic", function() { return _masked_dynamic_js__WEBPACK_IMPORTED_MODULE_23__["default"]; });
+
+/* harmony import */ var _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./masked/pipe.js */ "./node_modules/imask/esm/masked/pipe.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PIPE_TYPE", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__["PIPE_TYPE"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createPipe", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__["createPipe"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pipe", function() { return _masked_pipe_js__WEBPACK_IMPORTED_MODULE_24__["pipe"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+globalThis.IMask = _imask_js__WEBPACK_IMPORTED_MODULE_18__["default"];
+
+/* harmony default export */ __webpack_exports__["default"] = (_imask_js__WEBPACK_IMPORTED_MODULE_18__["default"]);
+
 
 /***/ }),
 
@@ -238,7 +1792,396 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n\n\n\n\n\n\n/** Supported mask type */\n\n/** Provides common masking stuff */\nvar Masked =\n/*#__PURE__*/\nfunction () {\n  // $Shape<MaskedOptions>; TODO after fix https://github.com/facebook/flow/issues/4773\n\n  /** @type {Mask} */\n\n  /** */\n  // $FlowFixMe no ideas\n\n  /** Transforms value before mask processing */\n\n  /** Validates if value is acceptable */\n\n  /** Does additional processing in the end of editing */\n\n  /** Format typed value to string */\n\n  /** Parse strgin to get typed value */\n\n  /** Enable characters overwriting */\n\n  /** */\n  function Masked(opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, Masked);\n\n    this._value = '';\n\n    this._update(Object.assign({}, Masked.DEFAULTS, {}, opts));\n\n    this.isInitialized = true;\n  }\n  /** Sets and applies new options */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(Masked, [{\n    key: \"updateOptions\",\n    value: function updateOptions(opts) {\n      if (!Object.keys(opts).length) return;\n      this.withValueRefresh(this._update.bind(this, opts));\n    }\n    /**\r\n      Sets new options\r\n      @protected\r\n    */\n\n  }, {\n    key: \"_update\",\n    value: function _update(opts) {\n      Object.assign(this, opts);\n    }\n    /** Mask state */\n\n  }, {\n    key: \"reset\",\n\n    /** Resets value */\n    value: function reset() {\n      this._value = '';\n    }\n    /** */\n\n  }, {\n    key: \"resolve\",\n\n    /** Resolve new value */\n    value: function resolve(value) {\n      this.reset();\n      this.append(value, {\n        input: true\n      }, '');\n      this.doCommit();\n      return this.value;\n    }\n    /** */\n\n  }, {\n    key: \"nearestInputPos\",\n\n    /** Finds nearest input position in direction */\n    value: function nearestInputPos(cursorPos, direction) {\n      return cursorPos;\n    }\n    /** Extracts value in range considering flags */\n\n  }, {\n    key: \"extractInput\",\n    value: function extractInput() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      return this.value.slice(fromPos, toPos);\n    }\n    /** Extracts tail in range */\n\n  }, {\n    key: \"extractTail\",\n    value: function extractTail() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      return new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](this.extractInput(fromPos, toPos), fromPos);\n    }\n    /** Appends tail */\n    // $FlowFixMe no ideas\n\n  }, {\n    key: \"appendTail\",\n    value: function appendTail(tail) {\n      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(tail)) tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](String(tail));\n      return tail.appendTo(this);\n    }\n    /** Appends char */\n\n  }, {\n    key: \"_appendCharRaw\",\n    value: function _appendCharRaw(ch) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      ch = this.doPrepare(ch, flags);\n      if (!ch) return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      this._value += ch;\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n        inserted: ch,\n        rawInserted: ch\n      });\n    }\n    /** Appends char */\n\n  }, {\n    key: \"_appendChar\",\n    value: function _appendChar(ch) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      var checkTail = arguments.length > 2 ? arguments[2] : undefined;\n      var consistentState = this.state;\n\n      var details = this._appendCharRaw(ch, flags);\n\n      if (details.inserted) {\n        var consistentTail;\n        var appended = this.doValidate(flags) !== false;\n\n        if (appended && checkTail != null) {\n          // validation ok, check tail\n          var beforeTailState = this.state;\n\n          if (this.overwrite) {\n            consistentTail = checkTail.state;\n            checkTail.shiftBefore(this.value.length);\n          }\n\n          var tailDetails = this.appendTail(checkTail);\n          appended = tailDetails.rawInserted === checkTail.toString(); // if ok, rollback state after tail\n\n          if (appended && tailDetails.inserted) this.state = beforeTailState;\n        } // revert all if something went wrong\n\n\n        if (!appended) {\n          details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n          this.state = consistentState;\n          if (checkTail && consistentTail) checkTail.state = consistentTail;\n        }\n      }\n\n      return details;\n    }\n    /** Appends optional placeholder at end */\n\n  }, {\n    key: \"_appendPlaceholder\",\n    value: function _appendPlaceholder() {\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n    }\n    /** Appends symbols considering flags */\n    // $FlowFixMe no ideas\n\n  }, {\n    key: \"append\",\n    value: function append(str, flags, tail) {\n      if (!Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(str)) throw new Error('value should be string');\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      var checkTail = Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(tail) ? new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](String(tail)) : tail;\n      if (flags.tail) flags._beforeTailState = this.state;\n\n      for (var ci = 0; ci < str.length; ++ci) {\n        details.aggregate(this._appendChar(str[ci], flags, checkTail));\n      } // append tail but aggregate only tailShift\n\n\n      if (checkTail != null) {\n        details.tailShift += this.appendTail(checkTail).tailShift; // TODO it's a good idea to clear state after appending ends\n        // but it causes bugs when one append calls another (when dynamic dispatch set rawInputValue)\n        // this._resetBeforeTailState();\n      }\n\n      return details;\n    }\n    /** */\n\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      this._value = this.value.slice(0, fromPos) + this.value.slice(toPos);\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n    }\n    /** Calls function and reapplies current value */\n\n  }, {\n    key: \"withValueRefresh\",\n    value: function withValueRefresh(fn) {\n      if (this._refreshing || !this.isInitialized) return fn();\n      this._refreshing = true;\n      var rawInput = this.rawInputValue;\n      var value = this.value;\n      var ret = fn();\n      this.rawInputValue = rawInput; // append lost trailing chars at end\n\n      if (this.value !== value && value.indexOf(this._value) === 0) {\n        this.append(value.slice(this._value.length), {}, '');\n      }\n\n      delete this._refreshing;\n      return ret;\n    }\n    /** */\n\n  }, {\n    key: \"runIsolated\",\n    value: function runIsolated(fn) {\n      if (this._isolated || !this.isInitialized) return fn(this);\n      this._isolated = true;\n      var state = this.state;\n      var ret = fn(this);\n      this.state = state;\n      delete this._isolated;\n      return ret;\n    }\n    /**\r\n      Prepares string before mask processing\r\n      @protected\r\n    */\n\n  }, {\n    key: \"doPrepare\",\n    value: function doPrepare(str) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      return this.prepare ? this.prepare(str, this, flags) : str;\n    }\n    /**\r\n      Validates if value is acceptable\r\n      @protected\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate(flags) {\n      return (!this.validate || this.validate(this.value, this, flags)) && (!this.parent || this.parent.doValidate(flags));\n    }\n    /**\r\n      Does additional processing in the end of editing\r\n      @protected\r\n    */\n\n  }, {\n    key: \"doCommit\",\n    value: function doCommit() {\n      if (this.commit) this.commit(this.value, this);\n    }\n    /** */\n\n  }, {\n    key: \"doFormat\",\n    value: function doFormat(value) {\n      return this.format ? this.format(value, this) : value;\n    }\n    /** */\n\n  }, {\n    key: \"doParse\",\n    value: function doParse(str) {\n      return this.parse ? this.parse(str, this) : str;\n    }\n    /** */\n\n  }, {\n    key: \"splice\",\n    value: function splice(start, deleteCount, inserted, removeDirection) {\n      var tailPos = start + deleteCount;\n      var tail = this.extractTail(tailPos);\n      var startChangePos = this.nearestInputPos(start, removeDirection);\n      var changeDetails = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n        tailShift: startChangePos - start // adjust tailShift if start was aligned\n\n      }).aggregate(this.remove(startChangePos)).aggregate(this.append(inserted, {\n        input: true\n      }, tail));\n      return changeDetails;\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return {\n        _value: this.value\n      };\n    },\n    set: function set(state) {\n      this._value = state._value;\n    }\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this._value;\n    },\n    set: function set(value) {\n      this.resolve(value);\n    }\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this.value;\n    },\n    set: function set(value) {\n      this.reset();\n      this.append(value, {}, '');\n      this.doCommit();\n    }\n    /** */\n\n  }, {\n    key: \"typedValue\",\n    get: function get() {\n      return this.doParse(this.value);\n    },\n    set: function set(value) {\n      this.value = this.doFormat(value);\n    }\n    /** Value that includes raw user input */\n\n  }, {\n    key: \"rawInputValue\",\n    get: function get() {\n      return this.extractInput(0, this.value.length, {\n        raw: true\n      });\n    },\n    set: function set(value) {\n      this.reset();\n      this.append(value, {\n        raw: true\n      }, '');\n      this.doCommit();\n    }\n    /** */\n\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return true;\n    }\n  }]);\n\n  return Masked;\n}();\nMasked.DEFAULTS = {\n  format: function format(v) {\n    return v;\n  },\n  parse: function parse(v) {\n    return v;\n  }\n};\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].Masked = Masked;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Masked);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/base.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+
+
+
+
+
+
+/** Supported mask type */
+
+/** Provides common masking stuff */
+var Masked =
+/*#__PURE__*/
+function () {
+  // $Shape<MaskedOptions>; TODO after fix https://github.com/facebook/flow/issues/4773
+
+  /** @type {Mask} */
+
+  /** */
+  // $FlowFixMe no ideas
+
+  /** Transforms value before mask processing */
+
+  /** Validates if value is acceptable */
+
+  /** Does additional processing in the end of editing */
+
+  /** Format typed value to string */
+
+  /** Parse strgin to get typed value */
+
+  /** Enable characters overwriting */
+
+  /** */
+  function Masked(opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, Masked);
+
+    this._value = '';
+
+    this._update(Object.assign({}, Masked.DEFAULTS, {}, opts));
+
+    this.isInitialized = true;
+  }
+  /** Sets and applies new options */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(Masked, [{
+    key: "updateOptions",
+    value: function updateOptions(opts) {
+      if (!Object.keys(opts).length) return;
+      this.withValueRefresh(this._update.bind(this, opts));
+    }
+    /**
+      Sets new options
+      @protected
+    */
+
+  }, {
+    key: "_update",
+    value: function _update(opts) {
+      Object.assign(this, opts);
+    }
+    /** Mask state */
+
+  }, {
+    key: "reset",
+
+    /** Resets value */
+    value: function reset() {
+      this._value = '';
+    }
+    /** */
+
+  }, {
+    key: "resolve",
+
+    /** Resolve new value */
+    value: function resolve(value) {
+      this.reset();
+      this.append(value, {
+        input: true
+      }, '');
+      this.doCommit();
+      return this.value;
+    }
+    /** */
+
+  }, {
+    key: "nearestInputPos",
+
+    /** Finds nearest input position in direction */
+    value: function nearestInputPos(cursorPos, direction) {
+      return cursorPos;
+    }
+    /** Extracts value in range considering flags */
+
+  }, {
+    key: "extractInput",
+    value: function extractInput() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      return this.value.slice(fromPos, toPos);
+    }
+    /** Extracts tail in range */
+
+  }, {
+    key: "extractTail",
+    value: function extractTail() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      return new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](this.extractInput(fromPos, toPos), fromPos);
+    }
+    /** Appends tail */
+    // $FlowFixMe no ideas
+
+  }, {
+    key: "appendTail",
+    value: function appendTail(tail) {
+      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(tail)) tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](String(tail));
+      return tail.appendTo(this);
+    }
+    /** Appends char */
+
+  }, {
+    key: "_appendCharRaw",
+    value: function _appendCharRaw(ch) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      ch = this.doPrepare(ch, flags);
+      if (!ch) return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      this._value += ch;
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]({
+        inserted: ch,
+        rawInserted: ch
+      });
+    }
+    /** Appends char */
+
+  }, {
+    key: "_appendChar",
+    value: function _appendChar(ch) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var checkTail = arguments.length > 2 ? arguments[2] : undefined;
+      var consistentState = this.state;
+
+      var details = this._appendCharRaw(ch, flags);
+
+      if (details.inserted) {
+        var consistentTail;
+        var appended = this.doValidate(flags) !== false;
+
+        if (appended && checkTail != null) {
+          // validation ok, check tail
+          var beforeTailState = this.state;
+
+          if (this.overwrite) {
+            consistentTail = checkTail.state;
+            checkTail.shiftBefore(this.value.length);
+          }
+
+          var tailDetails = this.appendTail(checkTail);
+          appended = tailDetails.rawInserted === checkTail.toString(); // if ok, rollback state after tail
+
+          if (appended && tailDetails.inserted) this.state = beforeTailState;
+        } // revert all if something went wrong
+
+
+        if (!appended) {
+          details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+          this.state = consistentState;
+          if (checkTail && consistentTail) checkTail.state = consistentTail;
+        }
+      }
+
+      return details;
+    }
+    /** Appends optional placeholder at end */
+
+  }, {
+    key: "_appendPlaceholder",
+    value: function _appendPlaceholder() {
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    }
+    /** Appends symbols considering flags */
+    // $FlowFixMe no ideas
+
+  }, {
+    key: "append",
+    value: function append(str, flags, tail) {
+      if (!Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(str)) throw new Error('value should be string');
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      var checkTail = Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(tail) ? new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](String(tail)) : tail;
+      if (flags.tail) flags._beforeTailState = this.state;
+
+      for (var ci = 0; ci < str.length; ++ci) {
+        details.aggregate(this._appendChar(str[ci], flags, checkTail));
+      } // append tail but aggregate only tailShift
+
+
+      if (checkTail != null) {
+        details.tailShift += this.appendTail(checkTail).tailShift; // TODO it's a good idea to clear state after appending ends
+        // but it causes bugs when one append calls another (when dynamic dispatch set rawInputValue)
+        // this._resetBeforeTailState();
+      }
+
+      return details;
+    }
+    /** */
+
+  }, {
+    key: "remove",
+    value: function remove() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      this._value = this.value.slice(0, fromPos) + this.value.slice(toPos);
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    }
+    /** Calls function and reapplies current value */
+
+  }, {
+    key: "withValueRefresh",
+    value: function withValueRefresh(fn) {
+      if (this._refreshing || !this.isInitialized) return fn();
+      this._refreshing = true;
+      var rawInput = this.rawInputValue;
+      var value = this.value;
+      var ret = fn();
+      this.rawInputValue = rawInput; // append lost trailing chars at end
+
+      if (this.value !== value && value.indexOf(this._value) === 0) {
+        this.append(value.slice(this._value.length), {}, '');
+      }
+
+      delete this._refreshing;
+      return ret;
+    }
+    /** */
+
+  }, {
+    key: "runIsolated",
+    value: function runIsolated(fn) {
+      if (this._isolated || !this.isInitialized) return fn(this);
+      this._isolated = true;
+      var state = this.state;
+      var ret = fn(this);
+      this.state = state;
+      delete this._isolated;
+      return ret;
+    }
+    /**
+      Prepares string before mask processing
+      @protected
+    */
+
+  }, {
+    key: "doPrepare",
+    value: function doPrepare(str) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.prepare ? this.prepare(str, this, flags) : str;
+    }
+    /**
+      Validates if value is acceptable
+      @protected
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate(flags) {
+      return (!this.validate || this.validate(this.value, this, flags)) && (!this.parent || this.parent.doValidate(flags));
+    }
+    /**
+      Does additional processing in the end of editing
+      @protected
+    */
+
+  }, {
+    key: "doCommit",
+    value: function doCommit() {
+      if (this.commit) this.commit(this.value, this);
+    }
+    /** */
+
+  }, {
+    key: "doFormat",
+    value: function doFormat(value) {
+      return this.format ? this.format(value, this) : value;
+    }
+    /** */
+
+  }, {
+    key: "doParse",
+    value: function doParse(str) {
+      return this.parse ? this.parse(str, this) : str;
+    }
+    /** */
+
+  }, {
+    key: "splice",
+    value: function splice(start, deleteCount, inserted, removeDirection) {
+      var tailPos = start + deleteCount;
+      var tail = this.extractTail(tailPos);
+      var startChangePos = this.nearestInputPos(start, removeDirection);
+      var changeDetails = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]({
+        tailShift: startChangePos - start // adjust tailShift if start was aligned
+
+      }).aggregate(this.remove(startChangePos)).aggregate(this.append(inserted, {
+        input: true
+      }, tail));
+      return changeDetails;
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return {
+        _value: this.value
+      };
+    },
+    set: function set(state) {
+      this._value = state._value;
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this._value;
+    },
+    set: function set(value) {
+      this.resolve(value);
+    }
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this.value;
+    },
+    set: function set(value) {
+      this.reset();
+      this.append(value, {}, '');
+      this.doCommit();
+    }
+    /** */
+
+  }, {
+    key: "typedValue",
+    get: function get() {
+      return this.doParse(this.value);
+    },
+    set: function set(value) {
+      this.value = this.doFormat(value);
+    }
+    /** Value that includes raw user input */
+
+  }, {
+    key: "rawInputValue",
+    get: function get() {
+      return this.extractInput(0, this.value.length, {
+        raw: true
+      });
+    },
+    set: function set(value) {
+      this.reset();
+      this.append(value, {
+        raw: true
+      }, '');
+      this.doCommit();
+    }
+    /** */
+
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return true;
+    }
+  }]);
+
+  return Masked;
+}();
+Masked.DEFAULTS = {
+  format: function format(v) {
+    return v;
+  },
+  parse: function parse(v) {
+    return v;
+  }
+};
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].Masked = Masked;
+
+/* harmony default export */ __webpack_exports__["default"] = (Masked);
+
 
 /***/ }),
 
@@ -250,7 +2193,185 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n/* harmony import */ var _range_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./range.js */ \"./node_modules/imask/esm/masked/range.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n/** Date mask */\n\nvar MaskedDate =\n/*#__PURE__*/\nfunction (_MaskedPattern) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedDate, _MaskedPattern);\n\n  /** Pattern mask for date according to {@link MaskedDate#format} */\n\n  /** Start date */\n\n  /** End date */\n\n  /** */\n\n  /**\r\n    @param {Object} opts\r\n  */\n  function MaskedDate(opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedDate);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDate).call(this, Object.assign({}, MaskedDate.DEFAULTS, {}, opts)));\n  }\n  /**\r\n    @override\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedDate, [{\n    key: \"_update\",\n    value: function _update(opts) {\n      if (opts.mask === Date) delete opts.mask;\n      if (opts.pattern) opts.mask = opts.pattern;\n      var blocks = opts.blocks;\n      opts.blocks = Object.assign({}, MaskedDate.GET_DEFAULT_BLOCKS()); // adjust year block\n\n      if (opts.min) opts.blocks.Y.from = opts.min.getFullYear();\n      if (opts.max) opts.blocks.Y.to = opts.max.getFullYear();\n\n      if (opts.min && opts.max && opts.blocks.Y.from === opts.blocks.Y.to) {\n        opts.blocks.m.from = opts.min.getMonth() + 1;\n        opts.blocks.m.to = opts.max.getMonth() + 1;\n\n        if (opts.blocks.m.from === opts.blocks.m.to) {\n          opts.blocks.d.from = opts.min.getDate();\n          opts.blocks.d.to = opts.max.getDate();\n        }\n      }\n\n      Object.assign(opts.blocks, blocks); // add autofix\n\n      Object.keys(opts.blocks).forEach(function (bk) {\n        var b = opts.blocks[bk];\n        if (!('autofix' in b)) b.autofix = opts.autofix;\n      });\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDate.prototype), \"_update\", this).call(this, opts);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate() {\n      var _get2;\n\n      var date = this.date;\n\n      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n        args[_key] = arguments[_key];\n      }\n\n      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDate.prototype), \"doValidate\", this)).call.apply(_get2, [this].concat(args)) && (!this.isComplete || this.isDateExist(this.value) && date != null && (this.min == null || this.min <= date) && (this.max == null || date <= this.max));\n    }\n    /** Checks if date is exists */\n\n  }, {\n    key: \"isDateExist\",\n    value: function isDateExist(str) {\n      return this.format(this.parse(str, this), this).indexOf(str) >= 0;\n    }\n    /** Parsed Date */\n\n  }, {\n    key: \"date\",\n    get: function get() {\n      return this.typedValue;\n    },\n    set: function set(date) {\n      this.typedValue = date;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"typedValue\",\n    get: function get() {\n      return this.isComplete ? Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDate.prototype), \"typedValue\", this) : null;\n    },\n    set: function set(value) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDate.prototype), \"typedValue\", value, this, true);\n    }\n  }]);\n\n  return MaskedDate;\n}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"]);\nMaskedDate.DEFAULTS = {\n  pattern: 'd{.}`m{.}`Y',\n  format: function format(date) {\n    var day = String(date.getDate()).padStart(2, '0');\n    var month = String(date.getMonth() + 1).padStart(2, '0');\n    var year = date.getFullYear();\n    return [day, month, year].join('.');\n  },\n  parse: function parse(str) {\n    var _str$split = str.split('.'),\n        _str$split2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_str$split, 3),\n        day = _str$split2[0],\n        month = _str$split2[1],\n        year = _str$split2[2];\n\n    return new Date(year, month - 1, day);\n  }\n};\n\nMaskedDate.GET_DEFAULT_BLOCKS = function () {\n  return {\n    d: {\n      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__[\"default\"],\n      from: 1,\n      to: 31,\n      maxLength: 2\n    },\n    m: {\n      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__[\"default\"],\n      from: 1,\n      to: 12,\n      maxLength: 2\n    },\n    Y: {\n      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__[\"default\"],\n      from: 1900,\n      to: 9999\n    }\n  };\n};\n\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedDate = MaskedDate;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedDate);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/date.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+/* harmony import */ var _range_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./range.js */ "./node_modules/imask/esm/masked/range.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Date mask */
+
+var MaskedDate =
+/*#__PURE__*/
+function (_MaskedPattern) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedDate, _MaskedPattern);
+
+  /** Pattern mask for date according to {@link MaskedDate#format} */
+
+  /** Start date */
+
+  /** End date */
+
+  /** */
+
+  /**
+    @param {Object} opts
+  */
+  function MaskedDate(opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedDate);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDate).call(this, Object.assign({}, MaskedDate.DEFAULTS, {}, opts)));
+  }
+  /**
+    @override
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedDate, [{
+    key: "_update",
+    value: function _update(opts) {
+      if (opts.mask === Date) delete opts.mask;
+      if (opts.pattern) opts.mask = opts.pattern;
+      var blocks = opts.blocks;
+      opts.blocks = Object.assign({}, MaskedDate.GET_DEFAULT_BLOCKS()); // adjust year block
+
+      if (opts.min) opts.blocks.Y.from = opts.min.getFullYear();
+      if (opts.max) opts.blocks.Y.to = opts.max.getFullYear();
+
+      if (opts.min && opts.max && opts.blocks.Y.from === opts.blocks.Y.to) {
+        opts.blocks.m.from = opts.min.getMonth() + 1;
+        opts.blocks.m.to = opts.max.getMonth() + 1;
+
+        if (opts.blocks.m.from === opts.blocks.m.to) {
+          opts.blocks.d.from = opts.min.getDate();
+          opts.blocks.d.to = opts.max.getDate();
+        }
+      }
+
+      Object.assign(opts.blocks, blocks); // add autofix
+
+      Object.keys(opts.blocks).forEach(function (bk) {
+        var b = opts.blocks[bk];
+        if (!('autofix' in b)) b.autofix = opts.autofix;
+      });
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDate.prototype), "_update", this).call(this, opts);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate() {
+      var _get2;
+
+      var date = this.date;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDate.prototype), "doValidate", this)).call.apply(_get2, [this].concat(args)) && (!this.isComplete || this.isDateExist(this.value) && date != null && (this.min == null || this.min <= date) && (this.max == null || date <= this.max));
+    }
+    /** Checks if date is exists */
+
+  }, {
+    key: "isDateExist",
+    value: function isDateExist(str) {
+      return this.format(this.parse(str, this), this).indexOf(str) >= 0;
+    }
+    /** Parsed Date */
+
+  }, {
+    key: "date",
+    get: function get() {
+      return this.typedValue;
+    },
+    set: function set(date) {
+      this.typedValue = date;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "typedValue",
+    get: function get() {
+      return this.isComplete ? Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDate.prototype), "typedValue", this) : null;
+    },
+    set: function set(value) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDate.prototype), "typedValue", value, this, true);
+    }
+  }]);
+
+  return MaskedDate;
+}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__["default"]);
+MaskedDate.DEFAULTS = {
+  pattern: 'd{.}`m{.}`Y',
+  format: function format(date) {
+    var day = String(date.getDate()).padStart(2, '0');
+    var month = String(date.getMonth() + 1).padStart(2, '0');
+    var year = date.getFullYear();
+    return [day, month, year].join('.');
+  },
+  parse: function parse(str) {
+    var _str$split = str.split('.'),
+        _str$split2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_str$split, 3),
+        day = _str$split2[0],
+        month = _str$split2[1],
+        year = _str$split2[2];
+
+    return new Date(year, month - 1, day);
+  }
+};
+
+MaskedDate.GET_DEFAULT_BLOCKS = function () {
+  return {
+    d: {
+      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__["default"],
+      from: 1,
+      to: 31,
+      maxLength: 2
+    },
+    m: {
+      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__["default"],
+      from: 1,
+      to: 12,
+      maxLength: 2
+    },
+    Y: {
+      mask: _range_js__WEBPACK_IMPORTED_MODULE_11__["default"],
+      from: 1900,
+      to: 9999
+    }
+  };
+};
+
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedDate = MaskedDate;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedDate);
+
 
 /***/ }),
 
@@ -262,7 +2383,366 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n\n\n\n\n\n\n\n\n/** Dynamic mask for choosing apropriate mask in run-time */\nvar MaskedDynamic =\n/*#__PURE__*/\nfunction (_Masked) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedDynamic, _Masked);\n\n  /** Currently chosen mask */\n\n  /** Compliled {@link Masked} options */\n\n  /** Chooses {@link Masked} depending on input value */\n\n  /**\r\n    @param {Object} opts\r\n  */\n  function MaskedDynamic(opts) {\n    var _this;\n\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedDynamic);\n\n    _this = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic).call(this, Object.assign({}, MaskedDynamic.DEFAULTS, {}, opts)));\n    _this.currentMask = null;\n    return _this;\n  }\n  /**\r\n    @override\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedDynamic, [{\n    key: \"_update\",\n    value: function _update(opts) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"_update\", this).call(this, opts);\n\n      if ('mask' in opts) {\n        // mask could be totally dynamic with only `dispatch` option\n        this.compiledMasks = Array.isArray(opts.mask) ? opts.mask.map(function (m) {\n          return Object(_factory_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(m);\n        }) : [];\n      }\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"_appendCharRaw\",\n    value: function _appendCharRaw() {\n      var details = this._applyDispatch.apply(this, arguments);\n\n      if (this.currentMask) {\n        var _this$currentMask;\n\n        details.aggregate((_this$currentMask = this.currentMask)._appendChar.apply(_this$currentMask, arguments));\n      }\n\n      return details;\n    }\n  }, {\n    key: \"_applyDispatch\",\n    value: function _applyDispatch() {\n      var appended = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      var prevValueBeforeTail = flags.tail && flags._beforeTailState != null ? flags._beforeTailState._value : this.value;\n      var inputValue = this.rawInputValue;\n      var insertValue = flags.tail && flags._beforeTailState != null ? // $FlowFixMe - tired to fight with type system\n      flags._beforeTailState._rawInputValue : inputValue;\n      var tailValue = inputValue.slice(insertValue.length);\n      var prevMask = this.currentMask;\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      var prevMaskState = prevMask && prevMask.state; // clone flags to prevent overwriting `_beforeTailState`\n\n      this.currentMask = this.doDispatch(appended, Object.assign({}, flags)); // restore state after dispatch\n\n      if (this.currentMask) {\n        if (this.currentMask !== prevMask) {\n          // if mask changed reapply input\n          this.currentMask.reset(); // $FlowFixMe - it's ok, we don't change current mask above\n\n          var d = this.currentMask.append(insertValue, {\n            raw: true\n          });\n          details.tailShift = d.inserted.length - prevValueBeforeTail.length;\n\n          if (tailValue) {\n            // $FlowFixMe - it's ok, we don't change current mask above\n            details.tailShift += this.currentMask.append(tailValue, {\n              raw: true,\n              tail: true\n            }).tailShift;\n          }\n        } else {\n          // Dispatch can do something bad with state, so\n          // restore prev mask state\n          this.currentMask.state = prevMaskState;\n        }\n      }\n\n      return details;\n    }\n  }, {\n    key: \"_appendPlaceholder\",\n    value: function _appendPlaceholder() {\n      var details = this._applyDispatch.apply(this, arguments);\n\n      if (this.currentMask) {\n        details.aggregate(this.currentMask._appendPlaceholder());\n      }\n\n      return details;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doDispatch\",\n    value: function doDispatch(appended) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      return this.dispatch(appended, this, flags);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate() {\n      var _get2, _this$currentMask2;\n\n      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n        args[_key] = arguments[_key];\n      }\n\n      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"doValidate\", this)).call.apply(_get2, [this].concat(args)) && (!this.currentMask || (_this$currentMask2 = this.currentMask).doValidate.apply(_this$currentMask2, args));\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"reset\",\n    value: function reset() {\n      if (this.currentMask) this.currentMask.reset();\n      this.compiledMasks.forEach(function (m) {\n        return m.reset();\n      });\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"remove\",\n\n    /**\r\n      @override\r\n    */\n    value: function remove() {\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\n      if (this.currentMask) {\n        var _this$currentMask3;\n\n        details.aggregate((_this$currentMask3 = this.currentMask).remove.apply(_this$currentMask3, arguments)) // update with dispatch\n        .aggregate(this._applyDispatch());\n      }\n\n      return details;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"extractInput\",\n\n    /**\r\n      @override\r\n    */\n    value: function extractInput() {\n      var _this$currentMask4;\n\n      return this.currentMask ? (_this$currentMask4 = this.currentMask).extractInput.apply(_this$currentMask4, arguments) : '';\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"extractTail\",\n    value: function extractTail() {\n      var _this$currentMask5, _get3;\n\n      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {\n        args[_key2] = arguments[_key2];\n      }\n\n      return this.currentMask ? (_this$currentMask5 = this.currentMask).extractTail.apply(_this$currentMask5, args) : (_get3 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"extractTail\", this)).call.apply(_get3, [this].concat(args));\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doCommit\",\n    value: function doCommit() {\n      if (this.currentMask) this.currentMask.doCommit();\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"doCommit\", this).call(this);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"nearestInputPos\",\n    value: function nearestInputPos() {\n      var _this$currentMask6, _get4;\n\n      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {\n        args[_key3] = arguments[_key3];\n      }\n\n      return this.currentMask ? (_this$currentMask6 = this.currentMask).nearestInputPos.apply(_this$currentMask6, args) : (_get4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"nearestInputPos\", this)).call.apply(_get4, [this].concat(args));\n    }\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this.currentMask ? this.currentMask.value : '';\n    },\n    set: function set(value) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"value\", value, this, true);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this.currentMask ? this.currentMask.unmaskedValue : '';\n    },\n    set: function set(unmaskedValue) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"unmaskedValue\", unmaskedValue, this, true);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"typedValue\",\n    get: function get() {\n      return this.currentMask ? this.currentMask.typedValue : '';\n    } // probably typedValue should not be used with dynamic\n    ,\n    set: function set(value) {\n      var unmaskedValue = String(value); // double check it\n\n      if (this.currentMask) {\n        this.currentMask.typedValue = value;\n        unmaskedValue = this.currentMask.unmaskedValue;\n      }\n\n      this.unmaskedValue = unmaskedValue;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return !!this.currentMask && this.currentMask.isComplete;\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return Object.assign({}, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"state\", this), {\n        _rawInputValue: this.rawInputValue,\n        compiledMasks: this.compiledMasks.map(function (m) {\n          return m.state;\n        }),\n        currentMaskRef: this.currentMask,\n        currentMask: this.currentMask && this.currentMask.state\n      });\n    },\n    set: function set(state) {\n      var compiledMasks = state.compiledMasks,\n          currentMaskRef = state.currentMaskRef,\n          currentMask = state.currentMask,\n          maskedState = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"c\"])(state, [\"compiledMasks\", \"currentMaskRef\", \"currentMask\"]);\n\n      this.compiledMasks.forEach(function (m, mi) {\n        return m.state = compiledMasks[mi];\n      });\n\n      if (currentMaskRef != null) {\n        this.currentMask = currentMaskRef;\n        this.currentMask.state = currentMask;\n      }\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"state\", maskedState, this, true);\n    }\n  }, {\n    key: \"overwrite\",\n    get: function get() {\n      return this.currentMask ? this.currentMask.overwrite : Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedDynamic.prototype), \"overwrite\", this);\n    },\n    set: function set(overwrite) {\n      console.warn('\"overwrite\" option is not available in dynamic mask, use this option in siblings');\n    }\n  }]);\n\n  return MaskedDynamic;\n}(_base_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nMaskedDynamic.DEFAULTS = {\n  dispatch: function dispatch(appended, masked, flags) {\n    if (!masked.compiledMasks.length) return;\n    var inputValue = masked.rawInputValue; // simulate input\n\n    var inputs = masked.compiledMasks.map(function (m, index) {\n      m.reset();\n      m.append(inputValue, {\n        raw: true\n      });\n      m.append(appended, flags);\n      var weight = m.rawInputValue.length;\n      return {\n        weight: weight,\n        index: index\n      };\n    }); // pop masks with longer values first\n\n    inputs.sort(function (i1, i2) {\n      return i2.weight - i1.weight;\n    });\n    return masked.compiledMasks[inputs[0].index];\n  }\n};\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedDynamic = MaskedDynamic;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedDynamic);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/dynamic.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+
+
+
+
+
+
+
+
+/** Dynamic mask for choosing apropriate mask in run-time */
+var MaskedDynamic =
+/*#__PURE__*/
+function (_Masked) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedDynamic, _Masked);
+
+  /** Currently chosen mask */
+
+  /** Compliled {@link Masked} options */
+
+  /** Chooses {@link Masked} depending on input value */
+
+  /**
+    @param {Object} opts
+  */
+  function MaskedDynamic(opts) {
+    var _this;
+
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedDynamic);
+
+    _this = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic).call(this, Object.assign({}, MaskedDynamic.DEFAULTS, {}, opts)));
+    _this.currentMask = null;
+    return _this;
+  }
+  /**
+    @override
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedDynamic, [{
+    key: "_update",
+    value: function _update(opts) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "_update", this).call(this, opts);
+
+      if ('mask' in opts) {
+        // mask could be totally dynamic with only `dispatch` option
+        this.compiledMasks = Array.isArray(opts.mask) ? opts.mask.map(function (m) {
+          return Object(_factory_js__WEBPACK_IMPORTED_MODULE_6__["default"])(m);
+        }) : [];
+      }
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "_appendCharRaw",
+    value: function _appendCharRaw() {
+      var details = this._applyDispatch.apply(this, arguments);
+
+      if (this.currentMask) {
+        var _this$currentMask;
+
+        details.aggregate((_this$currentMask = this.currentMask)._appendChar.apply(_this$currentMask, arguments));
+      }
+
+      return details;
+    }
+  }, {
+    key: "_applyDispatch",
+    value: function _applyDispatch() {
+      var appended = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var prevValueBeforeTail = flags.tail && flags._beforeTailState != null ? flags._beforeTailState._value : this.value;
+      var inputValue = this.rawInputValue;
+      var insertValue = flags.tail && flags._beforeTailState != null ? // $FlowFixMe - tired to fight with type system
+      flags._beforeTailState._rawInputValue : inputValue;
+      var tailValue = inputValue.slice(insertValue.length);
+      var prevMask = this.currentMask;
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      var prevMaskState = prevMask && prevMask.state; // clone flags to prevent overwriting `_beforeTailState`
+
+      this.currentMask = this.doDispatch(appended, Object.assign({}, flags)); // restore state after dispatch
+
+      if (this.currentMask) {
+        if (this.currentMask !== prevMask) {
+          // if mask changed reapply input
+          this.currentMask.reset(); // $FlowFixMe - it's ok, we don't change current mask above
+
+          var d = this.currentMask.append(insertValue, {
+            raw: true
+          });
+          details.tailShift = d.inserted.length - prevValueBeforeTail.length;
+
+          if (tailValue) {
+            // $FlowFixMe - it's ok, we don't change current mask above
+            details.tailShift += this.currentMask.append(tailValue, {
+              raw: true,
+              tail: true
+            }).tailShift;
+          }
+        } else {
+          // Dispatch can do something bad with state, so
+          // restore prev mask state
+          this.currentMask.state = prevMaskState;
+        }
+      }
+
+      return details;
+    }
+  }, {
+    key: "_appendPlaceholder",
+    value: function _appendPlaceholder() {
+      var details = this._applyDispatch.apply(this, arguments);
+
+      if (this.currentMask) {
+        details.aggregate(this.currentMask._appendPlaceholder());
+      }
+
+      return details;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doDispatch",
+    value: function doDispatch(appended) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.dispatch(appended, this, flags);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate() {
+      var _get2, _this$currentMask2;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "doValidate", this)).call.apply(_get2, [this].concat(args)) && (!this.currentMask || (_this$currentMask2 = this.currentMask).doValidate.apply(_this$currentMask2, args));
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "reset",
+    value: function reset() {
+      if (this.currentMask) this.currentMask.reset();
+      this.compiledMasks.forEach(function (m) {
+        return m.reset();
+      });
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "remove",
+
+    /**
+      @override
+    */
+    value: function remove() {
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+
+      if (this.currentMask) {
+        var _this$currentMask3;
+
+        details.aggregate((_this$currentMask3 = this.currentMask).remove.apply(_this$currentMask3, arguments)) // update with dispatch
+        .aggregate(this._applyDispatch());
+      }
+
+      return details;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "extractInput",
+
+    /**
+      @override
+    */
+    value: function extractInput() {
+      var _this$currentMask4;
+
+      return this.currentMask ? (_this$currentMask4 = this.currentMask).extractInput.apply(_this$currentMask4, arguments) : '';
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "extractTail",
+    value: function extractTail() {
+      var _this$currentMask5, _get3;
+
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return this.currentMask ? (_this$currentMask5 = this.currentMask).extractTail.apply(_this$currentMask5, args) : (_get3 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "extractTail", this)).call.apply(_get3, [this].concat(args));
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doCommit",
+    value: function doCommit() {
+      if (this.currentMask) this.currentMask.doCommit();
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "doCommit", this).call(this);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "nearestInputPos",
+    value: function nearestInputPos() {
+      var _this$currentMask6, _get4;
+
+      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+        args[_key3] = arguments[_key3];
+      }
+
+      return this.currentMask ? (_this$currentMask6 = this.currentMask).nearestInputPos.apply(_this$currentMask6, args) : (_get4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "nearestInputPos", this)).call.apply(_get4, [this].concat(args));
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this.currentMask ? this.currentMask.value : '';
+    },
+    set: function set(value) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "value", value, this, true);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this.currentMask ? this.currentMask.unmaskedValue : '';
+    },
+    set: function set(unmaskedValue) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "unmaskedValue", unmaskedValue, this, true);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "typedValue",
+    get: function get() {
+      return this.currentMask ? this.currentMask.typedValue : '';
+    } // probably typedValue should not be used with dynamic
+    ,
+    set: function set(value) {
+      var unmaskedValue = String(value); // double check it
+
+      if (this.currentMask) {
+        this.currentMask.typedValue = value;
+        unmaskedValue = this.currentMask.unmaskedValue;
+      }
+
+      this.unmaskedValue = unmaskedValue;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return !!this.currentMask && this.currentMask.isComplete;
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return Object.assign({}, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "state", this), {
+        _rawInputValue: this.rawInputValue,
+        compiledMasks: this.compiledMasks.map(function (m) {
+          return m.state;
+        }),
+        currentMaskRef: this.currentMask,
+        currentMask: this.currentMask && this.currentMask.state
+      });
+    },
+    set: function set(state) {
+      var compiledMasks = state.compiledMasks,
+          currentMaskRef = state.currentMaskRef,
+          currentMask = state.currentMask,
+          maskedState = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["c"])(state, ["compiledMasks", "currentMaskRef", "currentMask"]);
+
+      this.compiledMasks.forEach(function (m, mi) {
+        return m.state = compiledMasks[mi];
+      });
+
+      if (currentMaskRef != null) {
+        this.currentMask = currentMaskRef;
+        this.currentMask.state = currentMask;
+      }
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "state", maskedState, this, true);
+    }
+  }, {
+    key: "overwrite",
+    get: function get() {
+      return this.currentMask ? this.currentMask.overwrite : Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedDynamic.prototype), "overwrite", this);
+    },
+    set: function set(overwrite) {
+      console.warn('"overwrite" option is not available in dynamic mask, use this option in siblings');
+    }
+  }]);
+
+  return MaskedDynamic;
+}(_base_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+MaskedDynamic.DEFAULTS = {
+  dispatch: function dispatch(appended, masked, flags) {
+    if (!masked.compiledMasks.length) return;
+    var inputValue = masked.rawInputValue; // simulate input
+
+    var inputs = masked.compiledMasks.map(function (m, index) {
+      m.reset();
+      m.append(inputValue, {
+        raw: true
+      });
+      m.append(appended, flags);
+      var weight = m.rawInputValue.length;
+      return {
+        weight: weight,
+        index: index
+      };
+    }); // pop masks with longer values first
+
+    inputs.sort(function (i1, i2) {
+      return i2.weight - i1.weight;
+    });
+    return masked.compiledMasks[inputs[0].index];
+  }
+};
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedDynamic = MaskedDynamic;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedDynamic);
+
 
 /***/ }),
 
@@ -274,7 +2754,82 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n/** Pattern which validates enum values */\n\nvar MaskedEnum =\n/*#__PURE__*/\nfunction (_MaskedPattern) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedEnum, _MaskedPattern);\n\n  function MaskedEnum() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedEnum);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedEnum).apply(this, arguments));\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedEnum, [{\n    key: \"_update\",\n\n    /**\r\n      @override\r\n      @param {Object} opts\r\n    */\n    value: function _update(opts) {\n      // TODO type\n      if (opts.enum) opts.mask = '*'.repeat(opts.enum[0].length);\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedEnum.prototype), \"_update\", this).call(this, opts);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate() {\n      var _this = this,\n          _get2;\n\n      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n        args[_key] = arguments[_key];\n      }\n\n      return this.enum.some(function (e) {\n        return e.indexOf(_this.unmaskedValue) >= 0;\n      }) && (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedEnum.prototype), \"doValidate\", this)).call.apply(_get2, [this].concat(args));\n    }\n  }]);\n\n  return MaskedEnum;\n}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"]);\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedEnum = MaskedEnum;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedEnum);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/enum.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+
+
+
+
+
+
+
+
+
+
+
+
+/** Pattern which validates enum values */
+
+var MaskedEnum =
+/*#__PURE__*/
+function (_MaskedPattern) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedEnum, _MaskedPattern);
+
+  function MaskedEnum() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedEnum);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedEnum).apply(this, arguments));
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedEnum, [{
+    key: "_update",
+
+    /**
+      @override
+      @param {Object} opts
+    */
+    value: function _update(opts) {
+      // TODO type
+      if (opts.enum) opts.mask = '*'.repeat(opts.enum[0].length);
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedEnum.prototype), "_update", this).call(this, opts);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate() {
+      var _this = this,
+          _get2;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return this.enum.some(function (e) {
+        return e.indexOf(_this.unmaskedValue) >= 0;
+      }) && (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedEnum.prototype), "doValidate", this)).call.apply(_get2, [this].concat(args));
+    }
+  }]);
+
+  return MaskedEnum;
+}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__["default"]);
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedEnum = MaskedEnum;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedEnum);
+
 
 /***/ }),
 
@@ -286,7 +2841,59 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"maskedClass\", function() { return maskedClass; });\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n\n\n\n\n/** Get Masked class by mask type */\n\nfunction maskedClass(mask) {\n  if (mask == null) {\n    throw new Error('mask property should be defined');\n  } // $FlowFixMe\n\n\n  if (mask instanceof RegExp) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedRegExp; // $FlowFixMe\n\n  if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(mask)) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedPattern; // $FlowFixMe\n\n  if (mask instanceof Date || mask === Date) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedDate; // $FlowFixMe\n\n  if (mask instanceof Number || typeof mask === 'number' || mask === Number) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedNumber; // $FlowFixMe\n\n  if (Array.isArray(mask) || mask === Array) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedDynamic; // $FlowFixMe\n\n  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked && mask.prototype instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked) return mask; // $FlowFixMe\n\n  if (mask instanceof Function) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].MaskedFunction;\n  console.warn('Mask not found for mask', mask); // eslint-disable-line no-console\n  // $FlowFixMe\n\n  return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked;\n}\n/** Creates new {@link Masked} depending on mask type */\n\nfunction createMask(opts) {\n  // $FlowFixMe\n  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked && opts instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked) return opts;\n  opts = Object.assign({}, opts);\n  var mask = opts.mask; // $FlowFixMe\n\n  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked && mask instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Masked) return mask;\n  var MaskedClass = maskedClass(mask);\n  if (!MaskedClass) throw new Error('Masked class is not found for provided mask, appropriate module needs to be import manually before creating mask.');\n  return new MaskedClass(opts);\n}\n_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].createMask = createMask;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createMask);\n\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/factory.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "maskedClass", function() { return maskedClass; });
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+
+
+
+
+/** Get Masked class by mask type */
+
+function maskedClass(mask) {
+  if (mask == null) {
+    throw new Error('mask property should be defined');
+  } // $FlowFixMe
+
+
+  if (mask instanceof RegExp) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedRegExp; // $FlowFixMe
+
+  if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(mask)) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedPattern; // $FlowFixMe
+
+  if (mask instanceof Date || mask === Date) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedDate; // $FlowFixMe
+
+  if (mask instanceof Number || typeof mask === 'number' || mask === Number) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedNumber; // $FlowFixMe
+
+  if (Array.isArray(mask) || mask === Array) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedDynamic; // $FlowFixMe
+
+  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked && mask.prototype instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked) return mask; // $FlowFixMe
+
+  if (mask instanceof Function) return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].MaskedFunction;
+  console.warn('Mask not found for mask', mask); // eslint-disable-line no-console
+  // $FlowFixMe
+
+  return _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked;
+}
+/** Creates new {@link Masked} depending on mask type */
+
+function createMask(opts) {
+  // $FlowFixMe
+  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked && opts instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked) return opts;
+  opts = Object.assign({}, opts);
+  var mask = opts.mask; // $FlowFixMe
+
+  if (_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked && mask instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].Masked) return mask;
+  var MaskedClass = maskedClass(mask);
+  if (!MaskedClass) throw new Error('Masked class is not found for provided mask, appropriate module needs to be import manually before creating mask.');
+  return new MaskedClass(opts);
+}
+_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].createMask = createMask;
+
+/* harmony default export */ __webpack_exports__["default"] = (createMask);
+
+
 
 /***/ }),
 
@@ -298,7 +2905,53 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n\n\n\n\n\n\n\n/** Masking by custom Function */\n\nvar MaskedFunction =\n/*#__PURE__*/\nfunction (_Masked) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedFunction, _Masked);\n\n  function MaskedFunction() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedFunction);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedFunction).apply(this, arguments));\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedFunction, [{\n    key: \"_update\",\n\n    /**\r\n      @override\r\n      @param {Object} opts\r\n    */\n    value: function _update(opts) {\n      if (opts.mask) opts.validate = opts.mask;\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedFunction.prototype), \"_update\", this).call(this, opts);\n    }\n  }]);\n\n  return MaskedFunction;\n}(_base_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedFunction = MaskedFunction;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedFunction);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/function.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+
+
+
+
+
+
+
+/** Masking by custom Function */
+
+var MaskedFunction =
+/*#__PURE__*/
+function (_Masked) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedFunction, _Masked);
+
+  function MaskedFunction() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedFunction);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedFunction).apply(this, arguments));
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedFunction, [{
+    key: "_update",
+
+    /**
+      @override
+      @param {Object} opts
+    */
+    value: function _update(opts) {
+      if (opts.mask) opts.validate = opts.mask;
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedFunction.prototype), "_update", this).call(this, opts);
+    }
+  }]);
+
+  return MaskedFunction;
+}(_base_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedFunction = MaskedFunction;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedFunction);
+
 
 /***/ }),
 
@@ -310,7 +2963,419 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n\n\n\n\n\n\n\n/**\r\n  Number mask\r\n  @param {Object} opts\r\n  @param {string} opts.radix - Single char\r\n  @param {string} opts.thousandsSeparator - Single char\r\n  @param {Array<string>} opts.mapToRadix - Array of single chars\r\n  @param {number} opts.min\r\n  @param {number} opts.max\r\n  @param {number} opts.scale - Digits after point\r\n  @param {boolean} opts.signed - Allow negative\r\n  @param {boolean} opts.normalizeZeros - Flag to remove leading and trailing zeros in the end of editing\r\n  @param {boolean} opts.padFractionalZeros - Flag to pad trailing zeros after point in the end of editing\r\n*/\nvar MaskedNumber =\n/*#__PURE__*/\nfunction (_Masked) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedNumber, _Masked);\n\n  /** Single char */\n\n  /** Single char */\n\n  /** Array of single chars */\n\n  /** */\n\n  /** */\n\n  /** Digits after point */\n\n  /** */\n\n  /** Flag to remove leading and trailing zeros in the end of editing */\n\n  /** Flag to pad trailing zeros after point in the end of editing */\n  function MaskedNumber(opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedNumber);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber).call(this, Object.assign({}, MaskedNumber.DEFAULTS, {}, opts)));\n  }\n  /**\r\n    @override\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedNumber, [{\n    key: \"_update\",\n    value: function _update(opts) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"_update\", this).call(this, opts);\n\n      this._updateRegExps();\n    }\n    /** */\n\n  }, {\n    key: \"_updateRegExps\",\n    value: function _updateRegExps() {\n      // use different regexp to process user input (more strict, input suffix) and tail shifting\n      var start = '^' + (this.allowNegative ? '[+|\\\\-]?' : '');\n      var midInput = '(0|([1-9]+\\\\d*))?';\n      var mid = '\\\\d*';\n      var end = (this.scale ? '(' + Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"escapeRegExp\"])(this.radix) + '\\\\d{0,' + this.scale + '})?' : '') + '$';\n      this._numberRegExpInput = new RegExp(start + midInput + end);\n      this._numberRegExp = new RegExp(start + mid + end);\n      this._mapToRadixRegExp = new RegExp('[' + this.mapToRadix.map(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"escapeRegExp\"]).join('') + ']', 'g');\n      this._thousandsSeparatorRegExp = new RegExp(Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"escapeRegExp\"])(this.thousandsSeparator), 'g');\n    }\n    /** */\n\n  }, {\n    key: \"_removeThousandsSeparators\",\n    value: function _removeThousandsSeparators(value) {\n      return value.replace(this._thousandsSeparatorRegExp, '');\n    }\n    /** */\n\n  }, {\n    key: \"_insertThousandsSeparators\",\n    value: function _insertThousandsSeparators(value) {\n      // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript\n      var parts = value.split(this.radix);\n      parts[0] = parts[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g, this.thousandsSeparator);\n      return parts.join(this.radix);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doPrepare\",\n    value: function doPrepare(str) {\n      var _get2;\n\n      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n        args[_key - 1] = arguments[_key];\n      }\n\n      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"doPrepare\", this)).call.apply(_get2, [this, this._removeThousandsSeparators(str.replace(this._mapToRadixRegExp, this.radix))].concat(args));\n    }\n    /** */\n\n  }, {\n    key: \"_separatorsCount\",\n    value: function _separatorsCount(to) {\n      var extendOnSeparators = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;\n      var count = 0;\n\n      for (var pos = 0; pos < to; ++pos) {\n        if (this._value.indexOf(this.thousandsSeparator, pos) === pos) {\n          ++count;\n          if (extendOnSeparators) to += this.thousandsSeparator.length;\n        }\n      }\n\n      return count;\n    }\n    /** */\n\n  }, {\n    key: \"_separatorsCountFromSlice\",\n    value: function _separatorsCountFromSlice() {\n      var slice = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._value;\n      return this._separatorsCount(this._removeThousandsSeparators(slice).length, true);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"extractInput\",\n    value: function extractInput() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      var flags = arguments.length > 2 ? arguments[2] : undefined;\n\n      var _this$_adjustRangeWit = this._adjustRangeWithSeparators(fromPos, toPos);\n\n      var _this$_adjustRangeWit2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_this$_adjustRangeWit, 2);\n\n      fromPos = _this$_adjustRangeWit2[0];\n      toPos = _this$_adjustRangeWit2[1];\n      return this._removeThousandsSeparators(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"extractInput\", this).call(this, fromPos, toPos, flags));\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"_appendCharRaw\",\n    value: function _appendCharRaw(ch) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      if (!this.thousandsSeparator) return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"_appendCharRaw\", this).call(this, ch, flags);\n      var prevBeforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;\n\n      var prevBeforeTailSeparatorsCount = this._separatorsCountFromSlice(prevBeforeTailValue);\n\n      this._value = this._removeThousandsSeparators(this.value);\n\n      var appendDetails = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"_appendCharRaw\", this).call(this, ch, flags);\n\n      this._value = this._insertThousandsSeparators(this._value);\n      var beforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;\n\n      var beforeTailSeparatorsCount = this._separatorsCountFromSlice(beforeTailValue);\n\n      appendDetails.tailShift += (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length;\n      return appendDetails;\n    }\n    /** */\n\n  }, {\n    key: \"_findSeparatorAround\",\n    value: function _findSeparatorAround(pos) {\n      if (this.thousandsSeparator) {\n        var searchFrom = pos - this.thousandsSeparator.length + 1;\n        var separatorPos = this.value.indexOf(this.thousandsSeparator, searchFrom);\n        if (separatorPos <= pos) return separatorPos;\n      }\n\n      return -1;\n    }\n  }, {\n    key: \"_adjustRangeWithSeparators\",\n    value: function _adjustRangeWithSeparators(from, to) {\n      var separatorAroundFromPos = this._findSeparatorAround(from);\n\n      if (separatorAroundFromPos >= 0) from = separatorAroundFromPos;\n\n      var separatorAroundToPos = this._findSeparatorAround(to);\n\n      if (separatorAroundToPos >= 0) to = separatorAroundToPos + this.thousandsSeparator.length;\n      return [from, to];\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n\n      var _this$_adjustRangeWit3 = this._adjustRangeWithSeparators(fromPos, toPos);\n\n      var _this$_adjustRangeWit4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_this$_adjustRangeWit3, 2);\n\n      fromPos = _this$_adjustRangeWit4[0];\n      toPos = _this$_adjustRangeWit4[1];\n      var valueBeforePos = this.value.slice(0, fromPos);\n      var valueAfterPos = this.value.slice(toPos);\n\n      var prevBeforeTailSeparatorsCount = this._separatorsCount(valueBeforePos.length);\n\n      this._value = this._insertThousandsSeparators(this._removeThousandsSeparators(valueBeforePos + valueAfterPos));\n\n      var beforeTailSeparatorsCount = this._separatorsCountFromSlice(valueBeforePos);\n\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n        tailShift: (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length\n      });\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"nearestInputPos\",\n    value: function nearestInputPos(cursorPos, direction) {\n      if (!this.thousandsSeparator) return cursorPos;\n\n      switch (direction) {\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT:\n          {\n            var separatorAtLeftPos = this._findSeparatorAround(cursorPos - 1);\n\n            if (separatorAtLeftPos >= 0) {\n              var separatorAtLeftEndPos = separatorAtLeftPos + this.thousandsSeparator.length;\n\n              if (cursorPos < separatorAtLeftEndPos || this.value.length <= separatorAtLeftEndPos || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT) {\n                return separatorAtLeftPos;\n              }\n            }\n\n            break;\n          }\n\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT:\n          {\n            var separatorAtRightPos = this._findSeparatorAround(cursorPos);\n\n            if (separatorAtRightPos >= 0) {\n              return separatorAtRightPos + this.thousandsSeparator.length;\n            }\n          }\n      }\n\n      return cursorPos;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate(flags) {\n      var regexp = flags.input ? this._numberRegExpInput : this._numberRegExp; // validate as string\n\n      var valid = regexp.test(this._removeThousandsSeparators(this.value));\n\n      if (valid) {\n        // validate as number\n        var number = this.number;\n        valid = valid && !isNaN(number) && ( // check min bound for negative values\n        this.min == null || this.min >= 0 || this.min <= this.number) && ( // check max bound for positive values\n        this.max == null || this.max <= 0 || this.number <= this.max);\n      }\n\n      return valid && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"doValidate\", this).call(this, flags);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doCommit\",\n    value: function doCommit() {\n      if (this.value) {\n        var number = this.number;\n        var validnum = number; // check bounds\n\n        if (this.min != null) validnum = Math.max(validnum, this.min);\n        if (this.max != null) validnum = Math.min(validnum, this.max);\n        if (validnum !== number) this.unmaskedValue = String(validnum);\n        var formatted = this.value;\n        if (this.normalizeZeros) formatted = this._normalizeZeros(formatted);\n        if (this.padFractionalZeros) formatted = this._padFractionalZeros(formatted);\n        this._value = formatted;\n      }\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"doCommit\", this).call(this);\n    }\n    /** */\n\n  }, {\n    key: \"_normalizeZeros\",\n    value: function _normalizeZeros(value) {\n      var parts = this._removeThousandsSeparators(value).split(this.radix); // remove leading zeros\n\n\n      parts[0] = parts[0].replace(/^(\\D*)(0*)(\\d*)/, function (match, sign, zeros, num) {\n        return sign + num;\n      }); // add leading zero\n\n      if (value.length && !/\\d$/.test(parts[0])) parts[0] = parts[0] + '0';\n\n      if (parts.length > 1) {\n        parts[1] = parts[1].replace(/0*$/, ''); // remove trailing zeros\n\n        if (!parts[1].length) parts.length = 1; // remove fractional\n      }\n\n      return this._insertThousandsSeparators(parts.join(this.radix));\n    }\n    /** */\n\n  }, {\n    key: \"_padFractionalZeros\",\n    value: function _padFractionalZeros(value) {\n      if (!value) return value;\n      var parts = value.split(this.radix);\n      if (parts.length < 2) parts.push('');\n      parts[1] = parts[1].padEnd(this.scale, '0');\n      return parts.join(this.radix);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this._removeThousandsSeparators(this._normalizeZeros(this.value)).replace(this.radix, '.');\n    },\n    set: function set(unmaskedValue) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"unmaskedValue\", unmaskedValue.replace('.', this.radix), this, true);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"typedValue\",\n    get: function get() {\n      return Number(this.unmaskedValue);\n    },\n    set: function set(n) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedNumber.prototype), \"unmaskedValue\", String(n), this, true);\n    }\n    /** Parsed Number */\n\n  }, {\n    key: \"number\",\n    get: function get() {\n      return this.typedValue;\n    },\n    set: function set(number) {\n      this.typedValue = number;\n    }\n    /**\r\n      Is negative allowed\r\n      @readonly\r\n    */\n\n  }, {\n    key: \"allowNegative\",\n    get: function get() {\n      return this.signed || this.min != null && this.min < 0 || this.max != null && this.max < 0;\n    }\n  }]);\n\n  return MaskedNumber;\n}(_base_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nMaskedNumber.DEFAULTS = {\n  radix: ',',\n  thousandsSeparator: '',\n  mapToRadix: ['.'],\n  scale: 2,\n  signed: false,\n  normalizeZeros: true,\n  padFractionalZeros: false\n};\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedNumber = MaskedNumber;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedNumber);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/number.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+
+
+
+
+
+
+
+/**
+  Number mask
+  @param {Object} opts
+  @param {string} opts.radix - Single char
+  @param {string} opts.thousandsSeparator - Single char
+  @param {Array<string>} opts.mapToRadix - Array of single chars
+  @param {number} opts.min
+  @param {number} opts.max
+  @param {number} opts.scale - Digits after point
+  @param {boolean} opts.signed - Allow negative
+  @param {boolean} opts.normalizeZeros - Flag to remove leading and trailing zeros in the end of editing
+  @param {boolean} opts.padFractionalZeros - Flag to pad trailing zeros after point in the end of editing
+*/
+var MaskedNumber =
+/*#__PURE__*/
+function (_Masked) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedNumber, _Masked);
+
+  /** Single char */
+
+  /** Single char */
+
+  /** Array of single chars */
+
+  /** */
+
+  /** */
+
+  /** Digits after point */
+
+  /** */
+
+  /** Flag to remove leading and trailing zeros in the end of editing */
+
+  /** Flag to pad trailing zeros after point in the end of editing */
+  function MaskedNumber(opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedNumber);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber).call(this, Object.assign({}, MaskedNumber.DEFAULTS, {}, opts)));
+  }
+  /**
+    @override
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedNumber, [{
+    key: "_update",
+    value: function _update(opts) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "_update", this).call(this, opts);
+
+      this._updateRegExps();
+    }
+    /** */
+
+  }, {
+    key: "_updateRegExps",
+    value: function _updateRegExps() {
+      // use different regexp to process user input (more strict, input suffix) and tail shifting
+      var start = '^' + (this.allowNegative ? '[+|\\-]?' : '');
+      var midInput = '(0|([1-9]+\\d*))?';
+      var mid = '\\d*';
+      var end = (this.scale ? '(' + Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["escapeRegExp"])(this.radix) + '\\d{0,' + this.scale + '})?' : '') + '$';
+      this._numberRegExpInput = new RegExp(start + midInput + end);
+      this._numberRegExp = new RegExp(start + mid + end);
+      this._mapToRadixRegExp = new RegExp('[' + this.mapToRadix.map(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["escapeRegExp"]).join('') + ']', 'g');
+      this._thousandsSeparatorRegExp = new RegExp(Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["escapeRegExp"])(this.thousandsSeparator), 'g');
+    }
+    /** */
+
+  }, {
+    key: "_removeThousandsSeparators",
+    value: function _removeThousandsSeparators(value) {
+      return value.replace(this._thousandsSeparatorRegExp, '');
+    }
+    /** */
+
+  }, {
+    key: "_insertThousandsSeparators",
+    value: function _insertThousandsSeparators(value) {
+      // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+      var parts = value.split(this.radix);
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, this.thousandsSeparator);
+      return parts.join(this.radix);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doPrepare",
+    value: function doPrepare(str) {
+      var _get2;
+
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      return (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "doPrepare", this)).call.apply(_get2, [this, this._removeThousandsSeparators(str.replace(this._mapToRadixRegExp, this.radix))].concat(args));
+    }
+    /** */
+
+  }, {
+    key: "_separatorsCount",
+    value: function _separatorsCount(to) {
+      var extendOnSeparators = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var count = 0;
+
+      for (var pos = 0; pos < to; ++pos) {
+        if (this._value.indexOf(this.thousandsSeparator, pos) === pos) {
+          ++count;
+          if (extendOnSeparators) to += this.thousandsSeparator.length;
+        }
+      }
+
+      return count;
+    }
+    /** */
+
+  }, {
+    key: "_separatorsCountFromSlice",
+    value: function _separatorsCountFromSlice() {
+      var slice = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._value;
+      return this._separatorsCount(this._removeThousandsSeparators(slice).length, true);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "extractInput",
+    value: function extractInput() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      var flags = arguments.length > 2 ? arguments[2] : undefined;
+
+      var _this$_adjustRangeWit = this._adjustRangeWithSeparators(fromPos, toPos);
+
+      var _this$_adjustRangeWit2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_this$_adjustRangeWit, 2);
+
+      fromPos = _this$_adjustRangeWit2[0];
+      toPos = _this$_adjustRangeWit2[1];
+      return this._removeThousandsSeparators(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "extractInput", this).call(this, fromPos, toPos, flags));
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "_appendCharRaw",
+    value: function _appendCharRaw(ch) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      if (!this.thousandsSeparator) return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "_appendCharRaw", this).call(this, ch, flags);
+      var prevBeforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;
+
+      var prevBeforeTailSeparatorsCount = this._separatorsCountFromSlice(prevBeforeTailValue);
+
+      this._value = this._removeThousandsSeparators(this.value);
+
+      var appendDetails = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "_appendCharRaw", this).call(this, ch, flags);
+
+      this._value = this._insertThousandsSeparators(this._value);
+      var beforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;
+
+      var beforeTailSeparatorsCount = this._separatorsCountFromSlice(beforeTailValue);
+
+      appendDetails.tailShift += (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length;
+      return appendDetails;
+    }
+    /** */
+
+  }, {
+    key: "_findSeparatorAround",
+    value: function _findSeparatorAround(pos) {
+      if (this.thousandsSeparator) {
+        var searchFrom = pos - this.thousandsSeparator.length + 1;
+        var separatorPos = this.value.indexOf(this.thousandsSeparator, searchFrom);
+        if (separatorPos <= pos) return separatorPos;
+      }
+
+      return -1;
+    }
+  }, {
+    key: "_adjustRangeWithSeparators",
+    value: function _adjustRangeWithSeparators(from, to) {
+      var separatorAroundFromPos = this._findSeparatorAround(from);
+
+      if (separatorAroundFromPos >= 0) from = separatorAroundFromPos;
+
+      var separatorAroundToPos = this._findSeparatorAround(to);
+
+      if (separatorAroundToPos >= 0) to = separatorAroundToPos + this.thousandsSeparator.length;
+      return [from, to];
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "remove",
+    value: function remove() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+
+      var _this$_adjustRangeWit3 = this._adjustRangeWithSeparators(fromPos, toPos);
+
+      var _this$_adjustRangeWit4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_this$_adjustRangeWit3, 2);
+
+      fromPos = _this$_adjustRangeWit4[0];
+      toPos = _this$_adjustRangeWit4[1];
+      var valueBeforePos = this.value.slice(0, fromPos);
+      var valueAfterPos = this.value.slice(toPos);
+
+      var prevBeforeTailSeparatorsCount = this._separatorsCount(valueBeforePos.length);
+
+      this._value = this._insertThousandsSeparators(this._removeThousandsSeparators(valueBeforePos + valueAfterPos));
+
+      var beforeTailSeparatorsCount = this._separatorsCountFromSlice(valueBeforePos);
+
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]({
+        tailShift: (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length
+      });
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "nearestInputPos",
+    value: function nearestInputPos(cursorPos, direction) {
+      if (!this.thousandsSeparator) return cursorPos;
+
+      switch (direction) {
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT:
+          {
+            var separatorAtLeftPos = this._findSeparatorAround(cursorPos - 1);
+
+            if (separatorAtLeftPos >= 0) {
+              var separatorAtLeftEndPos = separatorAtLeftPos + this.thousandsSeparator.length;
+
+              if (cursorPos < separatorAtLeftEndPos || this.value.length <= separatorAtLeftEndPos || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT) {
+                return separatorAtLeftPos;
+              }
+            }
+
+            break;
+          }
+
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT:
+          {
+            var separatorAtRightPos = this._findSeparatorAround(cursorPos);
+
+            if (separatorAtRightPos >= 0) {
+              return separatorAtRightPos + this.thousandsSeparator.length;
+            }
+          }
+      }
+
+      return cursorPos;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate(flags) {
+      var regexp = flags.input ? this._numberRegExpInput : this._numberRegExp; // validate as string
+
+      var valid = regexp.test(this._removeThousandsSeparators(this.value));
+
+      if (valid) {
+        // validate as number
+        var number = this.number;
+        valid = valid && !isNaN(number) && ( // check min bound for negative values
+        this.min == null || this.min >= 0 || this.min <= this.number) && ( // check max bound for positive values
+        this.max == null || this.max <= 0 || this.number <= this.max);
+      }
+
+      return valid && Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "doValidate", this).call(this, flags);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doCommit",
+    value: function doCommit() {
+      if (this.value) {
+        var number = this.number;
+        var validnum = number; // check bounds
+
+        if (this.min != null) validnum = Math.max(validnum, this.min);
+        if (this.max != null) validnum = Math.min(validnum, this.max);
+        if (validnum !== number) this.unmaskedValue = String(validnum);
+        var formatted = this.value;
+        if (this.normalizeZeros) formatted = this._normalizeZeros(formatted);
+        if (this.padFractionalZeros) formatted = this._padFractionalZeros(formatted);
+        this._value = formatted;
+      }
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "doCommit", this).call(this);
+    }
+    /** */
+
+  }, {
+    key: "_normalizeZeros",
+    value: function _normalizeZeros(value) {
+      var parts = this._removeThousandsSeparators(value).split(this.radix); // remove leading zeros
+
+
+      parts[0] = parts[0].replace(/^(\D*)(0*)(\d*)/, function (match, sign, zeros, num) {
+        return sign + num;
+      }); // add leading zero
+
+      if (value.length && !/\d$/.test(parts[0])) parts[0] = parts[0] + '0';
+
+      if (parts.length > 1) {
+        parts[1] = parts[1].replace(/0*$/, ''); // remove trailing zeros
+
+        if (!parts[1].length) parts.length = 1; // remove fractional
+      }
+
+      return this._insertThousandsSeparators(parts.join(this.radix));
+    }
+    /** */
+
+  }, {
+    key: "_padFractionalZeros",
+    value: function _padFractionalZeros(value) {
+      if (!value) return value;
+      var parts = value.split(this.radix);
+      if (parts.length < 2) parts.push('');
+      parts[1] = parts[1].padEnd(this.scale, '0');
+      return parts.join(this.radix);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this._removeThousandsSeparators(this._normalizeZeros(this.value)).replace(this.radix, '.');
+    },
+    set: function set(unmaskedValue) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "unmaskedValue", unmaskedValue.replace('.', this.radix), this, true);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "typedValue",
+    get: function get() {
+      return Number(this.unmaskedValue);
+    },
+    set: function set(n) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedNumber.prototype), "unmaskedValue", String(n), this, true);
+    }
+    /** Parsed Number */
+
+  }, {
+    key: "number",
+    get: function get() {
+      return this.typedValue;
+    },
+    set: function set(number) {
+      this.typedValue = number;
+    }
+    /**
+      Is negative allowed
+      @readonly
+    */
+
+  }, {
+    key: "allowNegative",
+    get: function get() {
+      return this.signed || this.min != null && this.min < 0 || this.max != null && this.max < 0;
+    }
+  }]);
+
+  return MaskedNumber;
+}(_base_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+MaskedNumber.DEFAULTS = {
+  radix: ',',
+  thousandsSeparator: '',
+  mapToRadix: ['.'],
+  scale: 2,
+  signed: false,
+  normalizeZeros: true,
+  padFractionalZeros: false
+};
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedNumber = MaskedNumber;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedNumber);
+
 
 /***/ }),
 
@@ -322,7 +3387,726 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n\n\n\n\n\n\n\n\n\n\n\n/**\r\n  Pattern mask\r\n  @param {Object} opts\r\n  @param {Object} opts.blocks\r\n  @param {Object} opts.definitions\r\n  @param {string} opts.placeholderChar\r\n  @param {boolean} opts.lazy\r\n*/\nvar MaskedPattern =\n/*#__PURE__*/\nfunction (_Masked) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedPattern, _Masked);\n\n  /** */\n\n  /** */\n\n  /** Single char for empty input */\n\n  /** Show placeholder only when needed */\n  function MaskedPattern() {\n    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedPattern);\n\n    // TODO type $Shape<MaskedPatternOptions>={} does not work\n    opts.definitions = Object.assign({}, _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__[\"DEFAULT_INPUT_DEFINITIONS\"], opts.definitions);\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern).call(this, Object.assign({}, MaskedPattern.DEFAULTS, {}, opts)));\n  }\n  /**\r\n    @override\r\n    @param {Object} opts\r\n  */\n\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedPattern, [{\n    key: \"_update\",\n    value: function _update() {\n      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n      opts.definitions = Object.assign({}, this.definitions, opts.definitions);\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"_update\", this).call(this, opts);\n\n      this._rebuildMask();\n    }\n    /** */\n\n  }, {\n    key: \"_rebuildMask\",\n    value: function _rebuildMask() {\n      var _this = this;\n\n      var defs = this.definitions;\n      this._blocks = [];\n      this._stops = [];\n      this._maskedBlocks = {};\n      var pattern = this.mask;\n      if (!pattern || !defs) return;\n      var unmaskingBlock = false;\n      var optionalBlock = false;\n\n      for (var i = 0; i < pattern.length; ++i) {\n        if (this.blocks) {\n          var _ret = function () {\n            var p = pattern.slice(i);\n            var bNames = Object.keys(_this.blocks).filter(function (bName) {\n              return p.indexOf(bName) === 0;\n            }); // order by key length\n\n            bNames.sort(function (a, b) {\n              return b.length - a.length;\n            }); // use block name with max length\n\n            var bName = bNames[0];\n\n            if (bName) {\n              var maskedBlock = Object(_factory_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(Object.assign({\n                parent: _this,\n                lazy: _this.lazy,\n                placeholderChar: _this.placeholderChar,\n                overwrite: _this.overwrite\n              }, _this.blocks[bName]));\n\n              if (maskedBlock) {\n                _this._blocks.push(maskedBlock); // store block index\n\n\n                if (!_this._maskedBlocks[bName]) _this._maskedBlocks[bName] = [];\n\n                _this._maskedBlocks[bName].push(_this._blocks.length - 1);\n              }\n\n              i += bName.length - 1;\n              return \"continue\";\n            }\n          }();\n\n          if (_ret === \"continue\") continue;\n        }\n\n        var char = pattern[i];\n\n        var _isInput = char in defs;\n\n        if (char === MaskedPattern.STOP_CHAR) {\n          this._stops.push(this._blocks.length);\n\n          continue;\n        }\n\n        if (char === '{' || char === '}') {\n          unmaskingBlock = !unmaskingBlock;\n          continue;\n        }\n\n        if (char === '[' || char === ']') {\n          optionalBlock = !optionalBlock;\n          continue;\n        }\n\n        if (char === MaskedPattern.ESCAPE_CHAR) {\n          ++i;\n          char = pattern[i];\n          if (!char) break;\n          _isInput = false;\n        }\n\n        var def = _isInput ? new _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"]({\n          parent: this,\n          lazy: this.lazy,\n          placeholderChar: this.placeholderChar,\n          mask: defs[char],\n          isOptional: optionalBlock\n        }) : new _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"]({\n          char: char,\n          isUnmasking: unmaskingBlock\n        });\n\n        this._blocks.push(def);\n      }\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"reset\",\n\n    /**\r\n      @override\r\n    */\n    value: function reset() {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"reset\", this).call(this);\n\n      this._blocks.forEach(function (b) {\n        return b.reset();\n      });\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doCommit\",\n\n    /**\r\n      @override\r\n    */\n    value: function doCommit() {\n      this._blocks.forEach(function (b) {\n        return b.doCommit();\n      });\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"doCommit\", this).call(this);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"appendTail\",\n\n    /**\r\n      @override\r\n    */\n    value: function appendTail(tail) {\n      return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"appendTail\", this).call(this, tail).aggregate(this._appendPlaceholder());\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"_appendCharRaw\",\n    value: function _appendCharRaw(ch) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      ch = this.doPrepare(ch, flags);\n\n      var blockIter = this._mapPosToBlock(this.value.length);\n\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      if (!blockIter) return details;\n\n      for (var bi = blockIter.index;; ++bi) {\n        var _block = this._blocks[bi];\n        if (!_block) break;\n\n        var blockDetails = _block._appendChar(ch, flags);\n\n        var skip = blockDetails.skip;\n        details.aggregate(blockDetails);\n        if (skip || blockDetails.rawInserted) break; // go next char\n      }\n\n      return details;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"extractTail\",\n    value: function extractTail() {\n      var _this2 = this;\n\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      var chunkTail = new _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"]();\n      if (fromPos === toPos) return chunkTail;\n\n      this._forEachBlocksInRange(fromPos, toPos, function (b, bi, bFromPos, bToPos) {\n        var blockChunk = b.extractTail(bFromPos, bToPos);\n        blockChunk.stop = _this2._findStopBefore(bi);\n        blockChunk.from = _this2._blockStartPos(bi);\n        if (blockChunk instanceof _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"]) blockChunk.blockIndex = bi;\n        chunkTail.extend(blockChunk);\n      });\n\n      return chunkTail;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"extractInput\",\n    value: function extractInput() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      var flags = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n      if (fromPos === toPos) return '';\n      var input = '';\n\n      this._forEachBlocksInRange(fromPos, toPos, function (b, _, fromPos, toPos) {\n        input += b.extractInput(fromPos, toPos, flags);\n      });\n\n      return input;\n    }\n  }, {\n    key: \"_findStopBefore\",\n    value: function _findStopBefore(blockIndex) {\n      var stopBefore;\n\n      for (var si = 0; si < this._stops.length; ++si) {\n        var stop = this._stops[si];\n        if (stop <= blockIndex) stopBefore = stop;else break;\n      }\n\n      return stopBefore;\n    }\n    /** Appends placeholder depending on laziness */\n\n  }, {\n    key: \"_appendPlaceholder\",\n    value: function _appendPlaceholder(toBlockIndex) {\n      var _this3 = this;\n\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      if (this.lazy && toBlockIndex == null) return details;\n\n      var startBlockIter = this._mapPosToBlock(this.value.length);\n\n      if (!startBlockIter) return details;\n      var startBlockIndex = startBlockIter.index;\n      var endBlockIndex = toBlockIndex != null ? toBlockIndex : this._blocks.length;\n\n      this._blocks.slice(startBlockIndex, endBlockIndex).forEach(function (b) {\n        if (!b.lazy || toBlockIndex != null) {\n          // $FlowFixMe `_blocks` may not be present\n          var args = b._blocks != null ? [b._blocks.length] : [];\n\n          var bDetails = b._appendPlaceholder.apply(b, args);\n\n          _this3._value += bDetails.inserted;\n          details.aggregate(bDetails);\n        }\n      });\n\n      return details;\n    }\n    /** Finds block in pos */\n\n  }, {\n    key: \"_mapPosToBlock\",\n    value: function _mapPosToBlock(pos) {\n      var accVal = '';\n\n      for (var bi = 0; bi < this._blocks.length; ++bi) {\n        var _block2 = this._blocks[bi];\n        var blockStartPos = accVal.length;\n        accVal += _block2.value;\n\n        if (pos <= accVal.length) {\n          return {\n            index: bi,\n            offset: pos - blockStartPos\n          };\n        }\n      }\n    }\n    /** */\n\n  }, {\n    key: \"_blockStartPos\",\n    value: function _blockStartPos(blockIndex) {\n      return this._blocks.slice(0, blockIndex).reduce(function (pos, b) {\n        return pos += b.value.length;\n      }, 0);\n    }\n    /** */\n\n  }, {\n    key: \"_forEachBlocksInRange\",\n    value: function _forEachBlocksInRange(fromPos) {\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      var fn = arguments.length > 2 ? arguments[2] : undefined;\n\n      var fromBlockIter = this._mapPosToBlock(fromPos);\n\n      if (fromBlockIter) {\n        var toBlockIter = this._mapPosToBlock(toPos); // process first block\n\n\n        var isSameBlock = toBlockIter && fromBlockIter.index === toBlockIter.index;\n        var fromBlockStartPos = fromBlockIter.offset;\n        var fromBlockEndPos = toBlockIter && isSameBlock ? toBlockIter.offset : this._blocks[fromBlockIter.index].value.length;\n        fn(this._blocks[fromBlockIter.index], fromBlockIter.index, fromBlockStartPos, fromBlockEndPos);\n\n        if (toBlockIter && !isSameBlock) {\n          // process intermediate blocks\n          for (var bi = fromBlockIter.index + 1; bi < toBlockIter.index; ++bi) {\n            fn(this._blocks[bi], bi, 0, this._blocks[bi].value.length);\n          } // process last block\n\n\n          fn(this._blocks[toBlockIter.index], toBlockIter.index, 0, toBlockIter.offset);\n        }\n      }\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n\n      var removeDetails = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"remove\", this).call(this, fromPos, toPos);\n\n      this._forEachBlocksInRange(fromPos, toPos, function (b, _, bFromPos, bToPos) {\n        removeDetails.aggregate(b.remove(bFromPos, bToPos));\n      });\n\n      return removeDetails;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"nearestInputPos\",\n    value: function nearestInputPos(cursorPos) {\n      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE;\n      // TODO refactor - extract alignblock\n      var beginBlockData = this._mapPosToBlock(cursorPos) || {\n        index: 0,\n        offset: 0\n      };\n      var beginBlockOffset = beginBlockData.offset,\n          beginBlockIndex = beginBlockData.index;\n      var beginBlock = this._blocks[beginBlockIndex];\n      if (!beginBlock) return cursorPos;\n      var beginBlockCursorPos = beginBlockOffset; // if position inside block - try to adjust it\n\n      if (beginBlockCursorPos !== 0 && beginBlockCursorPos < beginBlock.value.length) {\n        beginBlockCursorPos = beginBlock.nearestInputPos(beginBlockOffset, Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"forceDirection\"])(direction));\n      }\n\n      var cursorAtRight = beginBlockCursorPos === beginBlock.value.length;\n      var cursorAtLeft = beginBlockCursorPos === 0; //  cursor is INSIDE first block (not at bounds)\n\n      if (!cursorAtLeft && !cursorAtRight) return this._blockStartPos(beginBlockIndex) + beginBlockCursorPos;\n      var searchBlockIndex = cursorAtRight ? beginBlockIndex + 1 : beginBlockIndex;\n\n      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE) {\n        // NONE direction used to calculate start input position if no chars were removed\n        // FOR NONE:\n        // -\n        // input|any\n        // ->\n        //  any|input\n        // <-\n        //  filled-input|any\n        // check if first block at left is input\n        if (searchBlockIndex > 0) {\n          var blockIndexAtLeft = searchBlockIndex - 1;\n          var blockAtLeft = this._blocks[blockIndexAtLeft];\n          var blockInputPos = blockAtLeft.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE); // is input\n\n          if (!blockAtLeft.value.length || blockInputPos !== blockAtLeft.value.length) {\n            return this._blockStartPos(searchBlockIndex);\n          }\n        } // ->\n\n\n        var firstInputAtRight = searchBlockIndex;\n\n        for (var bi = firstInputAtRight; bi < this._blocks.length; ++bi) {\n          var blockAtRight = this._blocks[bi];\n\n          var _blockInputPos = blockAtRight.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE);\n\n          if (!blockAtRight.value.length || _blockInputPos !== blockAtRight.value.length) {\n            return this._blockStartPos(bi) + _blockInputPos;\n          }\n        } // <-\n        // find first non-fixed symbol\n\n\n        for (var _bi = searchBlockIndex - 1; _bi >= 0; --_bi) {\n          var _block3 = this._blocks[_bi];\n\n          var _blockInputPos2 = _block3.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE); // is input\n\n\n          if (!_block3.value.length || _blockInputPos2 !== _block3.value.length) {\n            return this._blockStartPos(_bi) + _block3.value.length;\n          }\n        }\n\n        return cursorPos;\n      }\n\n      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT) {\n        // -\n        //  any|filled-input\n        // <-\n        //  any|first not empty is not-len-aligned\n        //  not-0-aligned|any\n        // ->\n        //  any|not-len-aligned or end\n        // check if first block at right is filled input\n        var firstFilledBlockIndexAtRight;\n\n        for (var _bi2 = searchBlockIndex; _bi2 < this._blocks.length; ++_bi2) {\n          if (this._blocks[_bi2].value) {\n            firstFilledBlockIndexAtRight = _bi2;\n            break;\n          }\n        }\n\n        if (firstFilledBlockIndexAtRight != null) {\n          var filledBlock = this._blocks[firstFilledBlockIndexAtRight];\n\n          var _blockInputPos3 = filledBlock.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT);\n\n          if (_blockInputPos3 === 0 && filledBlock.unmaskedValue.length) {\n            // filled block is input\n            return this._blockStartPos(firstFilledBlockIndexAtRight) + _blockInputPos3;\n          }\n        } // <-\n        // find this vars\n\n\n        var firstFilledInputBlockIndex = -1;\n        var firstEmptyInputBlockIndex; // TODO consider nested empty inputs\n\n        for (var _bi3 = searchBlockIndex - 1; _bi3 >= 0; --_bi3) {\n          var _block4 = this._blocks[_bi3];\n\n          var _blockInputPos4 = _block4.nearestInputPos(_block4.value.length, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT);\n\n          if (!_block4.value || _blockInputPos4 !== 0) firstEmptyInputBlockIndex = _bi3;\n\n          if (_blockInputPos4 !== 0) {\n            if (_blockInputPos4 !== _block4.value.length) {\n              // aligned inside block - return immediately\n              return this._blockStartPos(_bi3) + _blockInputPos4;\n            } else {\n              // found filled\n              firstFilledInputBlockIndex = _bi3;\n              break;\n            }\n          }\n        }\n\n        if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT) {\n          // try find first empty input before start searching position only when not forced\n          for (var _bi4 = firstFilledInputBlockIndex + 1; _bi4 <= Math.min(searchBlockIndex, this._blocks.length - 1); ++_bi4) {\n            var _block5 = this._blocks[_bi4];\n\n            var _blockInputPos5 = _block5.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE);\n\n            var blockAlignedPos = this._blockStartPos(_bi4) + _blockInputPos5;\n\n            if (blockAlignedPos > cursorPos) break; // if block is not lazy input\n\n            if (_blockInputPos5 !== _block5.value.length) return blockAlignedPos;\n          }\n        } // process overflow\n\n\n        if (firstFilledInputBlockIndex >= 0) {\n          return this._blockStartPos(firstFilledInputBlockIndex) + this._blocks[firstFilledInputBlockIndex].value.length;\n        } // for lazy if has aligned left inside fixed and has came to the start - use start position\n\n\n        if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT || this.lazy && !this.extractInput() && !isInput(this._blocks[searchBlockIndex])) {\n          return 0;\n        }\n\n        if (firstEmptyInputBlockIndex != null) {\n          return this._blockStartPos(firstEmptyInputBlockIndex);\n        } // find first input\n\n\n        for (var _bi5 = searchBlockIndex; _bi5 < this._blocks.length; ++_bi5) {\n          var _block6 = this._blocks[_bi5];\n\n          var _blockInputPos6 = _block6.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE); // is input\n\n\n          if (!_block6.value.length || _blockInputPos6 !== _block6.value.length) {\n            return this._blockStartPos(_bi5) + _blockInputPos6;\n          }\n        }\n\n        return 0;\n      }\n\n      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT) {\n        // ->\n        //  any|not-len-aligned and filled\n        //  any|not-len-aligned\n        // <-\n        //  not-0-aligned or start|any\n        var firstInputBlockAlignedIndex;\n        var firstInputBlockAlignedPos;\n\n        for (var _bi6 = searchBlockIndex; _bi6 < this._blocks.length; ++_bi6) {\n          var _block7 = this._blocks[_bi6];\n\n          var _blockInputPos7 = _block7.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE);\n\n          if (_blockInputPos7 !== _block7.value.length) {\n            firstInputBlockAlignedPos = this._blockStartPos(_bi6) + _blockInputPos7;\n            firstInputBlockAlignedIndex = _bi6;\n            break;\n          }\n        }\n\n        if (firstInputBlockAlignedIndex != null && firstInputBlockAlignedPos != null) {\n          for (var _bi7 = firstInputBlockAlignedIndex; _bi7 < this._blocks.length; ++_bi7) {\n            var _block8 = this._blocks[_bi7];\n\n            var _blockInputPos8 = _block8.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT);\n\n            if (_blockInputPos8 !== _block8.value.length) {\n              return this._blockStartPos(_bi7) + _blockInputPos8;\n            }\n          }\n\n          return direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT ? this.value.length : firstInputBlockAlignedPos;\n        }\n\n        for (var _bi8 = Math.min(searchBlockIndex, this._blocks.length - 1); _bi8 >= 0; --_bi8) {\n          var _block9 = this._blocks[_bi8];\n\n          var _blockInputPos9 = _block9.nearestInputPos(_block9.value.length, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT);\n\n          if (_blockInputPos9 !== 0) {\n            var alignedPos = this._blockStartPos(_bi8) + _blockInputPos9;\n\n            if (alignedPos >= cursorPos) return alignedPos;\n            break;\n          }\n        }\n      }\n\n      return cursorPos;\n    }\n    /** Get block by name */\n\n  }, {\n    key: \"maskedBlock\",\n    value: function maskedBlock(name) {\n      return this.maskedBlocks(name)[0];\n    }\n    /** Get all blocks by name */\n\n  }, {\n    key: \"maskedBlocks\",\n    value: function maskedBlocks(name) {\n      var _this4 = this;\n\n      var indices = this._maskedBlocks[name];\n      if (!indices) return [];\n      return indices.map(function (gi) {\n        return _this4._blocks[gi];\n      });\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return Object.assign({}, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"state\", this), {\n        _blocks: this._blocks.map(function (b) {\n          return b.state;\n        })\n      });\n    },\n    set: function set(state) {\n      var _blocks = state._blocks,\n          maskedState = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"c\"])(state, [\"_blocks\"]);\n\n      this._blocks.forEach(function (b, bi) {\n        return b.state = _blocks[bi];\n      });\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"state\", maskedState, this, true);\n    }\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return this._blocks.every(function (b) {\n        return b.isComplete;\n      });\n    }\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this._blocks.reduce(function (str, b) {\n        return str += b.unmaskedValue;\n      }, '');\n    },\n    set: function set(unmaskedValue) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"unmaskedValue\", unmaskedValue, this, true);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"value\",\n    get: function get() {\n      // TODO return _value when not in change?\n      return this._blocks.reduce(function (str, b) {\n        return str += b.value;\n      }, '');\n    },\n    set: function set(value) {\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"h\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedPattern.prototype), \"value\", value, this, true);\n    }\n  }]);\n\n  return MaskedPattern;\n}(_base_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nMaskedPattern.DEFAULTS = {\n  lazy: true,\n  placeholderChar: '_'\n};\nMaskedPattern.STOP_CHAR = '`';\nMaskedPattern.ESCAPE_CHAR = '\\\\';\nMaskedPattern.InputDefinition = _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"];\nMaskedPattern.FixedDefinition = _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"];\n\nfunction isInput(block) {\n  if (!block) return false;\n  var value = block.value;\n  return !value || block.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE) !== value.length;\n}\n\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedPattern = MaskedPattern;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedPattern);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/pattern.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+
+
+
+
+
+
+
+
+
+
+
+/**
+  Pattern mask
+  @param {Object} opts
+  @param {Object} opts.blocks
+  @param {Object} opts.definitions
+  @param {string} opts.placeholderChar
+  @param {boolean} opts.lazy
+*/
+var MaskedPattern =
+/*#__PURE__*/
+function (_Masked) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedPattern, _Masked);
+
+  /** */
+
+  /** */
+
+  /** Single char for empty input */
+
+  /** Show placeholder only when needed */
+  function MaskedPattern() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedPattern);
+
+    // TODO type $Shape<MaskedPatternOptions>={} does not work
+    opts.definitions = Object.assign({}, _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__["DEFAULT_INPUT_DEFINITIONS"], opts.definitions);
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern).call(this, Object.assign({}, MaskedPattern.DEFAULTS, {}, opts)));
+  }
+  /**
+    @override
+    @param {Object} opts
+  */
+
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedPattern, [{
+    key: "_update",
+    value: function _update() {
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      opts.definitions = Object.assign({}, this.definitions, opts.definitions);
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "_update", this).call(this, opts);
+
+      this._rebuildMask();
+    }
+    /** */
+
+  }, {
+    key: "_rebuildMask",
+    value: function _rebuildMask() {
+      var _this = this;
+
+      var defs = this.definitions;
+      this._blocks = [];
+      this._stops = [];
+      this._maskedBlocks = {};
+      var pattern = this.mask;
+      if (!pattern || !defs) return;
+      var unmaskingBlock = false;
+      var optionalBlock = false;
+
+      for (var i = 0; i < pattern.length; ++i) {
+        if (this.blocks) {
+          var _ret = function () {
+            var p = pattern.slice(i);
+            var bNames = Object.keys(_this.blocks).filter(function (bName) {
+              return p.indexOf(bName) === 0;
+            }); // order by key length
+
+            bNames.sort(function (a, b) {
+              return b.length - a.length;
+            }); // use block name with max length
+
+            var bName = bNames[0];
+
+            if (bName) {
+              var maskedBlock = Object(_factory_js__WEBPACK_IMPORTED_MODULE_6__["default"])(Object.assign({
+                parent: _this,
+                lazy: _this.lazy,
+                placeholderChar: _this.placeholderChar,
+                overwrite: _this.overwrite
+              }, _this.blocks[bName]));
+
+              if (maskedBlock) {
+                _this._blocks.push(maskedBlock); // store block index
+
+
+                if (!_this._maskedBlocks[bName]) _this._maskedBlocks[bName] = [];
+
+                _this._maskedBlocks[bName].push(_this._blocks.length - 1);
+              }
+
+              i += bName.length - 1;
+              return "continue";
+            }
+          }();
+
+          if (_ret === "continue") continue;
+        }
+
+        var char = pattern[i];
+
+        var _isInput = char in defs;
+
+        if (char === MaskedPattern.STOP_CHAR) {
+          this._stops.push(this._blocks.length);
+
+          continue;
+        }
+
+        if (char === '{' || char === '}') {
+          unmaskingBlock = !unmaskingBlock;
+          continue;
+        }
+
+        if (char === '[' || char === ']') {
+          optionalBlock = !optionalBlock;
+          continue;
+        }
+
+        if (char === MaskedPattern.ESCAPE_CHAR) {
+          ++i;
+          char = pattern[i];
+          if (!char) break;
+          _isInput = false;
+        }
+
+        var def = _isInput ? new _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__["default"]({
+          parent: this,
+          lazy: this.lazy,
+          placeholderChar: this.placeholderChar,
+          mask: defs[char],
+          isOptional: optionalBlock
+        }) : new _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__["default"]({
+          char: char,
+          isUnmasking: unmaskingBlock
+        });
+
+        this._blocks.push(def);
+      }
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "reset",
+
+    /**
+      @override
+    */
+    value: function reset() {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "reset", this).call(this);
+
+      this._blocks.forEach(function (b) {
+        return b.reset();
+      });
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doCommit",
+
+    /**
+      @override
+    */
+    value: function doCommit() {
+      this._blocks.forEach(function (b) {
+        return b.doCommit();
+      });
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "doCommit", this).call(this);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "appendTail",
+
+    /**
+      @override
+    */
+    value: function appendTail(tail) {
+      return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "appendTail", this).call(this, tail).aggregate(this._appendPlaceholder());
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "_appendCharRaw",
+    value: function _appendCharRaw(ch) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      ch = this.doPrepare(ch, flags);
+
+      var blockIter = this._mapPosToBlock(this.value.length);
+
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      if (!blockIter) return details;
+
+      for (var bi = blockIter.index;; ++bi) {
+        var _block = this._blocks[bi];
+        if (!_block) break;
+
+        var blockDetails = _block._appendChar(ch, flags);
+
+        var skip = blockDetails.skip;
+        details.aggregate(blockDetails);
+        if (skip || blockDetails.rawInserted) break; // go next char
+      }
+
+      return details;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "extractTail",
+    value: function extractTail() {
+      var _this2 = this;
+
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      var chunkTail = new _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__["default"]();
+      if (fromPos === toPos) return chunkTail;
+
+      this._forEachBlocksInRange(fromPos, toPos, function (b, bi, bFromPos, bToPos) {
+        var blockChunk = b.extractTail(bFromPos, bToPos);
+        blockChunk.stop = _this2._findStopBefore(bi);
+        blockChunk.from = _this2._blockStartPos(bi);
+        if (blockChunk instanceof _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__["default"]) blockChunk.blockIndex = bi;
+        chunkTail.extend(blockChunk);
+      });
+
+      return chunkTail;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "extractInput",
+    value: function extractInput() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      var flags = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      if (fromPos === toPos) return '';
+      var input = '';
+
+      this._forEachBlocksInRange(fromPos, toPos, function (b, _, fromPos, toPos) {
+        input += b.extractInput(fromPos, toPos, flags);
+      });
+
+      return input;
+    }
+  }, {
+    key: "_findStopBefore",
+    value: function _findStopBefore(blockIndex) {
+      var stopBefore;
+
+      for (var si = 0; si < this._stops.length; ++si) {
+        var stop = this._stops[si];
+        if (stop <= blockIndex) stopBefore = stop;else break;
+      }
+
+      return stopBefore;
+    }
+    /** Appends placeholder depending on laziness */
+
+  }, {
+    key: "_appendPlaceholder",
+    value: function _appendPlaceholder(toBlockIndex) {
+      var _this3 = this;
+
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      if (this.lazy && toBlockIndex == null) return details;
+
+      var startBlockIter = this._mapPosToBlock(this.value.length);
+
+      if (!startBlockIter) return details;
+      var startBlockIndex = startBlockIter.index;
+      var endBlockIndex = toBlockIndex != null ? toBlockIndex : this._blocks.length;
+
+      this._blocks.slice(startBlockIndex, endBlockIndex).forEach(function (b) {
+        if (!b.lazy || toBlockIndex != null) {
+          // $FlowFixMe `_blocks` may not be present
+          var args = b._blocks != null ? [b._blocks.length] : [];
+
+          var bDetails = b._appendPlaceholder.apply(b, args);
+
+          _this3._value += bDetails.inserted;
+          details.aggregate(bDetails);
+        }
+      });
+
+      return details;
+    }
+    /** Finds block in pos */
+
+  }, {
+    key: "_mapPosToBlock",
+    value: function _mapPosToBlock(pos) {
+      var accVal = '';
+
+      for (var bi = 0; bi < this._blocks.length; ++bi) {
+        var _block2 = this._blocks[bi];
+        var blockStartPos = accVal.length;
+        accVal += _block2.value;
+
+        if (pos <= accVal.length) {
+          return {
+            index: bi,
+            offset: pos - blockStartPos
+          };
+        }
+      }
+    }
+    /** */
+
+  }, {
+    key: "_blockStartPos",
+    value: function _blockStartPos(blockIndex) {
+      return this._blocks.slice(0, blockIndex).reduce(function (pos, b) {
+        return pos += b.value.length;
+      }, 0);
+    }
+    /** */
+
+  }, {
+    key: "_forEachBlocksInRange",
+    value: function _forEachBlocksInRange(fromPos) {
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      var fn = arguments.length > 2 ? arguments[2] : undefined;
+
+      var fromBlockIter = this._mapPosToBlock(fromPos);
+
+      if (fromBlockIter) {
+        var toBlockIter = this._mapPosToBlock(toPos); // process first block
+
+
+        var isSameBlock = toBlockIter && fromBlockIter.index === toBlockIter.index;
+        var fromBlockStartPos = fromBlockIter.offset;
+        var fromBlockEndPos = toBlockIter && isSameBlock ? toBlockIter.offset : this._blocks[fromBlockIter.index].value.length;
+        fn(this._blocks[fromBlockIter.index], fromBlockIter.index, fromBlockStartPos, fromBlockEndPos);
+
+        if (toBlockIter && !isSameBlock) {
+          // process intermediate blocks
+          for (var bi = fromBlockIter.index + 1; bi < toBlockIter.index; ++bi) {
+            fn(this._blocks[bi], bi, 0, this._blocks[bi].value.length);
+          } // process last block
+
+
+          fn(this._blocks[toBlockIter.index], toBlockIter.index, 0, toBlockIter.offset);
+        }
+      }
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "remove",
+    value: function remove() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+
+      var removeDetails = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "remove", this).call(this, fromPos, toPos);
+
+      this._forEachBlocksInRange(fromPos, toPos, function (b, _, bFromPos, bToPos) {
+        removeDetails.aggregate(b.remove(bFromPos, bToPos));
+      });
+
+      return removeDetails;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "nearestInputPos",
+    value: function nearestInputPos(cursorPos) {
+      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE;
+      // TODO refactor - extract alignblock
+      var beginBlockData = this._mapPosToBlock(cursorPos) || {
+        index: 0,
+        offset: 0
+      };
+      var beginBlockOffset = beginBlockData.offset,
+          beginBlockIndex = beginBlockData.index;
+      var beginBlock = this._blocks[beginBlockIndex];
+      if (!beginBlock) return cursorPos;
+      var beginBlockCursorPos = beginBlockOffset; // if position inside block - try to adjust it
+
+      if (beginBlockCursorPos !== 0 && beginBlockCursorPos < beginBlock.value.length) {
+        beginBlockCursorPos = beginBlock.nearestInputPos(beginBlockOffset, Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["forceDirection"])(direction));
+      }
+
+      var cursorAtRight = beginBlockCursorPos === beginBlock.value.length;
+      var cursorAtLeft = beginBlockCursorPos === 0; //  cursor is INSIDE first block (not at bounds)
+
+      if (!cursorAtLeft && !cursorAtRight) return this._blockStartPos(beginBlockIndex) + beginBlockCursorPos;
+      var searchBlockIndex = cursorAtRight ? beginBlockIndex + 1 : beginBlockIndex;
+
+      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE) {
+        // NONE direction used to calculate start input position if no chars were removed
+        // FOR NONE:
+        // -
+        // input|any
+        // ->
+        //  any|input
+        // <-
+        //  filled-input|any
+        // check if first block at left is input
+        if (searchBlockIndex > 0) {
+          var blockIndexAtLeft = searchBlockIndex - 1;
+          var blockAtLeft = this._blocks[blockIndexAtLeft];
+          var blockInputPos = blockAtLeft.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE); // is input
+
+          if (!blockAtLeft.value.length || blockInputPos !== blockAtLeft.value.length) {
+            return this._blockStartPos(searchBlockIndex);
+          }
+        } // ->
+
+
+        var firstInputAtRight = searchBlockIndex;
+
+        for (var bi = firstInputAtRight; bi < this._blocks.length; ++bi) {
+          var blockAtRight = this._blocks[bi];
+
+          var _blockInputPos = blockAtRight.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE);
+
+          if (!blockAtRight.value.length || _blockInputPos !== blockAtRight.value.length) {
+            return this._blockStartPos(bi) + _blockInputPos;
+          }
+        } // <-
+        // find first non-fixed symbol
+
+
+        for (var _bi = searchBlockIndex - 1; _bi >= 0; --_bi) {
+          var _block3 = this._blocks[_bi];
+
+          var _blockInputPos2 = _block3.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE); // is input
+
+
+          if (!_block3.value.length || _blockInputPos2 !== _block3.value.length) {
+            return this._blockStartPos(_bi) + _block3.value.length;
+          }
+        }
+
+        return cursorPos;
+      }
+
+      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT) {
+        // -
+        //  any|filled-input
+        // <-
+        //  any|first not empty is not-len-aligned
+        //  not-0-aligned|any
+        // ->
+        //  any|not-len-aligned or end
+        // check if first block at right is filled input
+        var firstFilledBlockIndexAtRight;
+
+        for (var _bi2 = searchBlockIndex; _bi2 < this._blocks.length; ++_bi2) {
+          if (this._blocks[_bi2].value) {
+            firstFilledBlockIndexAtRight = _bi2;
+            break;
+          }
+        }
+
+        if (firstFilledBlockIndexAtRight != null) {
+          var filledBlock = this._blocks[firstFilledBlockIndexAtRight];
+
+          var _blockInputPos3 = filledBlock.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT);
+
+          if (_blockInputPos3 === 0 && filledBlock.unmaskedValue.length) {
+            // filled block is input
+            return this._blockStartPos(firstFilledBlockIndexAtRight) + _blockInputPos3;
+          }
+        } // <-
+        // find this vars
+
+
+        var firstFilledInputBlockIndex = -1;
+        var firstEmptyInputBlockIndex; // TODO consider nested empty inputs
+
+        for (var _bi3 = searchBlockIndex - 1; _bi3 >= 0; --_bi3) {
+          var _block4 = this._blocks[_bi3];
+
+          var _blockInputPos4 = _block4.nearestInputPos(_block4.value.length, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT);
+
+          if (!_block4.value || _blockInputPos4 !== 0) firstEmptyInputBlockIndex = _bi3;
+
+          if (_blockInputPos4 !== 0) {
+            if (_blockInputPos4 !== _block4.value.length) {
+              // aligned inside block - return immediately
+              return this._blockStartPos(_bi3) + _blockInputPos4;
+            } else {
+              // found filled
+              firstFilledInputBlockIndex = _bi3;
+              break;
+            }
+          }
+        }
+
+        if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT) {
+          // try find first empty input before start searching position only when not forced
+          for (var _bi4 = firstFilledInputBlockIndex + 1; _bi4 <= Math.min(searchBlockIndex, this._blocks.length - 1); ++_bi4) {
+            var _block5 = this._blocks[_bi4];
+
+            var _blockInputPos5 = _block5.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE);
+
+            var blockAlignedPos = this._blockStartPos(_bi4) + _blockInputPos5;
+
+            if (blockAlignedPos > cursorPos) break; // if block is not lazy input
+
+            if (_blockInputPos5 !== _block5.value.length) return blockAlignedPos;
+          }
+        } // process overflow
+
+
+        if (firstFilledInputBlockIndex >= 0) {
+          return this._blockStartPos(firstFilledInputBlockIndex) + this._blocks[firstFilledInputBlockIndex].value.length;
+        } // for lazy if has aligned left inside fixed and has came to the start - use start position
+
+
+        if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT || this.lazy && !this.extractInput() && !isInput(this._blocks[searchBlockIndex])) {
+          return 0;
+        }
+
+        if (firstEmptyInputBlockIndex != null) {
+          return this._blockStartPos(firstEmptyInputBlockIndex);
+        } // find first input
+
+
+        for (var _bi5 = searchBlockIndex; _bi5 < this._blocks.length; ++_bi5) {
+          var _block6 = this._blocks[_bi5];
+
+          var _blockInputPos6 = _block6.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE); // is input
+
+
+          if (!_block6.value.length || _blockInputPos6 !== _block6.value.length) {
+            return this._blockStartPos(_bi5) + _blockInputPos6;
+          }
+        }
+
+        return 0;
+      }
+
+      if (direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT || direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT) {
+        // ->
+        //  any|not-len-aligned and filled
+        //  any|not-len-aligned
+        // <-
+        //  not-0-aligned or start|any
+        var firstInputBlockAlignedIndex;
+        var firstInputBlockAlignedPos;
+
+        for (var _bi6 = searchBlockIndex; _bi6 < this._blocks.length; ++_bi6) {
+          var _block7 = this._blocks[_bi6];
+
+          var _blockInputPos7 = _block7.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE);
+
+          if (_blockInputPos7 !== _block7.value.length) {
+            firstInputBlockAlignedPos = this._blockStartPos(_bi6) + _blockInputPos7;
+            firstInputBlockAlignedIndex = _bi6;
+            break;
+          }
+        }
+
+        if (firstInputBlockAlignedIndex != null && firstInputBlockAlignedPos != null) {
+          for (var _bi7 = firstInputBlockAlignedIndex; _bi7 < this._blocks.length; ++_bi7) {
+            var _block8 = this._blocks[_bi7];
+
+            var _blockInputPos8 = _block8.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT);
+
+            if (_blockInputPos8 !== _block8.value.length) {
+              return this._blockStartPos(_bi7) + _blockInputPos8;
+            }
+          }
+
+          return direction === _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT ? this.value.length : firstInputBlockAlignedPos;
+        }
+
+        for (var _bi8 = Math.min(searchBlockIndex, this._blocks.length - 1); _bi8 >= 0; --_bi8) {
+          var _block9 = this._blocks[_bi8];
+
+          var _blockInputPos9 = _block9.nearestInputPos(_block9.value.length, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT);
+
+          if (_blockInputPos9 !== 0) {
+            var alignedPos = this._blockStartPos(_bi8) + _blockInputPos9;
+
+            if (alignedPos >= cursorPos) return alignedPos;
+            break;
+          }
+        }
+      }
+
+      return cursorPos;
+    }
+    /** Get block by name */
+
+  }, {
+    key: "maskedBlock",
+    value: function maskedBlock(name) {
+      return this.maskedBlocks(name)[0];
+    }
+    /** Get all blocks by name */
+
+  }, {
+    key: "maskedBlocks",
+    value: function maskedBlocks(name) {
+      var _this4 = this;
+
+      var indices = this._maskedBlocks[name];
+      if (!indices) return [];
+      return indices.map(function (gi) {
+        return _this4._blocks[gi];
+      });
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return Object.assign({}, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "state", this), {
+        _blocks: this._blocks.map(function (b) {
+          return b.state;
+        })
+      });
+    },
+    set: function set(state) {
+      var _blocks = state._blocks,
+          maskedState = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["c"])(state, ["_blocks"]);
+
+      this._blocks.forEach(function (b, bi) {
+        return b.state = _blocks[bi];
+      });
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "state", maskedState, this, true);
+    }
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return this._blocks.every(function (b) {
+        return b.isComplete;
+      });
+    }
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this._blocks.reduce(function (str, b) {
+        return str += b.unmaskedValue;
+      }, '');
+    },
+    set: function set(unmaskedValue) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "unmaskedValue", unmaskedValue, this, true);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "value",
+    get: function get() {
+      // TODO return _value when not in change?
+      return this._blocks.reduce(function (str, b) {
+        return str += b.value;
+      }, '');
+    },
+    set: function set(value) {
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedPattern.prototype), "value", value, this, true);
+    }
+  }]);
+
+  return MaskedPattern;
+}(_base_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+MaskedPattern.DEFAULTS = {
+  lazy: true,
+  placeholderChar: '_'
+};
+MaskedPattern.STOP_CHAR = '`';
+MaskedPattern.ESCAPE_CHAR = '\\';
+MaskedPattern.InputDefinition = _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__["default"];
+MaskedPattern.FixedDefinition = _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__["default"];
+
+function isInput(block) {
+  if (!block) return false;
+  var value = block.value;
+  return !value || block.nearestInputPos(0, _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE) !== value.length;
+}
+
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedPattern = MaskedPattern;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedPattern);
+
 
 /***/ }),
 
@@ -334,7 +4118,182 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n\n\n\n\n\n\nvar ChunksTailDetails =\n/*#__PURE__*/\nfunction () {\n  /** */\n  function ChunksTailDetails() {\n    var chunks = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, ChunksTailDetails);\n\n    this.chunks = chunks;\n    this.from = from;\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(ChunksTailDetails, [{\n    key: \"toString\",\n    value: function toString() {\n      return this.chunks.map(String).join('');\n    } // $FlowFixMe no ideas\n\n  }, {\n    key: \"extend\",\n    value: function extend(tailChunk) {\n      if (!String(tailChunk)) return;\n      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(tailChunk)) tailChunk = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](String(tailChunk));\n      var lastChunk = this.chunks[this.chunks.length - 1];\n      var extendLast = lastChunk && ( // if stops are same or tail has no stop\n      lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && // if tail chunk goes just after last chunk\n      tailChunk.from === lastChunk.from + lastChunk.toString().length;\n\n      if (tailChunk instanceof _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]) {\n        // check the ability to extend previous chunk\n        if (extendLast) {\n          // extend previous chunk\n          lastChunk.extend(tailChunk.toString());\n        } else {\n          // append new chunk\n          this.chunks.push(tailChunk);\n        }\n      } else if (tailChunk instanceof ChunksTailDetails) {\n        if (tailChunk.stop == null) {\n          // unwrap floating chunks to parent, keeping `from` pos\n          var firstTailChunk;\n\n          while (tailChunk.chunks.length && tailChunk.chunks[0].stop == null) {\n            firstTailChunk = tailChunk.chunks.shift();\n            firstTailChunk.from += tailChunk.from;\n            this.extend(firstTailChunk);\n          }\n        } // if tail chunk still has value\n\n\n        if (tailChunk.toString()) {\n          // if chunks contains stops, then popup stop to container\n          tailChunk.stop = tailChunk.blockIndex;\n          this.chunks.push(tailChunk);\n        }\n      }\n    }\n  }, {\n    key: \"appendTo\",\n    value: function appendTo(masked) {\n      // $FlowFixMe\n      if (!(masked instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedPattern)) {\n        var tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](this.toString());\n        return tail.appendTo(masked);\n      }\n\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\n      for (var ci = 0; ci < this.chunks.length && !details.skip; ++ci) {\n        var chunk = this.chunks[ci];\n\n        var lastBlockIter = masked._mapPosToBlock(masked.value.length);\n\n        var stop = chunk.stop;\n        var chunkBlock = void 0;\n\n        if (stop && ( // if block not found or stop is behind lastBlock\n        !lastBlockIter || lastBlockIter.index <= stop)) {\n          if (chunk instanceof ChunksTailDetails || // for continuous block also check if stop is exist\n          masked._stops.indexOf(stop) >= 0) {\n            details.aggregate(masked._appendPlaceholder(stop));\n          }\n\n          chunkBlock = chunk instanceof ChunksTailDetails && masked._blocks[stop];\n        }\n\n        if (chunkBlock) {\n          var tailDetails = chunkBlock.appendTail(chunk);\n          tailDetails.skip = false; // always ignore skip, it will be set on last\n\n          details.aggregate(tailDetails);\n          masked._value += tailDetails.inserted; // get not inserted chars\n\n          var remainChars = chunk.toString().slice(tailDetails.rawInserted.length);\n          if (remainChars) details.aggregate(masked.append(remainChars, {\n            tail: true\n          }));\n        } else {\n          details.aggregate(masked.append(chunk.toString(), {\n            tail: true\n          }));\n        }\n      }\n      return details;\n    }\n  }, {\n    key: \"shiftBefore\",\n    value: function shiftBefore(pos) {\n      if (this.from >= pos || !this.chunks.length) return '';\n      var chunkShiftPos = pos - this.from;\n      var ci = 0;\n\n      while (ci < this.chunks.length) {\n        var chunk = this.chunks[ci];\n        var shiftChar = chunk.shiftBefore(chunkShiftPos);\n\n        if (chunk.toString()) {\n          // chunk still contains value\n          // but not shifted - means no more available chars to shift\n          if (!shiftChar) break;\n          ++ci;\n        } else {\n          // clean if chunk has no value\n          this.chunks.splice(ci, 1);\n        }\n\n        if (shiftChar) return shiftChar;\n      }\n\n      return '';\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return {\n        chunks: this.chunks.map(function (c) {\n          return c.state;\n        }),\n        from: this.from,\n        stop: this.stop,\n        blockIndex: this.blockIndex\n      };\n    },\n    set: function set(state) {\n      var chunks = state.chunks,\n          props = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"c\"])(state, [\"chunks\"]);\n\n      Object.assign(this, props);\n      this.chunks = chunks.map(function (cstate) {\n        var chunk = \"chunks\" in cstate ? new ChunksTailDetails() : new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](); // $FlowFixMe already checked above\n\n        chunk.state = cstate;\n        return chunk;\n      });\n    }\n  }]);\n\n  return ChunksTailDetails;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ChunksTailDetails);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/pattern/chunk-tail-details.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+
+
+
+
+
+
+var ChunksTailDetails =
+/*#__PURE__*/
+function () {
+  /** */
+  function ChunksTailDetails() {
+    var chunks = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, ChunksTailDetails);
+
+    this.chunks = chunks;
+    this.from = from;
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(ChunksTailDetails, [{
+    key: "toString",
+    value: function toString() {
+      return this.chunks.map(String).join('');
+    } // $FlowFixMe no ideas
+
+  }, {
+    key: "extend",
+    value: function extend(tailChunk) {
+      if (!String(tailChunk)) return;
+      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(tailChunk)) tailChunk = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](String(tailChunk));
+      var lastChunk = this.chunks[this.chunks.length - 1];
+      var extendLast = lastChunk && ( // if stops are same or tail has no stop
+      lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && // if tail chunk goes just after last chunk
+      tailChunk.from === lastChunk.from + lastChunk.toString().length;
+
+      if (tailChunk instanceof _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"]) {
+        // check the ability to extend previous chunk
+        if (extendLast) {
+          // extend previous chunk
+          lastChunk.extend(tailChunk.toString());
+        } else {
+          // append new chunk
+          this.chunks.push(tailChunk);
+        }
+      } else if (tailChunk instanceof ChunksTailDetails) {
+        if (tailChunk.stop == null) {
+          // unwrap floating chunks to parent, keeping `from` pos
+          var firstTailChunk;
+
+          while (tailChunk.chunks.length && tailChunk.chunks[0].stop == null) {
+            firstTailChunk = tailChunk.chunks.shift();
+            firstTailChunk.from += tailChunk.from;
+            this.extend(firstTailChunk);
+          }
+        } // if tail chunk still has value
+
+
+        if (tailChunk.toString()) {
+          // if chunks contains stops, then popup stop to container
+          tailChunk.stop = tailChunk.blockIndex;
+          this.chunks.push(tailChunk);
+        }
+      }
+    }
+  }, {
+    key: "appendTo",
+    value: function appendTo(masked) {
+      // $FlowFixMe
+      if (!(masked instanceof _core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedPattern)) {
+        var tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](this.toString());
+        return tail.appendTo(masked);
+      }
+
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+
+      for (var ci = 0; ci < this.chunks.length && !details.skip; ++ci) {
+        var chunk = this.chunks[ci];
+
+        var lastBlockIter = masked._mapPosToBlock(masked.value.length);
+
+        var stop = chunk.stop;
+        var chunkBlock = void 0;
+
+        if (stop && ( // if block not found or stop is behind lastBlock
+        !lastBlockIter || lastBlockIter.index <= stop)) {
+          if (chunk instanceof ChunksTailDetails || // for continuous block also check if stop is exist
+          masked._stops.indexOf(stop) >= 0) {
+            details.aggregate(masked._appendPlaceholder(stop));
+          }
+
+          chunkBlock = chunk instanceof ChunksTailDetails && masked._blocks[stop];
+        }
+
+        if (chunkBlock) {
+          var tailDetails = chunkBlock.appendTail(chunk);
+          tailDetails.skip = false; // always ignore skip, it will be set on last
+
+          details.aggregate(tailDetails);
+          masked._value += tailDetails.inserted; // get not inserted chars
+
+          var remainChars = chunk.toString().slice(tailDetails.rawInserted.length);
+          if (remainChars) details.aggregate(masked.append(remainChars, {
+            tail: true
+          }));
+        } else {
+          details.aggregate(masked.append(chunk.toString(), {
+            tail: true
+          }));
+        }
+      }
+      return details;
+    }
+  }, {
+    key: "shiftBefore",
+    value: function shiftBefore(pos) {
+      if (this.from >= pos || !this.chunks.length) return '';
+      var chunkShiftPos = pos - this.from;
+      var ci = 0;
+
+      while (ci < this.chunks.length) {
+        var chunk = this.chunks[ci];
+        var shiftChar = chunk.shiftBefore(chunkShiftPos);
+
+        if (chunk.toString()) {
+          // chunk still contains value
+          // but not shifted - means no more available chars to shift
+          if (!shiftChar) break;
+          ++ci;
+        } else {
+          // clean if chunk has no value
+          this.chunks.splice(ci, 1);
+        }
+
+        if (shiftChar) return shiftChar;
+      }
+
+      return '';
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return {
+        chunks: this.chunks.map(function (c) {
+          return c.state;
+        }),
+        from: this.from,
+        stop: this.stop,
+        blockIndex: this.blockIndex
+      };
+    },
+    set: function set(state) {
+      var chunks = state.chunks,
+          props = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["c"])(state, ["chunks"]);
+
+      Object.assign(this, props);
+      this.chunks = chunks.map(function (cstate) {
+        var chunk = "chunks" in cstate ? new ChunksTailDetails() : new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](); // $FlowFixMe already checked above
+
+        chunk.state = cstate;
+        return chunk;
+      });
+    }
+  }]);
+
+  return ChunksTailDetails;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ChunksTailDetails);
+
 
 /***/ }),
 
@@ -346,7 +4305,156 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n\n\n\n\n\nvar PatternFixedDefinition =\n/*#__PURE__*/\nfunction () {\n  /** */\n\n  /** */\n\n  /** */\n\n  /** */\n  function PatternFixedDefinition(opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, PatternFixedDefinition);\n\n    Object.assign(this, opts);\n    this._value = '';\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(PatternFixedDefinition, [{\n    key: \"reset\",\n    value: function reset() {\n      this._isRawInput = false;\n      this._value = '';\n    }\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._value.length;\n      this._value = this._value.slice(0, fromPos) + this._value.slice(toPos);\n      if (!this._value) this._isRawInput = false;\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n    }\n  }, {\n    key: \"nearestInputPos\",\n    value: function nearestInputPos(cursorPos) {\n      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE;\n      var minPos = 0;\n      var maxPos = this._value.length;\n\n      switch (direction) {\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT:\n          return minPos;\n\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT:\n        default:\n          return maxPos;\n      }\n    }\n  }, {\n    key: \"extractInput\",\n    value: function extractInput() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._value.length;\n      var flags = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n      return flags.raw && this._isRawInput && this._value.slice(fromPos, toPos) || '';\n    }\n  }, {\n    key: \"_appendChar\",\n    value: function _appendChar(str) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      if (this._value) return details;\n      var appended = this.char === str[0];\n      var isResolved = appended && (this.isUnmasking || flags.input || flags.raw) && !flags.tail;\n      if (isResolved) details.rawInserted = this.char;\n      this._value = details.inserted = this.char;\n      this._isRawInput = isResolved && (flags.raw || flags.input);\n      return details;\n    }\n  }, {\n    key: \"_appendPlaceholder\",\n    value: function _appendPlaceholder() {\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      if (this._value) return details;\n      this._value = details.inserted = this.char;\n      return details;\n    }\n  }, {\n    key: \"extractTail\",\n    value: function extractTail() {\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      return new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]('');\n    } // $FlowFixMe no ideas\n\n  }, {\n    key: \"appendTail\",\n    value: function appendTail(tail) {\n      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"isString\"])(tail)) tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"](String(tail));\n      return tail.appendTo(this);\n    }\n  }, {\n    key: \"append\",\n    value: function append(str, flags, tail) {\n      var details = this._appendChar(str, flags);\n\n      if (tail != null) {\n        details.tailShift += this.appendTail(tail).tailShift;\n      }\n\n      return details;\n    }\n  }, {\n    key: \"doCommit\",\n    value: function doCommit() {}\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this._value;\n    }\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this.isUnmasking ? this.value : '';\n    }\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return true;\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return {\n        _value: this._value,\n        _isRawInput: this._isRawInput\n      };\n    },\n    set: function set(state) {\n      Object.assign(this, state);\n    }\n  }]);\n\n  return PatternFixedDefinition;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PatternFixedDefinition);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/pattern/fixed-definition.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+
+
+
+
+
+var PatternFixedDefinition =
+/*#__PURE__*/
+function () {
+  /** */
+
+  /** */
+
+  /** */
+
+  /** */
+  function PatternFixedDefinition(opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, PatternFixedDefinition);
+
+    Object.assign(this, opts);
+    this._value = '';
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(PatternFixedDefinition, [{
+    key: "reset",
+    value: function reset() {
+      this._isRawInput = false;
+      this._value = '';
+    }
+  }, {
+    key: "remove",
+    value: function remove() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._value.length;
+      this._value = this._value.slice(0, fromPos) + this._value.slice(toPos);
+      if (!this._value) this._isRawInput = false;
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    }
+  }, {
+    key: "nearestInputPos",
+    value: function nearestInputPos(cursorPos) {
+      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE;
+      var minPos = 0;
+      var maxPos = this._value.length;
+
+      switch (direction) {
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT:
+          return minPos;
+
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT:
+        default:
+          return maxPos;
+      }
+    }
+  }, {
+    key: "extractInput",
+    value: function extractInput() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._value.length;
+      var flags = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      return flags.raw && this._isRawInput && this._value.slice(fromPos, toPos) || '';
+    }
+  }, {
+    key: "_appendChar",
+    value: function _appendChar(str) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      if (this._value) return details;
+      var appended = this.char === str[0];
+      var isResolved = appended && (this.isUnmasking || flags.input || flags.raw) && !flags.tail;
+      if (isResolved) details.rawInserted = this.char;
+      this._value = details.inserted = this.char;
+      this._isRawInput = isResolved && (flags.raw || flags.input);
+      return details;
+    }
+  }, {
+    key: "_appendPlaceholder",
+    value: function _appendPlaceholder() {
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      if (this._value) return details;
+      this._value = details.inserted = this.char;
+      return details;
+    }
+  }, {
+    key: "extractTail",
+    value: function extractTail() {
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      return new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"]('');
+    } // $FlowFixMe no ideas
+
+  }, {
+    key: "appendTail",
+    value: function appendTail(tail) {
+      if (Object(_core_utils_js__WEBPACK_IMPORTED_MODULE_1__["isString"])(tail)) tail = new _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__["default"](String(tail));
+      return tail.appendTo(this);
+    }
+  }, {
+    key: "append",
+    value: function append(str, flags, tail) {
+      var details = this._appendChar(str, flags);
+
+      if (tail != null) {
+        details.tailShift += this.appendTail(tail).tailShift;
+      }
+
+      return details;
+    }
+  }, {
+    key: "doCommit",
+    value: function doCommit() {}
+  }, {
+    key: "value",
+    get: function get() {
+      return this._value;
+    }
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this.isUnmasking ? this.value : '';
+    }
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return true;
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return {
+        _value: this._value,
+        _isRawInput: this._isRawInput
+      };
+    },
+    set: function set(state) {
+      Object.assign(this, state);
+    }
+  }]);
+
+  return PatternFixedDefinition;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (PatternFixedDefinition);
+
 
 /***/ }),
 
@@ -358,7 +4466,201 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DEFAULT_INPUT_DEFINITIONS\", function() { return DEFAULT_INPUT_DEFINITIONS; });\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n\n\n\n\n\n\nvar DEFAULT_INPUT_DEFINITIONS = {\n  '0': /\\d/,\n  'a': /[\\u0041-\\u005A\\u0061-\\u007A\\u00AA\\u00B5\\u00BA\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02C1\\u02C6-\\u02D1\\u02E0-\\u02E4\\u02EC\\u02EE\\u0370-\\u0374\\u0376\\u0377\\u037A-\\u037D\\u0386\\u0388-\\u038A\\u038C\\u038E-\\u03A1\\u03A3-\\u03F5\\u03F7-\\u0481\\u048A-\\u0527\\u0531-\\u0556\\u0559\\u0561-\\u0587\\u05D0-\\u05EA\\u05F0-\\u05F2\\u0620-\\u064A\\u066E\\u066F\\u0671-\\u06D3\\u06D5\\u06E5\\u06E6\\u06EE\\u06EF\\u06FA-\\u06FC\\u06FF\\u0710\\u0712-\\u072F\\u074D-\\u07A5\\u07B1\\u07CA-\\u07EA\\u07F4\\u07F5\\u07FA\\u0800-\\u0815\\u081A\\u0824\\u0828\\u0840-\\u0858\\u08A0\\u08A2-\\u08AC\\u0904-\\u0939\\u093D\\u0950\\u0958-\\u0961\\u0971-\\u0977\\u0979-\\u097F\\u0985-\\u098C\\u098F\\u0990\\u0993-\\u09A8\\u09AA-\\u09B0\\u09B2\\u09B6-\\u09B9\\u09BD\\u09CE\\u09DC\\u09DD\\u09DF-\\u09E1\\u09F0\\u09F1\\u0A05-\\u0A0A\\u0A0F\\u0A10\\u0A13-\\u0A28\\u0A2A-\\u0A30\\u0A32\\u0A33\\u0A35\\u0A36\\u0A38\\u0A39\\u0A59-\\u0A5C\\u0A5E\\u0A72-\\u0A74\\u0A85-\\u0A8D\\u0A8F-\\u0A91\\u0A93-\\u0AA8\\u0AAA-\\u0AB0\\u0AB2\\u0AB3\\u0AB5-\\u0AB9\\u0ABD\\u0AD0\\u0AE0\\u0AE1\\u0B05-\\u0B0C\\u0B0F\\u0B10\\u0B13-\\u0B28\\u0B2A-\\u0B30\\u0B32\\u0B33\\u0B35-\\u0B39\\u0B3D\\u0B5C\\u0B5D\\u0B5F-\\u0B61\\u0B71\\u0B83\\u0B85-\\u0B8A\\u0B8E-\\u0B90\\u0B92-\\u0B95\\u0B99\\u0B9A\\u0B9C\\u0B9E\\u0B9F\\u0BA3\\u0BA4\\u0BA8-\\u0BAA\\u0BAE-\\u0BB9\\u0BD0\\u0C05-\\u0C0C\\u0C0E-\\u0C10\\u0C12-\\u0C28\\u0C2A-\\u0C33\\u0C35-\\u0C39\\u0C3D\\u0C58\\u0C59\\u0C60\\u0C61\\u0C85-\\u0C8C\\u0C8E-\\u0C90\\u0C92-\\u0CA8\\u0CAA-\\u0CB3\\u0CB5-\\u0CB9\\u0CBD\\u0CDE\\u0CE0\\u0CE1\\u0CF1\\u0CF2\\u0D05-\\u0D0C\\u0D0E-\\u0D10\\u0D12-\\u0D3A\\u0D3D\\u0D4E\\u0D60\\u0D61\\u0D7A-\\u0D7F\\u0D85-\\u0D96\\u0D9A-\\u0DB1\\u0DB3-\\u0DBB\\u0DBD\\u0DC0-\\u0DC6\\u0E01-\\u0E30\\u0E32\\u0E33\\u0E40-\\u0E46\\u0E81\\u0E82\\u0E84\\u0E87\\u0E88\\u0E8A\\u0E8D\\u0E94-\\u0E97\\u0E99-\\u0E9F\\u0EA1-\\u0EA3\\u0EA5\\u0EA7\\u0EAA\\u0EAB\\u0EAD-\\u0EB0\\u0EB2\\u0EB3\\u0EBD\\u0EC0-\\u0EC4\\u0EC6\\u0EDC-\\u0EDF\\u0F00\\u0F40-\\u0F47\\u0F49-\\u0F6C\\u0F88-\\u0F8C\\u1000-\\u102A\\u103F\\u1050-\\u1055\\u105A-\\u105D\\u1061\\u1065\\u1066\\u106E-\\u1070\\u1075-\\u1081\\u108E\\u10A0-\\u10C5\\u10C7\\u10CD\\u10D0-\\u10FA\\u10FC-\\u1248\\u124A-\\u124D\\u1250-\\u1256\\u1258\\u125A-\\u125D\\u1260-\\u1288\\u128A-\\u128D\\u1290-\\u12B0\\u12B2-\\u12B5\\u12B8-\\u12BE\\u12C0\\u12C2-\\u12C5\\u12C8-\\u12D6\\u12D8-\\u1310\\u1312-\\u1315\\u1318-\\u135A\\u1380-\\u138F\\u13A0-\\u13F4\\u1401-\\u166C\\u166F-\\u167F\\u1681-\\u169A\\u16A0-\\u16EA\\u1700-\\u170C\\u170E-\\u1711\\u1720-\\u1731\\u1740-\\u1751\\u1760-\\u176C\\u176E-\\u1770\\u1780-\\u17B3\\u17D7\\u17DC\\u1820-\\u1877\\u1880-\\u18A8\\u18AA\\u18B0-\\u18F5\\u1900-\\u191C\\u1950-\\u196D\\u1970-\\u1974\\u1980-\\u19AB\\u19C1-\\u19C7\\u1A00-\\u1A16\\u1A20-\\u1A54\\u1AA7\\u1B05-\\u1B33\\u1B45-\\u1B4B\\u1B83-\\u1BA0\\u1BAE\\u1BAF\\u1BBA-\\u1BE5\\u1C00-\\u1C23\\u1C4D-\\u1C4F\\u1C5A-\\u1C7D\\u1CE9-\\u1CEC\\u1CEE-\\u1CF1\\u1CF5\\u1CF6\\u1D00-\\u1DBF\\u1E00-\\u1F15\\u1F18-\\u1F1D\\u1F20-\\u1F45\\u1F48-\\u1F4D\\u1F50-\\u1F57\\u1F59\\u1F5B\\u1F5D\\u1F5F-\\u1F7D\\u1F80-\\u1FB4\\u1FB6-\\u1FBC\\u1FBE\\u1FC2-\\u1FC4\\u1FC6-\\u1FCC\\u1FD0-\\u1FD3\\u1FD6-\\u1FDB\\u1FE0-\\u1FEC\\u1FF2-\\u1FF4\\u1FF6-\\u1FFC\\u2071\\u207F\\u2090-\\u209C\\u2102\\u2107\\u210A-\\u2113\\u2115\\u2119-\\u211D\\u2124\\u2126\\u2128\\u212A-\\u212D\\u212F-\\u2139\\u213C-\\u213F\\u2145-\\u2149\\u214E\\u2183\\u2184\\u2C00-\\u2C2E\\u2C30-\\u2C5E\\u2C60-\\u2CE4\\u2CEB-\\u2CEE\\u2CF2\\u2CF3\\u2D00-\\u2D25\\u2D27\\u2D2D\\u2D30-\\u2D67\\u2D6F\\u2D80-\\u2D96\\u2DA0-\\u2DA6\\u2DA8-\\u2DAE\\u2DB0-\\u2DB6\\u2DB8-\\u2DBE\\u2DC0-\\u2DC6\\u2DC8-\\u2DCE\\u2DD0-\\u2DD6\\u2DD8-\\u2DDE\\u2E2F\\u3005\\u3006\\u3031-\\u3035\\u303B\\u303C\\u3041-\\u3096\\u309D-\\u309F\\u30A1-\\u30FA\\u30FC-\\u30FF\\u3105-\\u312D\\u3131-\\u318E\\u31A0-\\u31BA\\u31F0-\\u31FF\\u3400-\\u4DB5\\u4E00-\\u9FCC\\uA000-\\uA48C\\uA4D0-\\uA4FD\\uA500-\\uA60C\\uA610-\\uA61F\\uA62A\\uA62B\\uA640-\\uA66E\\uA67F-\\uA697\\uA6A0-\\uA6E5\\uA717-\\uA71F\\uA722-\\uA788\\uA78B-\\uA78E\\uA790-\\uA793\\uA7A0-\\uA7AA\\uA7F8-\\uA801\\uA803-\\uA805\\uA807-\\uA80A\\uA80C-\\uA822\\uA840-\\uA873\\uA882-\\uA8B3\\uA8F2-\\uA8F7\\uA8FB\\uA90A-\\uA925\\uA930-\\uA946\\uA960-\\uA97C\\uA984-\\uA9B2\\uA9CF\\uAA00-\\uAA28\\uAA40-\\uAA42\\uAA44-\\uAA4B\\uAA60-\\uAA76\\uAA7A\\uAA80-\\uAAAF\\uAAB1\\uAAB5\\uAAB6\\uAAB9-\\uAABD\\uAAC0\\uAAC2\\uAADB-\\uAADD\\uAAE0-\\uAAEA\\uAAF2-\\uAAF4\\uAB01-\\uAB06\\uAB09-\\uAB0E\\uAB11-\\uAB16\\uAB20-\\uAB26\\uAB28-\\uAB2E\\uABC0-\\uABE2\\uAC00-\\uD7A3\\uD7B0-\\uD7C6\\uD7CB-\\uD7FB\\uF900-\\uFA6D\\uFA70-\\uFAD9\\uFB00-\\uFB06\\uFB13-\\uFB17\\uFB1D\\uFB1F-\\uFB28\\uFB2A-\\uFB36\\uFB38-\\uFB3C\\uFB3E\\uFB40\\uFB41\\uFB43\\uFB44\\uFB46-\\uFBB1\\uFBD3-\\uFD3D\\uFD50-\\uFD8F\\uFD92-\\uFDC7\\uFDF0-\\uFDFB\\uFE70-\\uFE74\\uFE76-\\uFEFC\\uFF21-\\uFF3A\\uFF41-\\uFF5A\\uFF66-\\uFFBE\\uFFC2-\\uFFC7\\uFFCA-\\uFFCF\\uFFD2-\\uFFD7\\uFFDA-\\uFFDC]/,\n  // http://stackoverflow.com/a/22075070\n  '*': /./\n};\n/** */\n\nvar PatternInputDefinition =\n/*#__PURE__*/\nfunction () {\n  /** */\n\n  /** */\n\n  /** */\n\n  /** */\n\n  /** */\n\n  /** */\n  function PatternInputDefinition(opts) {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, PatternInputDefinition);\n\n    var mask = opts.mask,\n        blockOpts = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"c\"])(opts, [\"mask\"]);\n\n    this.masked = Object(_factory_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])({\n      mask: mask\n    });\n    Object.assign(this, blockOpts);\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(PatternInputDefinition, [{\n    key: \"reset\",\n    value: function reset() {\n      this._isFilled = false;\n      this.masked.reset();\n    }\n  }, {\n    key: \"remove\",\n    value: function remove() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n\n      if (fromPos === 0 && toPos >= 1) {\n        this._isFilled = false;\n        return this.masked.remove(fromPos, toPos);\n      }\n\n      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n    }\n  }, {\n    key: \"_appendChar\",\n    value: function _appendChar(str) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      if (this._isFilled) return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      var state = this.masked.state; // simulate input\n\n      var details = this.masked._appendChar(str, flags);\n\n      if (details.inserted && this.doValidate(flags) === false) {\n        details.inserted = details.rawInserted = '';\n        this.masked.state = state;\n      }\n\n      if (!details.inserted && !this.isOptional && !this.lazy && !flags.input) {\n        details.inserted = this.placeholderChar;\n      }\n\n      details.skip = !details.inserted && !this.isOptional;\n      this._isFilled = Boolean(details.inserted);\n      return details;\n    }\n  }, {\n    key: \"append\",\n    value: function append() {\n      var _this$masked;\n\n      return (_this$masked = this.masked).append.apply(_this$masked, arguments);\n    }\n  }, {\n    key: \"_appendPlaceholder\",\n    value: function _appendPlaceholder() {\n      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n      if (this._isFilled || this.isOptional) return details;\n      this._isFilled = true;\n      details.inserted = this.placeholderChar;\n      return details;\n    }\n  }, {\n    key: \"extractTail\",\n    value: function extractTail() {\n      var _this$masked2;\n\n      return (_this$masked2 = this.masked).extractTail.apply(_this$masked2, arguments);\n    }\n  }, {\n    key: \"appendTail\",\n    value: function appendTail() {\n      var _this$masked3;\n\n      return (_this$masked3 = this.masked).appendTail.apply(_this$masked3, arguments);\n    }\n  }, {\n    key: \"extractInput\",\n    value: function extractInput() {\n      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;\n      var flags = arguments.length > 2 ? arguments[2] : undefined;\n      return this.masked.extractInput(fromPos, toPos, flags);\n    }\n  }, {\n    key: \"nearestInputPos\",\n    value: function nearestInputPos(cursorPos) {\n      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE;\n      var minPos = 0;\n      var maxPos = this.value.length;\n      var boundPos = Math.min(Math.max(cursorPos, minPos), maxPos);\n\n      switch (direction) {\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].LEFT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_LEFT:\n          return this.isComplete ? boundPos : minPos;\n\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].RIGHT:\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].FORCE_RIGHT:\n          return this.isComplete ? boundPos : maxPos;\n\n        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"DIRECTION\"].NONE:\n        default:\n          return boundPos;\n      }\n    }\n  }, {\n    key: \"doValidate\",\n    value: function doValidate() {\n      var _this$masked4, _this$parent;\n\n      return (_this$masked4 = this.masked).doValidate.apply(_this$masked4, arguments) && (!this.parent || (_this$parent = this.parent).doValidate.apply(_this$parent, arguments));\n    }\n  }, {\n    key: \"doCommit\",\n    value: function doCommit() {\n      this.masked.doCommit();\n    }\n  }, {\n    key: \"value\",\n    get: function get() {\n      return this.masked.value || (this._isFilled && !this.isOptional ? this.placeholderChar : '');\n    }\n  }, {\n    key: \"unmaskedValue\",\n    get: function get() {\n      return this.masked.unmaskedValue;\n    }\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return Boolean(this.masked.value) || this.isOptional;\n    }\n  }, {\n    key: \"state\",\n    get: function get() {\n      return {\n        masked: this.masked.state,\n        _isFilled: this._isFilled\n      };\n    },\n    set: function set(state) {\n      this.masked.state = state.masked;\n      this._isFilled = state._isFilled;\n    }\n  }]);\n\n  return PatternInputDefinition;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PatternInputDefinition);\n\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/pattern/input-definition.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_INPUT_DEFINITIONS", function() { return DEFAULT_INPUT_DEFINITIONS; });
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../factory.js */ "./node_modules/imask/esm/masked/factory.js");
+
+
+
+
+
+
+var DEFAULT_INPUT_DEFINITIONS = {
+  '0': /\d/,
+  'a': /[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC]/,
+  // http://stackoverflow.com/a/22075070
+  '*': /./
+};
+/** */
+
+var PatternInputDefinition =
+/*#__PURE__*/
+function () {
+  /** */
+
+  /** */
+
+  /** */
+
+  /** */
+
+  /** */
+
+  /** */
+  function PatternInputDefinition(opts) {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, PatternInputDefinition);
+
+    var mask = opts.mask,
+        blockOpts = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["c"])(opts, ["mask"]);
+
+    this.masked = Object(_factory_js__WEBPACK_IMPORTED_MODULE_4__["default"])({
+      mask: mask
+    });
+    Object.assign(this, blockOpts);
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(PatternInputDefinition, [{
+    key: "reset",
+    value: function reset() {
+      this._isFilled = false;
+      this.masked.reset();
+    }
+  }, {
+    key: "remove",
+    value: function remove() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+
+      if (fromPos === 0 && toPos >= 1) {
+        this._isFilled = false;
+        return this.masked.remove(fromPos, toPos);
+      }
+
+      return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    }
+  }, {
+    key: "_appendChar",
+    value: function _appendChar(str) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      if (this._isFilled) return new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      var state = this.masked.state; // simulate input
+
+      var details = this.masked._appendChar(str, flags);
+
+      if (details.inserted && this.doValidate(flags) === false) {
+        details.inserted = details.rawInserted = '';
+        this.masked.state = state;
+      }
+
+      if (!details.inserted && !this.isOptional && !this.lazy && !flags.input) {
+        details.inserted = this.placeholderChar;
+      }
+
+      details.skip = !details.inserted && !this.isOptional;
+      this._isFilled = Boolean(details.inserted);
+      return details;
+    }
+  }, {
+    key: "append",
+    value: function append() {
+      var _this$masked;
+
+      return (_this$masked = this.masked).append.apply(_this$masked, arguments);
+    }
+  }, {
+    key: "_appendPlaceholder",
+    value: function _appendPlaceholder() {
+      var details = new _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      if (this._isFilled || this.isOptional) return details;
+      this._isFilled = true;
+      details.inserted = this.placeholderChar;
+      return details;
+    }
+  }, {
+    key: "extractTail",
+    value: function extractTail() {
+      var _this$masked2;
+
+      return (_this$masked2 = this.masked).extractTail.apply(_this$masked2, arguments);
+    }
+  }, {
+    key: "appendTail",
+    value: function appendTail() {
+      var _this$masked3;
+
+      return (_this$masked3 = this.masked).appendTail.apply(_this$masked3, arguments);
+    }
+  }, {
+    key: "extractInput",
+    value: function extractInput() {
+      var fromPos = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
+      var flags = arguments.length > 2 ? arguments[2] : undefined;
+      return this.masked.extractInput(fromPos, toPos, flags);
+    }
+  }, {
+    key: "nearestInputPos",
+    value: function nearestInputPos(cursorPos) {
+      var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE;
+      var minPos = 0;
+      var maxPos = this.value.length;
+      var boundPos = Math.min(Math.max(cursorPos, minPos), maxPos);
+
+      switch (direction) {
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].LEFT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_LEFT:
+          return this.isComplete ? boundPos : minPos;
+
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].RIGHT:
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].FORCE_RIGHT:
+          return this.isComplete ? boundPos : maxPos;
+
+        case _core_utils_js__WEBPACK_IMPORTED_MODULE_1__["DIRECTION"].NONE:
+        default:
+          return boundPos;
+      }
+    }
+  }, {
+    key: "doValidate",
+    value: function doValidate() {
+      var _this$masked4, _this$parent;
+
+      return (_this$masked4 = this.masked).doValidate.apply(_this$masked4, arguments) && (!this.parent || (_this$parent = this.parent).doValidate.apply(_this$parent, arguments));
+    }
+  }, {
+    key: "doCommit",
+    value: function doCommit() {
+      this.masked.doCommit();
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this.masked.value || (this._isFilled && !this.isOptional ? this.placeholderChar : '');
+    }
+  }, {
+    key: "unmaskedValue",
+    get: function get() {
+      return this.masked.unmaskedValue;
+    }
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return Boolean(this.masked.value) || this.isOptional;
+    }
+  }, {
+    key: "state",
+    get: function get() {
+      return {
+        masked: this.masked.state,
+        _isFilled: this._isFilled
+      };
+    },
+    set: function set(state) {
+      this.masked.state = state.masked;
+      this._isFilled = state._isFilled;
+    }
+  }]);
+
+  return PatternInputDefinition;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (PatternInputDefinition);
+
+
 
 /***/ }),
 
@@ -370,7 +4672,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PIPE_TYPE\", function() { return PIPE_TYPE; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createPipe\", function() { return createPipe; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"pipe\", function() { return pipe; });\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n\n\n\n\n\n/** Mask pipe source and destination types */\n\nvar PIPE_TYPE = {\n  MASKED: 'value',\n  UNMASKED: 'unmaskedValue',\n  TYPED: 'typedValue'\n};\n/** Creates new pipe function depending on mask type, source and destination options */\n\nfunction createPipe(mask) {\n  var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : PIPE_TYPE.MASKED;\n  var to = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : PIPE_TYPE.MASKED;\n  var masked = Object(_factory_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(mask);\n  return function (value) {\n    return masked.runIsolated(function (m) {\n      m[from] = value;\n      return m[to];\n    });\n  };\n}\n/** Pipes value through mask depending on mask type, source and destination options */\n\nfunction pipe(value) {\n  for (var _len = arguments.length, pipeArgs = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    pipeArgs[_key - 1] = arguments[_key];\n  }\n\n  return createPipe.apply(void 0, pipeArgs)(value);\n}\n_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].PIPE_TYPE = PIPE_TYPE;\n_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].createPipe = createPipe;\n_core_holder_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].pipe = pipe;\n\n\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/pipe.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PIPE_TYPE", function() { return PIPE_TYPE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPipe", function() { return createPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pipe", function() { return pipe; });
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+
+
+
+
+
+/** Mask pipe source and destination types */
+
+var PIPE_TYPE = {
+  MASKED: 'value',
+  UNMASKED: 'unmaskedValue',
+  TYPED: 'typedValue'
+};
+/** Creates new pipe function depending on mask type, source and destination options */
+
+function createPipe(mask) {
+  var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : PIPE_TYPE.MASKED;
+  var to = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : PIPE_TYPE.MASKED;
+  var masked = Object(_factory_js__WEBPACK_IMPORTED_MODULE_3__["default"])(mask);
+  return function (value) {
+    return masked.runIsolated(function (m) {
+      m[from] = value;
+      return m[to];
+    });
+  };
+}
+/** Pipes value through mask depending on mask type, source and destination options */
+
+function pipe(value) {
+  for (var _len = arguments.length, pipeArgs = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    pipeArgs[_key - 1] = arguments[_key];
+  }
+
+  return createPipe.apply(void 0, pipeArgs)(value);
+}
+_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].PIPE_TYPE = PIPE_TYPE;
+_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].createPipe = createPipe;
+_core_holder_js__WEBPACK_IMPORTED_MODULE_2__["default"].pipe = pipe;
+
+
+
 
 /***/ }),
 
@@ -382,7 +4731,175 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ \"./node_modules/imask/esm/masked/factory.js\");\n/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ \"./node_modules/imask/esm/masked/pattern/input-definition.js\");\n/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ \"./node_modules/imask/esm/masked/pattern/fixed-definition.js\");\n/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ \"./node_modules/imask/esm/masked/pattern/chunk-tail-details.js\");\n/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ \"./node_modules/imask/esm/masked/pattern.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n/** Pattern which accepts ranges */\n\nvar MaskedRange =\n/*#__PURE__*/\nfunction (_MaskedPattern) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedRange, _MaskedPattern);\n\n  function MaskedRange() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedRange);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRange).apply(this, arguments));\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedRange, [{\n    key: \"_update\",\n\n    /**\r\n      @override\r\n    */\n    value: function _update(opts) {\n      // TODO type\n      opts = Object.assign({\n        to: this.to || 0,\n        from: this.from || 0\n      }, opts);\n      var maxLength = String(opts.to).length;\n      if (opts.maxLength != null) maxLength = Math.max(maxLength, opts.maxLength);\n      opts.maxLength = maxLength;\n      var fromStr = String(opts.from).padStart(maxLength, '0');\n      var toStr = String(opts.to).padStart(maxLength, '0');\n      var sameCharsCount = 0;\n\n      while (sameCharsCount < toStr.length && toStr[sameCharsCount] === fromStr[sameCharsCount]) {\n        ++sameCharsCount;\n      }\n\n      opts.mask = toStr.slice(0, sameCharsCount).replace(/0/g, '\\\\0') + '0'.repeat(maxLength - sameCharsCount);\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRange.prototype), \"_update\", this).call(this, opts);\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"boundaries\",\n    value: function boundaries(str) {\n      var minstr = '';\n      var maxstr = '';\n\n      var _ref = str.match(/^(\\D*)(\\d*)(\\D*)/) || [],\n          _ref2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_ref, 3),\n          placeholder = _ref2[1],\n          num = _ref2[2];\n\n      if (num) {\n        minstr = '0'.repeat(placeholder.length) + num;\n        maxstr = '9'.repeat(placeholder.length) + num;\n      }\n\n      minstr = minstr.padEnd(this.maxLength, '0');\n      maxstr = maxstr.padEnd(this.maxLength, '9');\n      return [minstr, maxstr];\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doPrepare\",\n    value: function doPrepare(str) {\n      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n      str = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRange.prototype), \"doPrepare\", this).call(this, str, flags).replace(/\\D/g, '');\n      if (!this.autofix) return str;\n      var fromStr = String(this.from).padStart(this.maxLength, '0');\n      var toStr = String(this.to).padStart(this.maxLength, '0');\n      var val = this.value;\n      var prepStr = '';\n\n      for (var ci = 0; ci < str.length; ++ci) {\n        var nextVal = val + prepStr + str[ci];\n\n        var _this$boundaries = this.boundaries(nextVal),\n            _this$boundaries2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_this$boundaries, 2),\n            minstr = _this$boundaries2[0],\n            maxstr = _this$boundaries2[1];\n\n        if (Number(maxstr) < this.from) prepStr += fromStr[nextVal.length - 1];else if (Number(minstr) > this.to) prepStr += toStr[nextVal.length - 1];else prepStr += str[ci];\n      }\n\n      return prepStr;\n    }\n    /**\r\n      @override\r\n    */\n\n  }, {\n    key: \"doValidate\",\n    value: function doValidate() {\n      var _get2;\n\n      var str = this.value;\n      var firstNonZero = str.search(/[^0]/);\n      if (firstNonZero === -1 && str.length <= this._matchFrom) return true;\n\n      var _this$boundaries3 = this.boundaries(str),\n          _this$boundaries4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"i\"])(_this$boundaries3, 2),\n          minstr = _this$boundaries4[0],\n          maxstr = _this$boundaries4[1];\n\n      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n        args[_key] = arguments[_key];\n      }\n\n      return this.from <= Number(maxstr) && Number(minstr) <= this.to && (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRange.prototype), \"doValidate\", this)).call.apply(_get2, [this].concat(args));\n    }\n  }, {\n    key: \"_matchFrom\",\n\n    /**\r\n      Optionally sets max length of pattern.\r\n      Used when pattern length is longer then `to` param length. Pads zeros at start in this case.\r\n    */\n\n    /** Min bound */\n\n    /** Max bound */\n\n    /** */\n    get: function get() {\n      return this.maxLength - String(this.from).length;\n    }\n  }, {\n    key: \"isComplete\",\n    get: function get() {\n      return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRange.prototype), \"isComplete\", this) && Boolean(this.value);\n    }\n  }]);\n\n  return MaskedRange;\n}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"]);\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedRange = MaskedRange;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedRange);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/range.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+/* harmony import */ var _factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./factory.js */ "./node_modules/imask/esm/masked/factory.js");
+/* harmony import */ var _pattern_input_definition_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pattern/input-definition.js */ "./node_modules/imask/esm/masked/pattern/input-definition.js");
+/* harmony import */ var _pattern_fixed_definition_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pattern/fixed-definition.js */ "./node_modules/imask/esm/masked/pattern/fixed-definition.js");
+/* harmony import */ var _pattern_chunk_tail_details_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pattern/chunk-tail-details.js */ "./node_modules/imask/esm/masked/pattern/chunk-tail-details.js");
+/* harmony import */ var _pattern_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pattern.js */ "./node_modules/imask/esm/masked/pattern.js");
+
+
+
+
+
+
+
+
+
+
+
+
+/** Pattern which accepts ranges */
+
+var MaskedRange =
+/*#__PURE__*/
+function (_MaskedPattern) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedRange, _MaskedPattern);
+
+  function MaskedRange() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedRange);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRange).apply(this, arguments));
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedRange, [{
+    key: "_update",
+
+    /**
+      @override
+    */
+    value: function _update(opts) {
+      // TODO type
+      opts = Object.assign({
+        to: this.to || 0,
+        from: this.from || 0
+      }, opts);
+      var maxLength = String(opts.to).length;
+      if (opts.maxLength != null) maxLength = Math.max(maxLength, opts.maxLength);
+      opts.maxLength = maxLength;
+      var fromStr = String(opts.from).padStart(maxLength, '0');
+      var toStr = String(opts.to).padStart(maxLength, '0');
+      var sameCharsCount = 0;
+
+      while (sameCharsCount < toStr.length && toStr[sameCharsCount] === fromStr[sameCharsCount]) {
+        ++sameCharsCount;
+      }
+
+      opts.mask = toStr.slice(0, sameCharsCount).replace(/0/g, '\\0') + '0'.repeat(maxLength - sameCharsCount);
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRange.prototype), "_update", this).call(this, opts);
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "boundaries",
+    value: function boundaries(str) {
+      var minstr = '';
+      var maxstr = '';
+
+      var _ref = str.match(/^(\D*)(\d*)(\D*)/) || [],
+          _ref2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_ref, 3),
+          placeholder = _ref2[1],
+          num = _ref2[2];
+
+      if (num) {
+        minstr = '0'.repeat(placeholder.length) + num;
+        maxstr = '9'.repeat(placeholder.length) + num;
+      }
+
+      minstr = minstr.padEnd(this.maxLength, '0');
+      maxstr = maxstr.padEnd(this.maxLength, '9');
+      return [minstr, maxstr];
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doPrepare",
+    value: function doPrepare(str) {
+      var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      str = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRange.prototype), "doPrepare", this).call(this, str, flags).replace(/\D/g, '');
+      if (!this.autofix) return str;
+      var fromStr = String(this.from).padStart(this.maxLength, '0');
+      var toStr = String(this.to).padStart(this.maxLength, '0');
+      var val = this.value;
+      var prepStr = '';
+
+      for (var ci = 0; ci < str.length; ++ci) {
+        var nextVal = val + prepStr + str[ci];
+
+        var _this$boundaries = this.boundaries(nextVal),
+            _this$boundaries2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_this$boundaries, 2),
+            minstr = _this$boundaries2[0],
+            maxstr = _this$boundaries2[1];
+
+        if (Number(maxstr) < this.from) prepStr += fromStr[nextVal.length - 1];else if (Number(minstr) > this.to) prepStr += toStr[nextVal.length - 1];else prepStr += str[ci];
+      }
+
+      return prepStr;
+    }
+    /**
+      @override
+    */
+
+  }, {
+    key: "doValidate",
+    value: function doValidate() {
+      var _get2;
+
+      var str = this.value;
+      var firstNonZero = str.search(/[^0]/);
+      if (firstNonZero === -1 && str.length <= this._matchFrom) return true;
+
+      var _this$boundaries3 = this.boundaries(str),
+          _this$boundaries4 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["i"])(_this$boundaries3, 2),
+          minstr = _this$boundaries4[0],
+          maxstr = _this$boundaries4[1];
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return this.from <= Number(maxstr) && Number(minstr) <= this.to && (_get2 = Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRange.prototype), "doValidate", this)).call.apply(_get2, [this].concat(args));
+    }
+  }, {
+    key: "_matchFrom",
+
+    /**
+      Optionally sets max length of pattern.
+      Used when pattern length is longer then `to` param length. Pads zeros at start in this case.
+    */
+
+    /** Min bound */
+
+    /** Max bound */
+
+    /** */
+    get: function get() {
+      return this.maxLength - String(this.from).length;
+    }
+  }, {
+    key: "isComplete",
+    get: function get() {
+      return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRange.prototype), "isComplete", this) && Boolean(this.value);
+    }
+  }]);
+
+  return MaskedRange;
+}(_pattern_js__WEBPACK_IMPORTED_MODULE_10__["default"]);
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedRange = MaskedRange;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedRange);
+
 
 /***/ }),
 
@@ -394,7 +4911,55 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ \"./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js\");\n/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ \"./node_modules/imask/esm/core/utils.js\");\n/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ \"./node_modules/imask/esm/core/change-details.js\");\n/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ \"./node_modules/imask/esm/core/continuous-tail-details.js\");\n/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ \"./node_modules/imask/esm/core/holder.js\");\n/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ \"./node_modules/imask/esm/masked/base.js\");\n\n\n\n\n\n\n\n/** Masking by RegExp */\n\nvar MaskedRegExp =\n/*#__PURE__*/\nfunction (_Masked) {\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"d\"])(MaskedRegExp, _Masked);\n\n  function MaskedRegExp() {\n    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"b\"])(this, MaskedRegExp);\n\n    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"e\"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRegExp).apply(this, arguments));\n  }\n\n  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"a\"])(MaskedRegExp, [{\n    key: \"_update\",\n\n    /**\r\n      @override\r\n      @param {Object} opts\r\n    */\n    value: function _update(opts) {\n      if (opts.mask) opts.validate = function (value) {\n        return value.search(opts.mask) >= 0;\n      };\n\n      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"g\"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__[\"f\"])(MaskedRegExp.prototype), \"_update\", this).call(this, opts);\n    }\n  }]);\n\n  return MaskedRegExp;\n}(_base_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n_core_holder_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"].MaskedRegExp = MaskedRegExp;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MaskedRegExp);\n\n\n//# sourceURL=webpack:///./node_modules/imask/esm/masked/regexp.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_rollupPluginBabelHelpers-3c58f0e3.js */ "./node_modules/imask/esm/_rollupPluginBabelHelpers-3c58f0e3.js");
+/* harmony import */ var _core_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/utils.js */ "./node_modules/imask/esm/core/utils.js");
+/* harmony import */ var _core_change_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/change-details.js */ "./node_modules/imask/esm/core/change-details.js");
+/* harmony import */ var _core_continuous_tail_details_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/continuous-tail-details.js */ "./node_modules/imask/esm/core/continuous-tail-details.js");
+/* harmony import */ var _core_holder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../core/holder.js */ "./node_modules/imask/esm/core/holder.js");
+/* harmony import */ var _base_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./base.js */ "./node_modules/imask/esm/masked/base.js");
+
+
+
+
+
+
+
+/** Masking by RegExp */
+
+var MaskedRegExp =
+/*#__PURE__*/
+function (_Masked) {
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["d"])(MaskedRegExp, _Masked);
+
+  function MaskedRegExp() {
+    Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["b"])(this, MaskedRegExp);
+
+    return Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRegExp).apply(this, arguments));
+  }
+
+  Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["a"])(MaskedRegExp, [{
+    key: "_update",
+
+    /**
+      @override
+      @param {Object} opts
+    */
+    value: function _update(opts) {
+      if (opts.mask) opts.validate = function (value) {
+        return value.search(opts.mask) >= 0;
+      };
+
+      Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["g"])(Object(_rollupPluginBabelHelpers_3c58f0e3_js__WEBPACK_IMPORTED_MODULE_0__["f"])(MaskedRegExp.prototype), "_update", this).call(this, opts);
+    }
+  }]);
+
+  return MaskedRegExp;
+}(_base_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+_core_holder_js__WEBPACK_IMPORTED_MODULE_4__["default"].MaskedRegExp = MaskedRegExp;
+
+/* harmony default export */ __webpack_exports__["default"] = (MaskedRegExp);
+
 
 /***/ }),
 
@@ -406,7 +4971,63 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! imask */ \"./node_modules/imask/esm/index.js\");\n/* harmony import */ var _module_overlay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/overlay */ \"./source/js/module/overlay.js\");\n/* harmony import */ var _module_feedback_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/feedback-form */ \"./source/js/module/feedback-form.js\");\n\n\n\nvar feedbackForm = document.querySelector(\".feedback-form\");\nvar feedbackLink = document.querySelector(\".page-header__feedback-link\");\nvar acceptedBlock = document.querySelector(\".accept\");\n\nif (feedbackLink) {\n  var feedbackLinkClickHandler = function feedbackLinkClickHandler() {\n    Object(_module_overlay__WEBPACK_IMPORTED_MODULE_1__[\"openOverlay\"])();\n  };\n\n  feedbackLink.addEventListener(\"click\", feedbackLinkClickHandler);\n}\n\nif (acceptedBlock) {\n  var acceptBtn = acceptedBlock.querySelector(\".accept__btn-accept\");\n\n  var acceptBtnClickHandler = function acceptBtnClickHandler() {\n    Object(_module_overlay__WEBPACK_IMPORTED_MODULE_1__[\"closeOverlay\"])();\n  };\n\n  acceptBtn.addEventListener(\"click\", acceptBtnClickHandler);\n}\n\nif (feedbackForm) {\n  var form = feedbackForm.querySelector(\"form\");\n  var phoneInput = feedbackForm.querySelector(\"input[type=\\\"tel\\\"]\");\n  Object(imask__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(phoneInput, {\n    mask: \"+{7}(000)000-00-00\"\n  });\n  phoneInput.addEventListener(\"input\", function () {\n    return Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_2__[\"phoneInputHandler\"])(phoneInput);\n  });\n  form.addEventListener(\"submit\", function (evt) {\n    evt.preventDefault();\n    Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_2__[\"submitHandler\"])(feedbackForm, acceptedBlock);\n  });\n}\n\n//# sourceURL=webpack:///./source/js/main.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! imask */ "./node_modules/imask/esm/index.js");
+/* harmony import */ var _module_overlay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/overlay */ "./source/js/module/overlay.js");
+/* harmony import */ var _module_feedback_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/feedback-form */ "./source/js/module/feedback-form.js");
+
+
+
+var feedbackForm = document.querySelector(".feedback-form");
+var feedbackLink = document.querySelector(".page-header__feedback-link");
+var acceptedBlock = document.querySelector(".accept");
+
+if (feedbackLink) {
+  var feedbackLinkClickHandler = function feedbackLinkClickHandler() {
+    Object(_module_overlay__WEBPACK_IMPORTED_MODULE_1__["openOverlay"])();
+  };
+
+  feedbackLink.addEventListener("click", feedbackLinkClickHandler);
+}
+
+if (acceptedBlock) {
+  var acceptBtn = acceptedBlock.querySelector(".accept__btn-accept");
+
+  var acceptBtnClickHandler = function acceptBtnClickHandler() {
+    Object(_module_overlay__WEBPACK_IMPORTED_MODULE_1__["closeOverlay"])();
+  };
+
+  acceptBtn.addEventListener("click", acceptBtnClickHandler);
+}
+
+if (feedbackForm) {
+  var form = feedbackForm.querySelector("form");
+  var phoneInput = feedbackForm.querySelector("input[type=\"tel\"]");
+  var nameInput = feedbackForm.querySelector("#feedback-form__user-name");
+
+  var checkInputs = function checkInputs() {
+    var validState = false;
+    var nameInputValid = Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_2__["checkNameInput"])(nameInput);
+    var phoneInputValid = Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_2__["checkPhoneInput"])(phoneInput);
+
+    if (nameInputValid && phoneInputValid) {
+      validState = true;
+    }
+
+    return validState;
+  };
+
+  Object(imask__WEBPACK_IMPORTED_MODULE_0__["default"])(phoneInput, {
+    mask: "+{7}(000)000-00-00"
+  });
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+
+    if (checkInputs()) {
+      Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_2__["submitHandler"])(feedbackForm, acceptedBlock);
+    }
+  });
+}
 
 /***/ }),
 
@@ -414,11 +5035,61 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var imas
 /*!*******************************************!*\
   !*** ./source/js/module/feedback-form.js ***!
   \*******************************************/
-/*! exports provided: phoneInputHandler, submitHandler */
+/*! exports provided: submitHandler, checkNameInput, checkPhoneInput */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"phoneInputHandler\", function() { return phoneInputHandler; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"submitHandler\", function() { return submitHandler; });\nfunction _createForOfIteratorHelper(o) { if (typeof Symbol === \"undefined\" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar phoneInputHandler = function phoneInputHandler(phoneInput) {\n  var phoneInputLength = phoneInput.value.length;\n  var minInputLength = 16;\n\n  if (phoneInputLength < minInputLength) {\n    phoneInput.setCustomValidity(\"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u043A\\u043E\\u0440\\u0440\\u0435\\u043A\\u0442\\u043D\\u044B\\u0439 \\u043D\\u043E\\u043C\\u0435\\u0440\");\n  } else {\n    phoneInput.setCustomValidity(\"\");\n  }\n};\n\nvar validateInputs = function validateInputs(inputs) {\n  var _iterator = _createForOfIteratorHelper(inputs),\n      _step;\n\n  try {\n    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n      var input = _step.value;\n\n      if (!input.checkValidity()) {\n        console.log(input);\n      }\n    }\n  } catch (err) {\n    _iterator.e(err);\n  } finally {\n    _iterator.f();\n  }\n};\n\nvar submitClickHandler = function submitClickHandler() {\n  validateInputs();\n};\n\nvar submitHandler = function submitHandler(form, accept) {\n  form.classList.add(\"visually-hidden\");\n  accept.classList.remove(\"visually-hidden\");\n};\n\n\n\n//# sourceURL=webpack:///./source/js/module/feedback-form.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "submitHandler", function() { return submitHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNameInput", function() { return checkNameInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkPhoneInput", function() { return checkPhoneInput; });
+var checkNameInput = function checkNameInput(input) {
+  if (input.value.length === 0) {
+    setErrorFor(input, "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044C\u0442\u0435\u0441\u044C");
+    return false;
+  } else if (input.value.length < 2) {
+    setErrorFor(input, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u0438\u043C\u044F");
+    return false;
+  } else {
+    setSuccesFor(input);
+    return true;
+  }
+};
+
+var checkPhoneInput = function checkPhoneInput(input) {
+  if (!input.checkValidity()) {
+    setErrorFor(input, "\u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0432\u0432\u0435\u0434\u0435\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440");
+    return false;
+  } else if (input.value.length === 0) {
+    setErrorFor(input, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0430\u0448 \u043D\u043E\u043C\u0435\u0440");
+    return false;
+  } else if (input.value.length < 16) {
+    setErrorFor(input, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u043E\u043B\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440");
+    return false;
+  } else {
+    setSuccesFor(input);
+    return true;
+  }
+};
+
+var submitHandler = function submitHandler(form, accept) {
+  form.classList.add("visually-hidden");
+  accept.classList.remove("visually-hidden");
+};
+
+var setSuccesFor = function setSuccesFor(input) {
+  var errorMessage = input.parentElement.querySelector("span");
+  input.className = "feedback-form__input--valid";
+  errorMessage.innerText = "";
+};
+
+var setErrorFor = function setErrorFor(input, message) {
+  var errorMessage = input.parentElement.querySelector("span");
+  input.className = "feedback-form__input--invalid";
+  errorMessage.innerText = message;
+};
+
+
 
 /***/ }),
 
@@ -430,8 +5101,55 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closeOverlay\", function() { return closeOverlay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"openOverlay\", function() { return openOverlay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closeBtns\", function() { return closeBtns; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closeBtnClickHandler\", function() { return closeBtnClickHandler; });\nvar ESC_KEYCODE = 27;\nvar overlay = document.querySelector(\".overlay\");\nvar body = document.querySelector(\"body\");\nvar closeBtns = overlay.querySelectorAll(\".btn--close\");\n\nvar closeOverlay = function closeOverlay() {\n  overlay.classList.add(\"visually-hidden\");\n  body.style.overflow = \"visible\";\n  document.removeEventListener(\"keydown\", escPressHandler);\n  overlay.removeEventListener(\"click\", overlayClickHandler);\n  closeBtns.forEach(function (btn) {\n    return btn.removeEventListener(\"click\", closeBtnClickHandler);\n  });\n};\n\nvar openOverlay = function openOverlay() {\n  body.style.overflow = \"hidden\";\n  document.addEventListener(\"keydown\", escPressHandler);\n  overlay.addEventListener(\"click\", overlayClickHandler);\n  overlay.classList.remove(\"visually-hidden\");\n  closeBtns.forEach(function (btn) {\n    return btn.addEventListener(\"click\", closeBtnClickHandler);\n  });\n};\n\nvar overlayClickHandler = function overlayClickHandler(evt) {\n  if (evt.target === overlay) {\n    closeOverlay();\n  }\n};\n\nvar escPressHandler = function escPressHandler(evt) {\n  if (evt.keyCode === ESC_KEYCODE) {\n    closeOverlay();\n  }\n};\n\nvar closeBtnClickHandler = function closeBtnClickHandler() {\n  closeOverlay();\n};\n\n\n\n//# sourceURL=webpack:///./source/js/module/overlay.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeOverlay", function() { return closeOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openOverlay", function() { return openOverlay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBtns", function() { return closeBtns; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBtnClickHandler", function() { return closeBtnClickHandler; });
+var ESC_KEYCODE = 27;
+var overlay = document.querySelector(".overlay");
+var body = document.querySelector("body");
+var closeBtns = overlay.querySelectorAll(".btn--close");
+
+var closeOverlay = function closeOverlay() {
+  overlay.classList.add("visually-hidden");
+  body.style.overflow = "visible";
+  document.removeEventListener("keydown", escPressHandler);
+  overlay.removeEventListener("click", overlayClickHandler);
+  closeBtns.forEach(function (btn) {
+    return btn.removeEventListener("click", closeBtnClickHandler);
+  });
+};
+
+var openOverlay = function openOverlay() {
+  body.style.overflow = "hidden";
+  document.addEventListener("keydown", escPressHandler);
+  overlay.addEventListener("click", overlayClickHandler);
+  overlay.classList.remove("visually-hidden");
+  closeBtns.forEach(function (btn) {
+    return btn.addEventListener("click", closeBtnClickHandler);
+  });
+};
+
+var overlayClickHandler = function overlayClickHandler(evt) {
+  if (evt.target === overlay) {
+    closeOverlay();
+  }
+};
+
+var escPressHandler = function escPressHandler(evt) {
+  if (evt.keyCode === ESC_KEYCODE) {
+    closeOverlay();
+  }
+};
+
+var closeBtnClickHandler = function closeBtnClickHandler() {
+  closeOverlay();
+};
+
+
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map

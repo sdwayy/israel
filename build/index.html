@@ -57,10 +57,12 @@
       <p>Оставьте ваши контактные данные, <br> мы свяжемся c вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form action="#" method="POST" autocomplete="off">
         <label aria-label="Введите ваше имя">
-          <input type="text" name="user-name" placeholder="Имя" required id="feedback-form__user-name" minlength="2" pattern="^[А-Яа-яЁё]+$">
+          <input class="feedback-form__input--default" type="text" name="user-name" placeholder="Имя" id="feedback-form__user-name">
+          <span class="feedback-form__error-message"></span>
         </label>
         <label aria-label="Введите ваш телефон">
-          <input type="tel" name="user-phone" placeholder="Телефон" required id="feedback-form__user-phone">
+          <input class="feedback-form__input--default" type="tel" name="user-phone" placeholder="Телефон" id="feedback-form__user-phone">
+          <span class="feedback-form__error-message""></span>
         </label>
         <label>
           <input class="visually-hidden" type="checkbox" name="pesronal-data-consent" tabindex="-1"  required>
