@@ -98,19 +98,16 @@
 
 @media (max-width: $tablet-width-max) {
   .page-header {
-    padding-top: 15px;
     background-size: 1366px 906px, calc(340px + 50%) 340px, 1366px 906px;
-  }
-
-  .page-header__contacts {
-    padding: 0 40px;
-  }
+  };
 }
 
 
 @media (max-width: $mobile-width-max) {
   .page-header {
-    background-position: center top 55px, center top 32%, center top -15px;
+    padding-top: 16px;
+    padding-bottom: 58px;
+    background-position: center top 55px, center top 35%, center top 20px;
     background-size: 850px 550px, 107% auto, 100% 616px;
 
     p {

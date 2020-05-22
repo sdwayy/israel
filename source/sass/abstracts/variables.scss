@@ -1,6 +1,7 @@
 $mobile-width-min: 320px;
 $tablet-width-min: 768px;
-$desktop-width-min: 1366px;
+$desktop-width-min: 1024px;
+$desktop-width-max: 1365px;
 
 $tablet-width-max: $desktop-width-min - 1px;
 $mobile-width-max: $tablet-width-min - 1px;

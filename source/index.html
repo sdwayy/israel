@@ -17,6 +17,10 @@
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="./build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="page-header__contacts wrapper">
       <a class="page-header__logo">
@@ -29,25 +33,60 @@
     <p>Учёба, путешествие и карьера <br> для еврейской молодёжи</p>
     <a href="#" class="page-header__scroll" aria-label="Узнать больше">
       <svg width="76" height="131" viewbox="0 0 76 131">
-        <use xlink:href="img/sprite_auto.svg#icon-scroll"></use>
+        <use xlink:href="img/sprite.svg#icon-scroll"></use>
       </svg>
     </a>
   </header>
   <main class="page-main">
     <section class="about-program">
       <h2>О программе</h2>
-      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. <span>Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</span></p>
       <div class="about-program__video">
         <picture>
+          <source media="(min-width: 320px) and (max-width:768px)" type="image/webp" srcset="img/about-photo-mobile.webp 1x">
+          <source media="(min-width: 320px) and (max-width:768px)" type="image/webp" srcset="img/about-photo-mobile.png 1x">
           <source type="image/webp" srcset="img/about-photo-desktop@1x.webp 1x, img/about-photo-desktop@2x.webp 2x">
           <img src="img/about-photo-desktop@1x.png" width="870" height="460" alt="Видео превью"
             srcset="img/about-photo-desktop@1x.png 1x, img/about-photo-desktop@2x.png 2x" loading="lazy">
         </picture>
-        <button type="button" aria-label="Запустить видео">
-          <svg width="96" height="96" viewbox="0 0 96 96">
-            <use xlink:href="img/sprite_auto.svg#icon-play-btn"></use>
-          </svg>
-        </button>
+        <button class="btn" type="button" aria-label="Запустить видео"></button>
+      </div>
+    </section>
+    <section class="programs">
+      <h2>Программы</h2>
+      <div class="programs__container wrapper">
+        <div class="programs__names-container">
+          <ul class="programs__names-list">
+            <li class="programs__name-item programs__name-item--common">Общие</li>
+            <li class="programs__name-item programs__name-item--academic programs__name-item--active btn">Академические</li>
+            <li class="programs__name-item programs__name-item--study btn">Стажировки</li>
+            <li class="programs__name-item programs__name-item--volunt btn">Волонтёрство</li>
+            <li class="programs__name-item programs__name-item--religion btn">Религиозные</li>
+          </ul>
+        </div>
+        <ul class="programs__descriptions">
+          <li class="programs__descriptions-item programs__descriptions-item--common">
+            <h3>Общие</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quam corrupti ullam amet iste, consectetur, laborum illo vero voluptate consequuntur ex, voluptatibus delectus iure veniam impedit. Eum nobis nisi tempora?</p>
+          </li>
+          <li class="programs__descriptions-item programs__descriptions-item--academic programs__descriptions-item--active">
+            <h3>Академические</h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами <br> и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы <br> в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь,  в Израиле, Вы сможете изучить все это <br> в удивительной университетской среде.</p>
+          </li>
+          <li class="programs__descriptions-item programs__descriptions-item--study">
+            <h3>Стажировки</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo, quam dolorum, labore odio aliquam enim, id maxime voluptatem pariatur sed iusto! Asperiores perferendis laudantium natus voluptates hic maiores repudiandae!</p>
+          </li>
+          <li class="programs__descriptions-item programs__descriptions-item--volunt">
+            <h3>Волонтёрство</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officia dolores hic repellendus error? Dignissimos, laudantium earum. Tempora, distinctio suscipit eos sed fugit repudiandae. Quis placeat excepturi reprehenderit quas quia.</p>
+          </li>
+          <li class="programs__descriptions-item programs__descriptions-item--religion">
+            <h3>Религиозные</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aliquid in adipisci soluta esse rerum eos, alias suscipit distinctio quidem vitae quo iure aperiam. Autem tenetur dolores dolore voluptatum perferendis.</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -62,23 +101,23 @@
         </label>
         <label aria-label="Введите ваш телефон">
           <input class="feedback-form__input--default" type="tel" name="user-phone" placeholder="Телефон" id="feedback-form__user-phone">
-          <span class="feedback-form__error-message""></span>
+          <span class="feedback-form__error-message"></span>
         </label>
         <label>
           <input class="visually-hidden" type="checkbox" name="pesronal-data-consent" tabindex="-1"  required>
-          <div class="feedback-form__checkbox checkbox" tabindex="0"></div>
+          <span class="feedback-form__checkbox checkbox" tabindex="0"></span>
           Нажимая на кнопку, вы даёте согласие на обработку персональных данных
         </label>
         <button type="submit" class="btn btn--gradient">перезвоните мне</button>
         <button type="reset" class="btn btn--close" aria-label="Закрыть окно"></button>
       </form>
     </section>
-    <section class="accept visually-hidden">
+    <div class="accept visually-hidden">
       <b>Заявка принята</b>
       <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
       <button type="button" class="accept__btn-accept btn btn--gradient">Понятно</button>
       <button type="button" class="btn btn--close" aria-label="Закрыть окно"></button>
-    </section>
+    </div>
   </div>
   <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>

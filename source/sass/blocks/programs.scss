@@ -1,0 +1,348 @@
+.programs {
+  padding-top: 50px;
+  background-size: 680px 426px;
+  background-repeat: no-repeat;
+  background-position:  right top;
+
+  h2 {
+    @include desktop-title;
+    max-width: $desktop-width-max + 1px;
+    width: 100%;
+    margin:  0 auto 65px auto;
+    padding:  0 210px;
+  }
+}
+
+.webp .programs {
+  background-image: url("../img/programs-background-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-background-desktop@2x.webp");
+  }
+}
+
+.no-webp .programs {
+  background-image: url("../img/programs-background-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-background-desktop@2x.jpg");
+  }
+}
+
+.programs__container {
+  display: flex;
+  padding-left: 210px;
+  padding-right: 210px;
+  padding-bottom: 300px;
+}
+
+.programs__names-list {
+  @include list;
+  width: 293px;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(72, 72, 72, 0.87);
+}
+
+.programs__name-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 228px;
+  min-height: 68px;
+  padding: 20px 30px 20px 72px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: $decor-color;
+  }
+
+  &--active {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #ffffff;
+    background-image: url("../img/rectangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.programs__name-item--common {
+      &::before {
+        background-image: url("../img/culture-icon-white.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/culture-icon-white.svg");
+        }
+      }
+    }
+
+    &.programs__name-item--academic {
+      &::before {
+        background-image: url("../img/learn-icon-white.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/learn-icon-white.svg");
+        }
+      }
+    }
+
+    &.programs__name-item--study {
+      &::before {
+        background-image: url("../img/bag-icon-white.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/bag-icon-white.svg");
+        }
+      }
+    }
+
+    &.programs__name-item--volunt {
+      &::before {
+        background-image: url("../img/charity-icon-white.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/charity-icon-white.svg");
+        }
+      }
+    }
+
+    &.programs__name-item--religion {
+      &::before {
+        background-image: url("../img/religion-icon-white.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/religion-icon-white.svg");
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    width: 36px;
+    height: 36px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--common {
+    &::before {
+      background-image: url("../img/culture-icon-black.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/culture-icon-yellow.svg");
+      }
+    }
+  }
+
+  &--academic {
+    &::before {
+      background-image: url("../img/learn-icon-black.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/learn-icon-yellow.svg");
+      }
+    }
+  }
+
+  &--study {
+    &::before {
+      background-image: url("../img/bag-icon-black.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/bag-icon-yellow.svg");
+      }
+    }
+  }
+
+  &--volunt {
+    &::before {
+      background-image: url("../img/charity-icon-black.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/charity-icon-yellow.svg");
+      }
+    }
+  }
+
+  &--religion {
+    &::before {
+      background-image: url("../img/religion-icon-black.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/religion-icon-yellow.svg");
+      }
+    }
+  }
+}
+
+.programs__descriptions {
+  @include list;
+  position: relative;
+  width: 550px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &:first-of-type + p {
+      width: 92%;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.programs__descriptions-item {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  visibility: hidden;
+
+  h3 {
+    @include desktop-subtitle;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  &--active {
+    position: static;
+    visibility: visible;
+  }
+}
+
+@media (max-width: $desktop-width-max) {
+  .programs {
+    h2 {
+      padding-left: 15.4%;
+      padding-right: 15.4%;
+    }
+  }
+
+  .programs__container {
+    padding-left: 15.4%;
+    padding-right: 15.4%;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .programs {
+    padding-top: 27px;
+
+    h2 {
+      @include mobile-title;
+      margin-bottom: 17px;
+      text-align: center;
+    }
+  }
+
+  .programs__container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .programs__names-container{
+    width: 100%;
+    margin-bottom: 27px;
+  }
+
+  .programs__names-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .programs__name-item {
+    width: auto;
+    min-height: 48px;
+    padding: 0;
+    padding: 0 15px 0 50px;
+    font-size: 15px;
+    line-height: 18px;
+
+    &--active {
+      background-image: $gradient;
+      border-radius: 60.6704px;
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: 0.9px;
+    }
+
+    &::before {
+      left: 12px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .programs__descriptions {
+    width: 100%;
+  }
+
+  .programs__descriptions-item  {
+    padding: 0 5%;
+    font-size: 14px;
+    line-height: 22px;
+
+    h3 {
+      @include  mobile-subtitle;
+      margin-bottom: 16px;
+    }
+
+    h3 + p {
+      margin-bottom: 15px;
+    }
+
+    p:first-of-type + p {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .programs__names-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
