@@ -14432,19 +14432,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // const MAX_TABLET_WIDTH = 1023;
 
-var MAX_TABLET_WIDTH = 1023;
 var MAX_MOBILE_WIDTH = 767;
 var feedbackForm = document.querySelector(".feedback-form");
 var feedbackLink = document.querySelector(".page-header__feedback-link");
 var acceptedBlock = document.querySelector(".accept");
-var programsBlock = document.querySelector(".programs");
-var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
+var programsBlock = document.querySelector(".programs"); // const tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
+
 var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 var feedbackSection = document.querySelector(".feedback");
+var headerAnchor = document.querySelector(".page-header__scroll");
 
 function getMaxMediaExpression(maxWidth) {
   return "(max-width: ".concat(maxWidth, "px)");
+}
+
+function scrollToAnchor(anchor) {
+  var anchorId = anchor.getAttribute("href").substr(1);
+  document.getElementById(anchorId).scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+
+if (headerAnchor) {
+  var headerAnchorClickHandler = function headerAnchorClickHandler(evt) {
+    evt.preventDefault();
+    scrollToAnchor(headerAnchor);
+  };
+
+  headerAnchor.addEventListener("click", headerAnchorClickHandler);
 }
 
 if (feedbackLink) {
@@ -14489,7 +14507,7 @@ if (feedbackForm) {
     evt.preventDefault();
 
     if (checkInputs()) {
-      Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_3__["submitHandler"])(feedbackForm, acceptedBlock);
+      Object(_module_overlay__WEBPACK_IMPORTED_MODULE_2__["showAcceptBlock"])();
     }
   });
 }
@@ -14530,10 +14548,14 @@ if (feedbackSection) {
   var phoneForm = feedbackSection.querySelector("form");
 
   var sumbitBtnClickHandler = function sumbitBtnClickHandler(evt) {
+    evt.preventDefault();
+
     if (Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_3__["checkPhoneInput"])(_phoneInput)) {
+      Object(_module_overlay__WEBPACK_IMPORTED_MODULE_2__["showAcceptBlock"])();
+      Object(_module_overlay__WEBPACK_IMPORTED_MODULE_2__["openOverlay"])();
       return true;
     } else {
-      return evt.preventDefault();
+      return false;
     }
   };
 
@@ -14549,12 +14571,11 @@ if (feedbackSection) {
 /*!*******************************************!*\
   !*** ./source/js/module/feedback-form.js ***!
   \*******************************************/
-/*! exports provided: submitHandler, checkNameInput, checkPhoneInput */
+/*! exports provided: checkNameInput, checkPhoneInput */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "submitHandler", function() { return submitHandler; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNameInput", function() { return checkNameInput; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkPhoneInput", function() { return checkPhoneInput; });
 var checkNameInput = function checkNameInput(input) {
@@ -14586,11 +14607,6 @@ var checkPhoneInput = function checkPhoneInput(input) {
   }
 };
 
-var submitHandler = function submitHandler(form, accept) {
-  form.classList.add("visually-hidden");
-  accept.classList.remove("visually-hidden");
-};
-
 var setSuccesFor = function setSuccesFor(input) {
   var errorMessage = input.parentElement.querySelector(".error");
   input.className = "input--valid";
@@ -14611,7 +14627,7 @@ var setErrorFor = function setErrorFor(input, message) {
 /*!*************************************!*\
   !*** ./source/js/module/overlay.js ***!
   \*************************************/
-/*! exports provided: closeOverlay, openOverlay, closeBtns, closeBtnClickHandler */
+/*! exports provided: closeOverlay, openOverlay, closeBtns, closeBtnClickHandler, showAcceptBlock */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14620,6 +14636,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openOverlay", function() { return openOverlay; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBtns", function() { return closeBtns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBtnClickHandler", function() { return closeBtnClickHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showAcceptBlock", function() { return showAcceptBlock; });
 var ESC_KEYCODE = 27;
 var overlay = document.querySelector(".overlay");
 var body = document.querySelector("body");
@@ -14659,6 +14676,13 @@ var escPressHandler = function escPressHandler(evt) {
 
 var closeBtnClickHandler = function closeBtnClickHandler() {
   closeOverlay();
+};
+
+var showAcceptBlock = function showAcceptBlock() {
+  var form = overlay.querySelector("form");
+  var accept = overlay.querySelector(".accept");
+  form.classList.add("visually-hidden");
+  accept.classList.remove("visually-hidden");
 };
 
 

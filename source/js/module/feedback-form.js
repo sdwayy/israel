@@ -27,12 +27,6 @@ const checkPhoneInput = (input) => {
   }
 };
 
-
-const submitHandler = (form, accept) => {
-  form.classList.add(`visually-hidden`);
-  accept.classList.remove(`visually-hidden`);
-};
-
 const setSuccesFor = (input) => {
   const errorMessage = input.parentElement.querySelector(`.error`);
 
@@ -48,7 +42,6 @@ const setErrorFor = (input, message) => {
 };
 
 export {
-  submitHandler,
   checkNameInput,
   checkPhoneInput
 };

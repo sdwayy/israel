@@ -36,10 +36,18 @@ const closeBtnClickHandler = () => {
   closeOverlay();
 };
 
+const showAcceptBlock = () => {
+  const form = overlay.querySelector(`form`);
+  const accept = overlay.querySelector(`.accept`);
+
+  form.classList.add(`visually-hidden`);
+  accept.classList.remove(`visually-hidden`);
+};
 
 export {
   closeOverlay,
   openOverlay,
   closeBtns,
-  closeBtnClickHandler
+  closeBtnClickHandler,
+  showAcceptBlock
 };

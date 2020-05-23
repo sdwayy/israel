@@ -118,7 +118,8 @@
 @media (max-width: $mobile-width-max) {
   .about-program {
     padding-bottom: 50px;
-    background-position-y: 230px;
+    background-position-y: calc(50% + 22px);
+    background-size: contain;
 
     h2 {
       margin-bottom: 22px;

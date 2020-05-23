@@ -1329,7 +1329,8 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
   .about-program {
     padding-bottom: 50px;
-    background-position-y: 230px; }
+    background-position-y: calc(50% + 22px);
+    background-size: contain; }
     .about-program h2 {
       margin-bottom: 22px; }
     .about-program h2 + p {
@@ -1753,3 +1754,226 @@ button.swiper-pagination-bullet {
     padding-top: 80px;
     padding-bottom: 310px;
     background-size: 424px auto; } }
+
+.how-to-go {
+  position: relative;
+  background-size: 286px 598px;
+  background-repeat: no-repeat;
+  background-position: right top 90%; }
+  .how-to-go h2 {
+    margin: 0;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc;
+    width: 528px;
+    margin-bottom: 25px; }
+  .how-to-go h2 + p {
+    margin-bottom: 30px;
+    padding-right: 40px; }
+  .how-to-go b {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 528px;
+    margin-bottom: 25px;
+    padding-right: 80px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 29px; }
+  .how-to-go p {
+    width: 528px;
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 26px; }
+  .how-to-go ol {
+    width: 528px;
+    margin-bottom: 43px;
+    padding-right: 75px; }
+  .how-to-go ol + p {
+    width: 528px;
+    padding-left: 15px;
+    border-left: 4px solid #ffc341;
+    font-size: 15px;
+    line-height: 21px;
+    color: rgba(72, 72, 72, 0.5); }
+
+.how-to-go__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 111px 120px 150px 130px;
+  background-size: 586px 855px;
+  background-position: left top 15px;
+  background-repeat: no-repeat; }
+
+.how-to-go__requirements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 460px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: li;
+  background-image: url("../img/punct.svg");
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: left top;
+  z-index: 0; }
+  .how-to-go__requirements li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    padding-left: 43px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 21px;
+    z-index: 1; }
+    .how-to-go__requirements li::before {
+      counter-increment: li;
+      content: counter(li);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      left: -17px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: #ffc341;
+      text-align: center;
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      transform: translateY(-50%); }
+    .how-to-go__requirements li:last-of-type {
+      margin-bottom: 0; }
+
+.webp .how-to-go {
+  background-image: url("../img/how-to-go-background-desktop@1x.webp"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .how-to-go {
+      background-image: url("../img/how-to-go-background-desktop@2x.webp"); } }
+
+.no-webp .how-to-go {
+  background-image: url("../img/how-to-go-background-desktop@1x.jpg"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .how-to-go {
+      background-image: url("../img/how-to-go-background-desktop@2x.jpg"); } }
+
+.webp .how-to-go__container {
+  background-image: url("../img/how-to-go-photo-desktop@1x.webp"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .how-to-go__container {
+      background-image: url("../img/how-to-go-photo-desktop@2x.webp"); } }
+
+.no-webp .how-to-go__container {
+  background-image: url("../img/how-to-go-photo-desktop@1x.jpg"); }
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .how-to-go__container {
+      background-image: url("../img/how-to-go-photo-desktop@2x.jpg"); } }
+
+@media (max-width: 1365px) {
+  .how-to-go__container {
+    padding-top: 8.1%;
+    padding-left: 9.5%;
+    padding-right: 8.8%;
+    background-size: calc(58% - 200px);
+    background-position: left center; } }
+
+@media (max-width: 1024px) {
+  .how-to-go {
+    font-size: 14px;
+    line-height: 22px; }
+    .how-to-go h2 {
+      font-size: 32px;
+      line-height: 39px;
+      width: unset;
+      align-self: center; }
+    .how-to-go h2 + p {
+      width: 450px;
+      padding-right: 0;
+      font-size: inherit;
+      line-height: inherit; }
+    .how-to-go p {
+      width: unset; }
+    .how-to-go b {
+      width: 430px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 26px; }
+    .how-to-go ol {
+      width: 430px;
+      padding-right: 0; }
+    .how-to-go ol + p {
+      width: 430px;
+      font-size: inherit;
+      line-height: inherit; }
+  .how-to-go__requirements li {
+    font-size: inherit;
+    line-height: inherit; }
+  .how-to-go__container {
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%; }
+  .webp .how-to-go__container {
+    background-image: none; }
+  .no-webp .how-to-go__container {
+    background-image: none; } }
+
+@media (max-width: 768px) {
+  .how-to-go {
+    background-position-y: 43%;
+    background-size: 216px 199px;
+    font-size: 14px;
+    line-height: 22px; }
+    .how-to-go h2 {
+      font-size: 32px;
+      line-height: 39px;
+      width: unset;
+      align-self: center; }
+    .how-to-go h2 + p {
+      width: auto;
+      max-width: 450px;
+      padding-right: 0;
+      margin-bottom: 20px;
+      font-size: inherit;
+      line-height: inherit; }
+    .how-to-go b {
+      width: auto;
+      max-width: 430px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 26px; }
+    .how-to-go ol {
+      width: auto;
+      max-width: 430px;
+      margin-bottom: 15px;
+      padding-right: 0; }
+    .how-to-go ol + p {
+      width: auto;
+      min-width: 300px;
+      max-width: 430px;
+      padding-left: 10px;
+      font-size: inherit;
+      line-height: inherit; }
+  .how-to-go__container {
+    padding-top: 75px; }
+  .how-to-go__requirements {
+    background-position: left 7px top; }
+    .how-to-go__requirements li {
+      margin-bottom: 35px;
+      padding-right: 2px;
+      font-size: inherit;
+      line-height: inherit; }
+      .how-to-go__requirements li::before {
+        left: -10px; }
+      .how-to-go__requirements li:first-of-type {
+        margin-bottom: 55px; }
+  .webp .how-to-go {
+    background-image: url("../img/how-to-go-background-mobile.webp"); }
+  .no-webp .how-to-go {
+    background-image: url("../img/how-to-go-background-mobile.jpg"); } }

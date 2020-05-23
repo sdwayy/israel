@@ -3,11 +3,11 @@ import Swiper from 'swiper';
 
 import {
   openOverlay,
-  closeOverlay
+  closeOverlay,
+  showAcceptBlock
 } from './module/overlay';
 
 import {
-  submitHandler,
   checkNameInput,
   checkPhoneInput
 } from './module/feedback-form';
@@ -16,19 +16,38 @@ import {
   programsItemClickHandler
 } from './module/programs';
 
-const MAX_TABLET_WIDTH = 1023;
+// const MAX_TABLET_WIDTH = 1023;
 const MAX_MOBILE_WIDTH = 767;
 
 const feedbackForm = document.querySelector(`.feedback-form`);
 const feedbackLink = document.querySelector(`.page-header__feedback-link`);
 const acceptedBlock = document.querySelector(`.accept`);
 const programsBlock = document.querySelector(`.programs`);
-const tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
+// const tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
 const mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 const feedbackSection = document.querySelector(`.feedback`);
+const headerAnchor = document.querySelector(`.page-header__scroll`);
 
 function getMaxMediaExpression(maxWidth) {
   return `(max-width: ${maxWidth}px)`;
+}
+
+function scrollToAnchor(anchor) {
+  const anchorId = anchor.getAttribute(`href`).substr(1);
+
+  document.getElementById(anchorId).scrollIntoView({
+    behavior: `smooth`,
+    block: `start`
+  });
+}
+
+if (headerAnchor) {
+  const headerAnchorClickHandler = (evt) => {
+    evt.preventDefault();
+    scrollToAnchor(headerAnchor);
+  };
+
+  headerAnchor.addEventListener(`click`, headerAnchorClickHandler);
 }
 
 if (feedbackLink) {
@@ -69,8 +88,9 @@ if (feedbackForm) {
   imask(phoneInput, {mask: `+{7}(000)000-00-00`});
   form.addEventListener(`submit`, (evt) => {
     evt.preventDefault();
+
     if (checkInputs()) {
-      submitHandler(feedbackForm, acceptedBlock);
+      showAcceptBlock();
     }
   });
 }
@@ -107,10 +127,14 @@ if (feedbackSection) {
   const phoneForm = feedbackSection.querySelector(`form`);
 
   const sumbitBtnClickHandler = (evt) => {
+    evt.preventDefault();
+
     if (checkPhoneInput(phoneInput)) {
+      showAcceptBlock();
+      openOverlay();
       return true;
     } else {
-      return evt.preventDefault();
+      return false;
     }
   };
 
