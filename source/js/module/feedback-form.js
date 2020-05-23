@@ -34,16 +34,16 @@ const submitHandler = (form, accept) => {
 };
 
 const setSuccesFor = (input) => {
-  const errorMessage = input.parentElement.querySelector(`span`);
+  const errorMessage = input.parentElement.querySelector(`.error`);
 
-  input.className = `feedback-form__input--valid`;
+  input.className = `input--valid`;
   errorMessage.innerText = ``;
 };
 
 const setErrorFor = (input, message) => {
-  const errorMessage = input.parentElement.querySelector(`span`);
+  const errorMessage = input.parentElement.querySelector(`.error`);
 
-  input.className = `feedback-form__input--invalid`;
+  input.className = `input--invalid`;
   errorMessage.innerText = message;
 };
 

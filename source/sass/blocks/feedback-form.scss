@@ -36,12 +36,6 @@
     font-variant: small-caps;
     color: #999999;
     opacity: 0.87;
-
-    &:focus {
-      border: 2px solid $decor-color;
-      color: $description-color;
-      transition: $transition;
-    }
   }
 
   label {
@@ -83,28 +77,6 @@
 .feedback-form__checkbox {
   flex-shrink: 0;
   margin-right: 10px;
-}
-
-.feedback-form__input {
-  &--default {
-    border: 2px solid #e3e3e3;
-  }
-
-  &--valid {
-    border: 2px solid #999999;
-  }
-
-  &--invalid {
-    border: 2px solid #FF0000;
-  }
-}
-
-.feedback-form__error-message {
-  margin-left: 30px;
-  font-size: 13px;
-  line-height: 150%;
-  color: #FF0000;
-  opacity: 0.75;
 }
 
 @media (max-width: $mobile-width-max) {

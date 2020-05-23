@@ -14441,6 +14441,7 @@ var acceptedBlock = document.querySelector(".accept");
 var programsBlock = document.querySelector(".programs");
 var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
 var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
+var feedbackSection = document.querySelector(".feedback");
 
 function getMaxMediaExpression(maxWidth) {
   return "(max-width: ".concat(maxWidth, "px)");
@@ -14498,10 +14499,6 @@ if (programsBlock) {
     return programsBlock.querySelectorAll(".programs__name-item");
   };
 
-  if (window.matchMedia(tabletMaxMediaExpression).matches) {
-    var swiper = {};
-  }
-
   if (window.matchMedia(mobileMaxMediaExpression).matches) {
     var programsContainer = programsBlock.querySelector(".programs__container");
     var programsNamesContainer = programsBlock.querySelector(".programs__names-container");
@@ -14512,12 +14509,12 @@ if (programsBlock) {
     getProgramsNameItems().forEach(function (btn) {
       return btn.classList.add("swiper-slide");
     });
-
-    var _swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper-container", {
+    var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper-container", {
       slidesPerView: "auto",
       freeMode: true,
       loop: true
     });
+    swiper.init();
   }
 
   getProgramsNameItems().forEach(function (btn) {
@@ -14525,6 +14522,25 @@ if (programsBlock) {
       return Object(_module_programs__WEBPACK_IMPORTED_MODULE_4__["programsItemClickHandler"])(evt, programsBlock);
     });
   });
+}
+
+if (feedbackSection) {
+  var _phoneInput = feedbackSection.querySelector("input[type=\"tel\"]");
+
+  var phoneForm = feedbackSection.querySelector("form");
+
+  var sumbitBtnClickHandler = function sumbitBtnClickHandler(evt) {
+    if (Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_3__["checkPhoneInput"])(_phoneInput)) {
+      return true;
+    } else {
+      return evt.preventDefault();
+    }
+  };
+
+  Object(imask__WEBPACK_IMPORTED_MODULE_0__["default"])(_phoneInput, {
+    mask: "+{7}(000)000-00-00"
+  });
+  phoneForm.addEventListener("submit", sumbitBtnClickHandler);
 }
 
 /***/ }),
@@ -14576,14 +14592,14 @@ var submitHandler = function submitHandler(form, accept) {
 };
 
 var setSuccesFor = function setSuccesFor(input) {
-  var errorMessage = input.parentElement.querySelector("span");
-  input.className = "feedback-form__input--valid";
+  var errorMessage = input.parentElement.querySelector(".error");
+  input.className = "input--valid";
   errorMessage.innerText = "";
 };
 
 var setErrorFor = function setErrorFor(input, message) {
-  var errorMessage = input.parentElement.querySelector("span");
-  input.className = "feedback-form__input--invalid";
+  var errorMessage = input.parentElement.querySelector(".error");
+  input.className = "input--invalid";
   errorMessage.innerText = message;
 };
 

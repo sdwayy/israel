@@ -1,0 +1,32 @@
+.input {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+
+  &--default {
+    border: 2px solid #e3e3e3;
+  }
+
+  &--valid {
+    border: 2px solid #999999;
+  }
+
+  &--invalid {
+    border: 2px solid #FF0000;
+  }
+
+  &:focus {
+    border: 2px solid $decor-color;
+    color: $description-color;
+    transition: $transition;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    color: rgba(72, 72, 72, 0.5);
+  }
+}

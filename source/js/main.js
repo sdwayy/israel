@@ -25,6 +25,7 @@ const acceptedBlock = document.querySelector(`.accept`);
 const programsBlock = document.querySelector(`.programs`);
 const tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
 const mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
+const feedbackSection = document.querySelector(`.feedback`);
 
 function getMaxMediaExpression(maxWidth) {
   return `(max-width: ${maxWidth}px)`;
@@ -77,10 +78,6 @@ if (feedbackForm) {
 if (programsBlock) {
   const getProgramsNameItems = () => programsBlock.querySelectorAll(`.programs__name-item`);
 
-  if (window.matchMedia(tabletMaxMediaExpression).matches) {
-    const swiper = {};
-  }
-
   if (window.matchMedia(mobileMaxMediaExpression).matches) {
     const programsContainer = programsBlock.querySelector(`.programs__container`);
     const programsNamesContainer = programsBlock.querySelector(`.programs__names-container`);
@@ -96,9 +93,27 @@ if (programsBlock) {
       freeMode: true,
       loop: true,
     });
+
+    swiper.init();
   }
 
   getProgramsNameItems().forEach(
       (btn) => btn.addEventListener(`click`, (evt) => programsItemClickHandler(evt, programsBlock))
   );
+}
+
+if (feedbackSection) {
+  const phoneInput = feedbackSection.querySelector(`input[type="tel"]`);
+  const phoneForm = feedbackSection.querySelector(`form`);
+
+  const sumbitBtnClickHandler = (evt) => {
+    if (checkPhoneInput(phoneInput)) {
+      return true;
+    } else {
+      return evt.preventDefault();
+    }
+  };
+
+  imask(phoneInput, {mask: `+{7}(000)000-00-00`});
+  phoneForm.addEventListener(`submit`, sumbitBtnClickHandler);
 }

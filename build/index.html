@@ -108,6 +108,17 @@
         </ul>
       </div>
     </section>
+    <section class="feedback">
+      <div class="feedback__container wrapper">
+        <h2>Хочу поехать!</h2>
+        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+        <form action="#" method="POST">
+          <input type="tel" class="input input--default" name="phone" placeholder="Телефон">
+          <button type="submit" class="btn btn--gradient">Перезвоните мне</button>
+          <div class="feedback__error error"></div>
+        </form>
+      </div>
+    </section>
   </main>
   <div class="overlay visually-hidden">
     <section class="feedback-form">
@@ -115,12 +126,12 @@
       <p>Оставьте ваши контактные данные, <br> мы свяжемся c вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form action="#" method="POST" autocomplete="off">
         <label aria-label="Введите ваше имя">
-          <input class="feedback-form__input--default" type="text" name="user-name" placeholder="Имя" id="feedback-form__user-name">
-          <span class="feedback-form__error-message"></span>
+          <input class="input--default" type="text" name="user-name" placeholder="Имя" id="feedback-form__user-name">
+          <span class="error"></span>
         </label>
         <label aria-label="Введите ваш телефон">
-          <input class="feedback-form__input--default" type="tel" name="user-phone" placeholder="Телефон" id="feedback-form__user-phone">
-          <span class="feedback-form__error-message"></span>
+          <input class="input--default" type="tel" name="user-phone" placeholder="Телефон" id="feedback-form__user-phone">
+          <span class="error"></span>
         </label>
         <label>
           <input class="visually-hidden" type="checkbox" name="pesronal-data-consent" tabindex="-1" required="">

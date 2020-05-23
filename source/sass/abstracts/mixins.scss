@@ -23,6 +23,7 @@
 }
 
 @mixin desktop-title {
+  margin: 0;
   font-family: $second-font;
   font-size: 40px;
   line-height: 49px;
@@ -32,6 +33,7 @@
 }
 
 @mixin desktop-subtitle {
+  margin: 0;
   font-family: $second-font;
   font-size: 28px;
   line-height: 34px;
