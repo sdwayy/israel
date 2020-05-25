@@ -1,8 +1,8 @@
 .how-to-go {
   position: relative;
-  background-size: 286px 598px;
+  background-size: 274px 290px;
   background-repeat: no-repeat;
-  background-position: right top 90%;
+  background-position: right top 43%;
 
   h2 {
     @include desktop-title;
@@ -11,7 +11,7 @@
   }
 
   h2 + p {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     padding-right: 40px;
   }
 
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 111px 120px 150px 130px;
+  padding: 111px 140px 130px 130px;
   background-size: 586px 855px;
   background-position: left top 15px;
   background-repeat: no-repeat;
@@ -69,9 +69,9 @@
   list-style: none;
   counter-reset: li;
   background-image: url("../img/punct.svg");
-  background-size: contain;
+  background-size: 3px;
   background-repeat: repeat-y;
-  background-position: left top;
+  background-position: left bottom 10px;
   z-index: 0;
 
   li {
@@ -111,18 +111,18 @@
 }
 
 .webp .how-to-go {
-  background-image: url("../img/how-to-go-background-desktop@1x.webp");
+  background-image: url("../img/ticket@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/how-to-go-background-desktop@2x.webp");
+    background-image: url("../img/ticket@2x.webp");
   }
 }
 
 .no-webp .how-to-go {
-  background-image: url("../img/how-to-go-background-desktop@1x.jpg");
+  background-image: url("../img/ticket@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/how-to-go-background-desktop@2x.jpg");
+    background-image: url("../img/ticket@2x.jpg");
   }
 }
 
@@ -250,7 +250,7 @@
     ol {
       width: auto;
       max-width: 430px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       padding-right: 0;
     }
 
@@ -266,10 +266,11 @@
 
   .how-to-go__container {
     padding-top: 75px;
+    padding-bottom: 35px;
   }
 
   .how-to-go__requirements {
-    background-position: left 7px top;
+    background-position: left 7px bottom;
 
     li {
       margin-bottom: 35px;
@@ -283,6 +284,10 @@
 
       &:first-of-type {
         margin-bottom: 55px;
+      }
+
+      &:last-of-type {
+        margin-top: -10px;
       }
     }
   }

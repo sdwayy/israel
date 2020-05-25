@@ -14428,21 +14428,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_overlay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/overlay */ "./source/js/module/overlay.js");
 /* harmony import */ var _module_feedback_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module/feedback-form */ "./source/js/module/feedback-form.js");
 /* harmony import */ var _module_programs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./module/programs */ "./source/js/module/programs.js");
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
 
- // const MAX_TABLET_WIDTH = 1023;
 
+
+var MAX_TABLET_WIDTH = 1023;
 var MAX_MOBILE_WIDTH = 767;
+var MIN_MOBILE_WIDTH = 320;
 var feedbackForm = document.querySelector(".feedback-form");
 var feedbackLink = document.querySelector(".page-header__feedback-link");
 var acceptedBlock = document.querySelector(".accept");
-var programsBlock = document.querySelector(".programs"); // const tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
-
+var programsBlock = document.querySelector(".programs");
+var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
+var tabletMinMedaExpression = getMinMediaExpression(MAX_MOBILE_WIDTH + 1);
 var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
+var mobileMinMediaExpression = getMinMediaExpression(MIN_MOBILE_WIDTH);
 var feedbackSection = document.querySelector(".feedback");
 var headerAnchor = document.querySelector(".page-header__scroll");
+var liveIn = document.querySelector(".live-in");
+var imagesSources = document.querySelectorAll("source");
+
+function getMinMediaExpression(minWidth) {
+  return "(min-width: ".concat(minWidth, "px)");
+}
 
 function getMaxMediaExpression(maxWidth) {
   return "(max-width: ".concat(maxWidth, "px)");
@@ -14454,6 +14469,28 @@ function scrollToAnchor(anchor) {
     behavior: "smooth",
     block: "start"
   });
+}
+
+function checkUserAgent() {
+  var ua = navigator.userAgent;
+
+  if (ua.search(/MSIE/) > 0) {
+    return "Internet Explorer";
+  }
+
+  if (ua.search(/Firefox/) > 0) {
+    return "Firefox";
+  }
+
+  if (ua.search(/Chrome/) > 0) {
+    return "Google Chrome";
+  }
+
+  if (ua.search(/Safari/) > 0) {
+    return "Safari";
+  }
+
+  return "other";
 }
 
 if (headerAnchor) {
@@ -14527,12 +14564,12 @@ if (programsBlock) {
     getProgramsNameItems().forEach(function (btn) {
       return btn.classList.add("swiper-slide");
     });
-    var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper-container", {
+    var programsBlockSwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".programs__names-container", {
       slidesPerView: "auto",
       freeMode: true,
       loop: true
     });
-    swiper.init();
+    programsBlockSwiper.init();
   }
 
   getProgramsNameItems().forEach(function (btn) {
@@ -14563,6 +14600,86 @@ if (feedbackSection) {
     mask: "+{7}(000)000-00-00"
   });
   phoneForm.addEventListener("submit", sumbitBtnClickHandler);
+}
+
+if (liveIn) {
+  var liveInGallery = liveIn.querySelector(".live-in__gallery");
+  var mainGalleryItem = liveInGallery.querySelector(".live-in__gallery-item--main");
+  var mainGalleryItemCopy = mainGalleryItem.cloneNode(true);
+  var galleryContainer = liveInGallery.querySelector(".live-in__gallery-container");
+
+  var getGalleryItems = function getGalleryItems() {
+    return galleryContainer.querySelectorAll(".live-in__gallery-item");
+  };
+
+  var addMobileClasses = function addMobileClasses() {
+    mainGalleryItem.remove();
+    mainGalleryItemCopy.classList.remove("live-in__gallery-item--main");
+    galleryContainer.insertBefore(mainGalleryItemCopy, getGalleryItems()[0]);
+    liveInGallery.classList.add("swiper-container");
+    galleryContainer.classList.add("swiper-wrapper");
+
+    var _iterator = _createForOfIteratorHelper(getGalleryItems()),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var galleryItem = _step.value;
+        galleryItem.classList.add("swiper-slide");
+        galleryItem.classList.remove("live-in__gallery-item--short");
+        galleryItem.classList.remove("live-in__gallery-item--long");
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  };
+
+  if (window.matchMedia(tabletMaxMediaExpression).matches) {
+    addMobileClasses();
+  }
+
+  if (window.matchMedia(tabletMinMedaExpression).matches && window.matchMedia(tabletMaxMediaExpression).matches) {
+    var gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".live-in__gallery", {
+      slidesPerView: 2,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+    gallerySwiper.init();
+  }
+
+  if (window.matchMedia(mobileMinMediaExpression).matches && window.matchMedia(mobileMaxMediaExpression).matches) {
+    addMobileClasses();
+
+    var _gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".live-in__gallery", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+
+    _gallerySwiper.init();
+  }
+
+  if (checkUserAgent() === "Safari" || checkUserAgent() === "Internet Explorer") {
+    var _iterator2 = _createForOfIteratorHelper(imagesSources),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var src = _step2.value;
+        var imageSrc = src.srcset;
+        src.srcset = imageSrc.replace(/.webp/gi, ".png");
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  }
 }
 
 /***/ }),

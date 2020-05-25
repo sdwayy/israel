@@ -30,6 +30,14 @@
   src: url("./../fonts/Montserrat-Bold.woff2") format("woff2"), url("./../fonts/Montserrat-Bold.woff") format("woff");
 }
 
+@font-face {
+  font-weight: bold;
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/Raleway-ExtraBold.woff2") format("woff2"), url("./../fonts/Raleway-ExtraBold.woff") format("woff");
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
