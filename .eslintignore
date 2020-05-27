@@ -1,2 +1,3 @@
-./source/vendor/**
-./build/**
+source/sass/vendor/
+build/**
+source/js/vendor/**

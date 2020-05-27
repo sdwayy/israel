@@ -2,6 +2,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  text-align: center;
   cursor: pointer;
 
   &--gradient {
@@ -11,7 +12,7 @@
     line-height: 20px;
     font-variant: small-caps;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     background-color: $decor-color;
     background-image: $gradient;
     border-radius: 80px;

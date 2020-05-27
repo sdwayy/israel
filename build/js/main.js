@@ -14454,6 +14454,9 @@ var feedbackSection = document.querySelector(".feedback");
 var headerAnchor = document.querySelector(".page-header__scroll");
 var liveIn = document.querySelector(".live-in");
 var imagesSources = document.querySelectorAll("source");
+var questions = document.querySelector(".questions");
+var reviews = document.querySelector(".reviews");
+var moreInfo = document.querySelector(".more-info");
 
 function getMinMediaExpression(minWidth) {
   return "(min-width: ".concat(minWidth, "px)");
@@ -14663,23 +14666,113 @@ if (liveIn) {
 
     _gallerySwiper.init();
   }
+}
 
-  if (checkUserAgent() === "Safari" || checkUserAgent() === "Internet Explorer") {
-    var _iterator2 = _createForOfIteratorHelper(imagesSources),
-        _step2;
+if (questions) {
+  var questionsList = questions.querySelector(".questions__list");
+  var questionDescription = questions.querySelectorAll("p");
+  var descriptionBtns = questions.querySelectorAll(".questions__open-description-btn");
+  var questionsElements = questionsList.querySelectorAll("li");
 
-    try {
-      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var src = _step2.value;
-        var imageSrc = src.srcset;
-        src.srcset = imageSrc.replace(/.webp/gi, ".png");
-      }
-    } catch (err) {
-      _iterator2.e(err);
-    } finally {
-      _iterator2.f();
+  var questionClickHandler = function questionClickHandler(question) {
+    var description = question.querySelector("p");
+    var descriptionBtn = question.querySelector(".questions__open-description-btn");
+    descriptionBtn.classList.toggle("questions__open-description-btn--not-active");
+    descriptionBtn.classList.toggle("questions__open-description-btn--active");
+    description.classList.toggle("visually-hidden");
+  };
+
+  questionDescription.forEach(function (description) {
+    return description.classList.add("visually-hidden");
+  });
+  descriptionBtns.forEach(function (btn) {
+    return btn.classList.remove("questions__open-description-btn--disabled");
+  });
+  descriptionBtns.forEach(function (btn) {
+    return btn.classList.add("questions__open-description-btn--not-active");
+  });
+  questionsElements.forEach(function (question) {
+    return question.addEventListener("click", function () {
+      return questionClickHandler(question);
+    });
+  });
+}
+
+if (reviews) {
+  var reviewsList = reviews.querySelector(".reviews__list");
+  var slides = reviewsList.querySelectorAll("li");
+  var container = reviews.querySelector(".reviews__container");
+  container.classList.add("swiper-container");
+  reviewsList.classList.add("swiper-wrapper");
+  slides.forEach(function (slide) {
+    return slide.classList.add("swiper-slide");
+  });
+  var reviewsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".reviews__container", {
+    pagination: {
+      el: ".reviews__pagination",
+      type: "fraction"
+    },
+    navigation: {
+      nextEl: ".reviews__btn-next",
+      prevEl: ".reviews__btn-prev "
     }
+  });
+  reviewsSwiper.init();
+}
+
+if (checkUserAgent() === "Safari" || checkUserAgent() === "Internet Explorer") {
+  var _iterator2 = _createForOfIteratorHelper(imagesSources),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var src = _step2.value;
+      var imageSrc = src.srcset;
+      src.srcset = imageSrc.replace(/.webp/gi, ".png");
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
   }
+}
+
+if (moreInfo) {
+  var _phoneInput2 = moreInfo.querySelector("input[type=\"tel\"]");
+
+  var _form = moreInfo.querySelector("form");
+
+  var _nameInput = moreInfo.querySelector("input[name=\"user-name\"]");
+
+  var _checkInputs = function _checkInputs() {
+    var validState = false;
+    var nameInputValid = Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_3__["checkNameInput"])(_nameInput);
+    var phoneInputValid = Object(_module_feedback_form__WEBPACK_IMPORTED_MODULE_3__["checkPhoneInput"])(_phoneInput2);
+
+    if (nameInputValid && phoneInputValid) {
+      validState = true;
+    }
+
+    return validState;
+  };
+
+  var _sumbitBtnClickHandler = function _sumbitBtnClickHandler(evt) {
+    evt.preventDefault();
+
+    if (_checkInputs()) {
+      Object(_module_overlay__WEBPACK_IMPORTED_MODULE_2__["showAcceptBlock"])();
+      Object(_module_overlay__WEBPACK_IMPORTED_MODULE_2__["openOverlay"])();
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  Object(imask__WEBPACK_IMPORTED_MODULE_0__["default"])(_phoneInput2, {
+    mask: "+{7}(000)000-00-00"
+  });
+
+  _form.addEventListener("submit", _sumbitBtnClickHandler);
 }
 
 /***/ }),

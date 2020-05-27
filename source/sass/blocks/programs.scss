@@ -2,14 +2,14 @@
   padding-top: 50px;
   background-size: 680px 426px;
   background-repeat: no-repeat;
-  background-position:  right top;
+  background-position: right top;
 
   h2 {
     @include desktop-title;
     max-width: $desktop-width-max + 1px;
     width: 100%;
-    margin:  0 auto 65px auto;
-    padding:  0 210px;
+    margin: 0 auto 65px auto;
+    padding: 0 210px;
   }
 }
 
@@ -66,7 +66,7 @@
     background-image: url("../img/rectangle.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
     text-transform: uppercase;
     font-variant: small-caps;
     letter-spacing: 1px;
@@ -141,7 +141,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 19px;
@@ -220,6 +220,7 @@
   @include list;
   position: relative;
   width: 550px;
+  padding-top: 15px;
 
   p {
     margin-top: 0;
@@ -233,10 +234,6 @@
       margin-bottom: 0;
     }
   }
-}
-
-.programs__descriptions {
-  padding-top: 15px;
 }
 
 .programs__descriptions-item {
@@ -291,7 +288,7 @@
     padding: 0;
   }
 
-  .programs__names-container{
+  .programs__names-container {
     width: 100%;
     margin-bottom: 27px;
   }
@@ -306,7 +303,6 @@
   .programs__name-item {
     width: auto;
     min-height: 48px;
-    padding: 0;
     padding: 0 15px 0 50px;
     font-size: 15px;
     line-height: 18px;
@@ -331,13 +327,13 @@
     padding-top: 0;
   }
 
-  .programs__descriptions-item  {
+  .programs__descriptions-item {
     padding: 0 5%;
     font-size: 14px;
     line-height: 22px;
 
     h3 {
-      @include  mobile-subtitle;
+      @include mobile-subtitle;
       margin-bottom: 16px;
     }
 

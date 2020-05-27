@@ -46,7 +46,7 @@
   background-repeat: no-repeat;
 }
 
-.webp .feedback  {
+.webp .feedback {
   background-image: url("../img/backpack@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -54,7 +54,7 @@
   }
 }
 
-.no-webp .feedback  {
+.no-webp .feedback {
   background-image: url("../img/backpack@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -62,7 +62,7 @@
   }
 }
 
-.webp .feedback__container  {
+.webp .feedback__container {
   background-image: url("../img/want-to-go-background-desktop@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -70,7 +70,7 @@
   }
 }
 
-.no-webp .feedback__container  {
+.no-webp .feedback__container {
   background-image: url("../img/want-to-go-background-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -81,7 +81,7 @@
 @media (max-width: $desktop-width-max) {
   .feedback__container {
     padding: 12.1% 15.3% 15.3%;
-    background-position: right top calc(-45px + 65%);
+    background-position: right top calc(50% - 64px);
     background-size: 60%;
   }
 }

@@ -5,14 +5,17 @@
 
   &--default {
     border: 2px solid #e3e3e3;
+    border-radius: 80px;
   }
 
   &--valid {
     border: 2px solid #999999;
+    border-radius: 80px;
   }
 
   &--invalid {
-    border: 2px solid #FF0000;
+    border: 2px solid #ff0000;
+    border-radius: 80px;
   }
 
   &:focus {

@@ -32,7 +32,9 @@ const feedbackSection = document.querySelector(`.feedback`);
 const headerAnchor = document.querySelector(`.page-header__scroll`);
 const liveIn = document.querySelector(`.live-in`);
 const imagesSources = document.querySelectorAll(`source`);
-
+const questions = document.querySelector(`.questions`);
+const reviews = document.querySelector(`.reviews`);
+const moreInfo = document.querySelector(`.more-info`);
 
 function getMinMediaExpression(minWidth) {
   return `(min-width: ${minWidth}px)`;
@@ -231,11 +233,88 @@ if (liveIn) {
 
     gallerySwiper.init();
   }
+}
 
-  if (checkUserAgent() === `Safari` || checkUserAgent() === `Internet Explorer`) {
-    for (const src of imagesSources) {
-      const imageSrc = src.srcset;
-      src.srcset = imageSrc.replace(/.webp/gi, `.png`);
-    }
+if (questions) {
+  const questionsList = questions.querySelector(`.questions__list`);
+  const questionDescription = questions.querySelectorAll(`p`);
+  const descriptionBtns = questions.querySelectorAll(`.questions__open-description-btn`);
+  const questionsElements = questionsList.querySelectorAll(`li`);
+
+  const questionClickHandler = (question) => {
+    const description = question.querySelector(`p`);
+    const descriptionBtn = question.querySelector(`.questions__open-description-btn`);
+
+    descriptionBtn.classList.toggle(`questions__open-description-btn--not-active`);
+    descriptionBtn.classList.toggle(`questions__open-description-btn--active`);
+    description.classList.toggle(`visually-hidden`);
+  };
+
+  questionDescription.forEach((description) => description.classList.add(`visually-hidden`));
+  descriptionBtns.forEach((btn) => btn.classList.remove(`questions__open-description-btn--disabled`));
+  descriptionBtns.forEach((btn) => btn.classList.add(`questions__open-description-btn--not-active`));
+  questionsElements.forEach((question) => question.addEventListener(`click`, () => questionClickHandler(question)));
+}
+
+if (reviews) {
+  const reviewsList = reviews.querySelector(`.reviews__list`);
+  const slides = reviewsList.querySelectorAll(`li`);
+  const container = reviews.querySelector(`.reviews__container`);
+
+  container.classList.add(`swiper-container`);
+  reviewsList.classList.add(`swiper-wrapper`);
+  slides.forEach((slide) => slide.classList.add(`swiper-slide`));
+
+  const reviewsSwiper = new Swiper(`.reviews__container`, {
+    pagination: {
+      el: `.reviews__pagination`,
+      type: `fraction`,
+    },
+    navigation: {
+      nextEl: `.reviews__btn-next`,
+      prevEl: `.reviews__btn-prev `,
+    },
+  });
+
+  reviewsSwiper.init();
+}
+
+if (checkUserAgent() === `Safari` || checkUserAgent() === `Internet Explorer`) {
+  for (const src of imagesSources) {
+    const imageSrc = src.srcset;
+    src.srcset = imageSrc.replace(/.webp/gi, `.png`);
   }
+}
+
+if (moreInfo) {
+  const phoneInput = moreInfo.querySelector(`input[type="tel"]`);
+  const form = moreInfo.querySelector(`form`);
+  const nameInput = moreInfo.querySelector(`input[name="user-name"]`);
+
+  const checkInputs = () => {
+    let validState = false;
+    const nameInputValid = checkNameInput(nameInput);
+    const phoneInputValid = checkPhoneInput(phoneInput);
+
+    if (nameInputValid && phoneInputValid) {
+      validState = true;
+    }
+
+    return validState;
+  };
+
+  const sumbitBtnClickHandler = (evt) => {
+    evt.preventDefault();
+
+    if (checkInputs()) {
+      showAcceptBlock();
+      openOverlay();
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  imask(phoneInput, {mask: `+{7}(000)000-00-00`});
+  form.addEventListener(`submit`, sumbitBtnClickHandler);
 }

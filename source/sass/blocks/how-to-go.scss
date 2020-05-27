@@ -99,7 +99,7 @@
       border-radius: 50%;
       color: $decor-color;
       text-align: center;
-      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       background-color: #ffffff;
       transform: translateY(-50%);
     }
@@ -288,6 +288,12 @@
 
       &:last-of-type {
         margin-top: -10px;
+
+        &::before {
+          box-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.1),
+            0 20px 0 0 #ffffff;
+        }
       }
     }
   }
