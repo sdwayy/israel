@@ -14679,6 +14679,13 @@ if (questions) {
       return questionClickHandler(question);
     });
   });
+
+  for (var i = 0; i < questionsElements.length; i++) {
+    var currentIndex = i;
+    var currentElement = questionsElements[i];
+    currentElement.dataset.number = currentIndex + 1;
+  }
+
   activeElementBtn.classList.remove("questions__open-description-btn--not-active");
   activeElementBtn.classList.add("questions__open-description-btn--active");
   activeElement.classList.remove("visually-hidden");

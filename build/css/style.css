@@ -2374,8 +2374,7 @@ button.swiper-pagination-bullet {
     border-bottom: 1px solid rgba(72, 72, 72, 0.2);
     cursor: pointer; }
     .questions li::before {
-      counter-increment: li;
-      content: counter(li);
+      content: attr(data-number);
       position: absolute;
       display: flex;
       align-items: center;
@@ -2390,8 +2389,7 @@ button.swiper-pagination-bullet {
       font-weight: bold;
       text-align: center;
       background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
-      background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      background-clip: text; }
   .questions h3 {
     position: relative;
     max-width: 400px;

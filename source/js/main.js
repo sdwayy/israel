@@ -241,6 +241,12 @@ if (questions) {
   descriptionBtns.forEach((btn) => btn.classList.add(`questions__open-description-btn--not-active`));
   questionsElements.forEach((question) => question.addEventListener(`click`, () => questionClickHandler(question)));
 
+  for (let i = 0; i < questionsElements.length; i++) {
+    const currentIndex = i;
+    const currentElement = questionsElements[i];
+    currentElement.dataset.number = currentIndex + 1;
+  }
+
   activeElementBtn.classList.remove(`questions__open-description-btn--not-active`);
   activeElementBtn.classList.add(`questions__open-description-btn--active`);
   activeElement.classList.remove(`visually-hidden`);
