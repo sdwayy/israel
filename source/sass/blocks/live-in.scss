@@ -34,10 +34,10 @@
 }
 
 .no-webp .live-in {
-  background-image: url("../img/watch@1x.jpg");
+  background-image: url("../img/watch@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/watch@2x.jpg");
+    background-image: url("../img/watch@2x.png");
   }
 }
 

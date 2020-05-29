@@ -14428,11 +14428,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_overlay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/overlay */ "./source/js/module/overlay.js");
 /* harmony import */ var _module_feedback_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module/feedback-form */ "./source/js/module/feedback-form.js");
 /* harmony import */ var _module_programs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./module/programs */ "./source/js/module/programs.js");
+/* harmony import */ var _module_browser_checker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./module/browser-checker */ "./source/js/module/browser-checker.js");
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 
 
@@ -14548,6 +14550,7 @@ if (programsBlock) {
     });
     var programsBlockSwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".programs__names-container", {
       slidesPerView: "auto",
+      slidesOffsetBefore: -42,
       freeMode: true,
       loop: true
     });
@@ -14652,6 +14655,8 @@ if (questions) {
   var questionDescription = questions.querySelectorAll("p");
   var descriptionBtns = questions.querySelectorAll(".questions__open-description-btn");
   var questionsElements = questionsList.querySelectorAll("li");
+  var activeElement = questionsList.querySelector(".questions__list__active-item");
+  var activeElementBtn = activeElement.parentElement.querySelector(".questions__open-description-btn");
 
   var questionClickHandler = function questionClickHandler(question) {
     var description = question.querySelector("p");
@@ -14675,6 +14680,9 @@ if (questions) {
       return questionClickHandler(question);
     });
   });
+  activeElementBtn.classList.remove("questions__open-description-btn--not-active");
+  activeElementBtn.classList.add("questions__open-description-btn--active");
+  activeElement.classList.remove("visually-hidden");
 }
 
 if (reviews) {
@@ -14737,7 +14745,7 @@ if (moreInfo) {
   _form.addEventListener("submit", _sumbitBtnClickHandler);
 }
 
-if (html.classList.contains("no-webp")) {
+if (Object(_module_browser_checker__WEBPACK_IMPORTED_MODULE_5__["isIe"])() || Object(_module_browser_checker__WEBPACK_IMPORTED_MODULE_5__["isSafari"])()) {
   var _iterator2 = _createForOfIteratorHelper(imagesSources),
       _step2;
 
@@ -14745,7 +14753,10 @@ if (html.classList.contains("no-webp")) {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
       var src = _step2.value;
       var imageSrc = src.srcset;
+      console.log("old", src);
       src.srcset = imageSrc.replace(/.webp/gi, ".png");
+      src.type = "image/png";
+      console.log("new", src);
     }
   } catch (err) {
     _iterator2.e(err);
@@ -14753,6 +14764,55 @@ if (html.classList.contains("no-webp")) {
     _iterator2.f();
   }
 }
+
+/***/ }),
+
+/***/ "./source/js/module/browser-checker.js":
+/*!*********************************************!*\
+  !*** ./source/js/module/browser-checker.js ***!
+  \*********************************************/
+/*! exports provided: isIe, isSafari */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIe", function() { return isIe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSafari", function() { return isSafari; });
+var userAgent = (navigator && navigator.userAgent || "").toLowerCase();
+
+function compareVersion(version, range) {
+  var string = range + "";
+  var n = +(string.match(/\d+/) || NaN);
+  var op = string.match(/^[<>]=?|/)[0];
+  return comparator[op] ? comparator[op](version, n) : version == n || n !== n;
+}
+
+var comparator = {
+  '<': function _(a, b) {
+    return a < b;
+  },
+  '<=': function _(a, b) {
+    return a <= b;
+  },
+  '>': function _(a, b) {
+    return a > b;
+  },
+  '>=': function _(a, b) {
+    return a >= b;
+  }
+};
+
+var isIe = function isIe(range) {
+  var match = userAgent.match(/(?:msie |trident.+?; rv:)(\d+)/);
+  return match !== null && compareVersion(match[1], range);
+};
+
+var isSafari = function isSafari(range) {
+  var match = userAgent.match(/version\/(\d+).+?safari/);
+  return match !== null && compareVersion(match[1], range);
+};
+
+
 
 /***/ }),
 

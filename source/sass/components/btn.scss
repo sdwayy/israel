@@ -26,6 +26,10 @@
       background-image: $gradient-active;
       transition: $transition;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &--close {
@@ -46,6 +50,10 @@
 
     &:active {
       opacity: $active-state-opacity;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }

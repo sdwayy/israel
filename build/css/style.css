@@ -407,6 +407,8 @@ template {
     .btn--gradient:active {
       background-image: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
       transition: 0.3s; }
+    .btn--gradient:focus {
+      outline: none; }
   .btn--close {
     position: absolute;
     top: 25px;
@@ -422,6 +424,8 @@ template {
       opacity: 0.7; }
     .btn--close:active {
       opacity: 0.4; }
+    .btn--close:focus {
+      outline: none; }
 
 @media (max-width: 767px) {
   .btn--close {
@@ -434,6 +438,8 @@ template {
   height: 16px;
   border: 2px solid #ffc341;
   border-radius: 2px; }
+  .checkbox:focus {
+    outline: none; }
 
 input[type="checkbox"]:checked + .checkbox {
   background-image: url("../img/check-icon.svg");
@@ -448,16 +454,23 @@ input[type="checkbox"]:checked + .checkbox {
   .input--default {
     border: 2px solid #e3e3e3;
     border-radius: 80px; }
+    .input--default:focus {
+      outline: none; }
   .input--valid {
     border: 2px solid #999999;
     border-radius: 80px; }
+    .input--valid:focus {
+      outline: none; }
   .input--invalid {
     border: 2px solid #ff0000;
     border-radius: 80px; }
+    .input--invalid:focus {
+      outline: none; }
   .input:focus {
     border: 2px solid #ffc341;
     color: rgba(72, 72, 72, 0.87);
-    transition: 0.3s; }
+    transition: 0.3s;
+    outline: none; }
   .input::placeholder {
     font-weight: 500;
     font-size: 15px;
@@ -1044,7 +1057,7 @@ button.swiper-pagination-bullet {
   background-image: url("../img/header-girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-background-desktop@1x.jpg"); }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .no-webp .page-header {
-      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.png"), url("../img/header-background-desktop@2x.jpg"); } }
+      background-image: url("../img/header-girl-desktop@2x.png"), url("../img/israel-desktop@2x.png"), url("../img/header-background-desktop@2x.jpg"); } }
 
 .page-header__contacts {
   display: flex;
@@ -1123,17 +1136,9 @@ button.swiper-pagination-bullet {
       width: 120px;
       height: 42px; }
   .webp .page-header {
-    background-image: url("../img/header-girl-desktop@1x.webp"), url("../img/israel-desktop@1x.webp"), url("../img/header-background-mobile.webp"); } }
-  @media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .webp .page-header {
-      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.webp"), url("../img/header-background-mobile.webp"); } }
-
-@media (max-width: 767px) {
+    background-image: url("../img/header-girl-desktop@1x.webp"), url("../img/israel-desktop@1x.webp"), url("../img/header-background-mobile.webp"); }
   .no-webp .page-header {
     background-image: url("../img/header-girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-background-mobile.jpg"); } }
-  @media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .no-webp .page-header {
-      background-image: url("../img/header-girl-desktop@2x.webp"), url("../img/israel-desktop@2x.png"), url("../img/header-background-mobile.jpg"); } }
 
 .overlay {
   position: fixed;
@@ -1298,7 +1303,7 @@ button.swiper-pagination-bullet {
   background-image: url("../img/about-background-desktop@1x.jpg"); }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .no-webp .about-program {
-      background-image: url("../img/about-backrgound-desktop@2x.jpg"); } }
+      background-image: url("../img/about-background-desktop@2x.jpg"); } }
 
 .about-program__video {
   position: relative;
@@ -1324,6 +1329,8 @@ button.swiper-pagination-bullet {
     .about-program__video button:active {
       background-image: url("../img/play-btn-icon-active.svg");
       transition: 0.3s; }
+    .about-program__video button:focus {
+      outline: none; }
 
 @media (max-width: 1023px) {
   .about-program h2 {
@@ -1591,6 +1598,8 @@ button.swiper-pagination-bullet {
       line-height: 39px;
       margin-bottom: 17px;
       text-align: center; }
+    .programs br {
+      display: none; }
   .programs__container {
     flex-direction: column;
     padding: 0; }
@@ -1636,9 +1645,19 @@ button.swiper-pagination-bullet {
       width: auto; } }
 
 @media (max-width: 767px) {
+  .programs h2 {
+    padding: 0; }
+  .programs br {
+    display: inline; }
   .programs__names-list {
     flex-wrap: nowrap;
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+  .programs__descriptions-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .programs__descriptions-item h3 {
+      margin-left: -84px; } }
 
 .feedback {
   background-repeat: no-repeat;
@@ -2030,10 +2049,10 @@ button.swiper-pagination-bullet {
       background-image: url("../img/watch@2x.webp"); } }
 
 .no-webp .live-in {
-  background-image: url("../img/watch@1x.jpg"); }
+  background-image: url("../img/watch@1x.png"); }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .no-webp .live-in {
-      background-image: url("../img/watch@2x.jpg"); } }
+      background-image: url("../img/watch@2x.png"); } }
 
 .live-in__container {
   position: relative;
@@ -2484,6 +2503,8 @@ button.swiper-pagination-bullet {
     .questions li:last-of-type {
       margin-bottom: 0;
       padding-top: 2px; }
+      .questions li:last-of-type h3 {
+        padding-right: 60px; }
   .questions__container {
     padding-top: 31px;
     padding-left: 5%;
@@ -2909,7 +2930,7 @@ button.swiper-pagination-bullet {
     padding-top: 12px;
     padding-bottom: 62px; }
     .more-info__container h2 {
-      margin-left: 5%;
+      width: 100%;
       margin-bottom: 26px;
       text-align: center; }
     .more-info__container address {

@@ -16,6 +16,11 @@ import {
   programsItemClickHandler
 } from './module/programs';
 
+import {
+  isIe,
+  isSafari
+} from './module/browser-checker';
+
 const MAX_TABLET_WIDTH = 1023;
 const MAX_MOBILE_WIDTH = 767;
 const MIN_MOBILE_WIDTH = 320;
@@ -123,6 +128,7 @@ if (programsBlock) {
 
     const programsBlockSwiper = new Swiper(`.programs__names-container`, {
       slidesPerView: `auto`,
+      slidesOffsetBefore: -42,
       freeMode: true,
       loop: true,
     });
@@ -219,6 +225,8 @@ if (questions) {
   const questionDescription = questions.querySelectorAll(`p`);
   const descriptionBtns = questions.querySelectorAll(`.questions__open-description-btn`);
   const questionsElements = questionsList.querySelectorAll(`li`);
+  const activeElement = questionsList.querySelector(`.questions__list__active-item`);
+  const activeElementBtn = activeElement.parentElement.querySelector(`.questions__open-description-btn`);
 
   const questionClickHandler = (question) => {
     const description = question.querySelector(`p`);
@@ -233,6 +241,10 @@ if (questions) {
   descriptionBtns.forEach((btn) => btn.classList.remove(`questions__open-description-btn--disabled`));
   descriptionBtns.forEach((btn) => btn.classList.add(`questions__open-description-btn--not-active`));
   questionsElements.forEach((question) => question.addEventListener(`click`, () => questionClickHandler(question)));
+
+  activeElementBtn.classList.remove(`questions__open-description-btn--not-active`);
+  activeElementBtn.classList.add(`questions__open-description-btn--active`);
+  activeElement.classList.remove(`visually-hidden`);
 }
 
 if (reviews) {
@@ -291,9 +303,12 @@ if (moreInfo) {
   form.addEventListener(`submit`, sumbitBtnClickHandler);
 }
 
-if (html.classList.contains(`no-webp`)) {
+if (isIe() || isSafari()) {
   for (const src of imagesSources) {
     const imageSrc = src.srcset;
+    console.log(`old`, src)
     src.srcset = imageSrc.replace(/.webp/gi, `.png`);
+    src.type = `image/png`;
+    console.log(`new`, src)
   }
 }

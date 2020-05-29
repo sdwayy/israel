@@ -281,6 +281,10 @@
       margin-bottom: 17px;
       text-align: center;
     }
+
+    br {
+      display: none;
+    }
   }
 
   .programs__container {
@@ -348,8 +352,28 @@
 }
 
 @media (max-width: $mobile-width-max) {
+  .programs {
+    h2 {
+      padding: 0;
+    }
+
+    br {
+      display: inline;
+    }
+  }
+
   .programs__names-list {
     flex-wrap: nowrap;
     justify-content: flex-start;
+  }
+
+  .programs__descriptions-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      margin-left: -84px;
+    }
   }
 }
