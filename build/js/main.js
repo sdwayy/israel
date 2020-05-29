@@ -14444,7 +14444,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var MAX_TABLET_WIDTH = 1023;
 var MAX_MOBILE_WIDTH = 767;
 var MIN_MOBILE_WIDTH = 320;
-var html = document.querySelector("html");
 var feedbackForm = document.querySelector(".feedback-form");
 var feedbackLink = document.querySelector(".page-header__feedback-link");
 var acceptedBlock = document.querySelector(".accept");
@@ -14753,10 +14752,8 @@ if (Object(_module_browser_checker__WEBPACK_IMPORTED_MODULE_5__["isIe"])() || Ob
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
       var src = _step2.value;
       var imageSrc = src.srcset;
-      console.log("old", src);
       src.srcset = imageSrc.replace(/.webp/gi, ".png");
       src.type = "image/png";
-      console.log("new", src);
     }
   } catch (err) {
     _iterator2.e(err);
@@ -14784,7 +14781,7 @@ function compareVersion(version, range) {
   var string = range + "";
   var n = +(string.match(/\d+/) || NaN);
   var op = string.match(/^[<>]=?|/)[0];
-  return comparator[op] ? comparator[op](version, n) : version == n || n !== n;
+  return comparator[op] ? comparator[op](version, n) : version === n || n !== n;
 }
 
 var comparator = {

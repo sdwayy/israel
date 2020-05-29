@@ -25,7 +25,6 @@ const MAX_TABLET_WIDTH = 1023;
 const MAX_MOBILE_WIDTH = 767;
 const MIN_MOBILE_WIDTH = 320;
 
-const html = document.querySelector(`html`);
 const feedbackForm = document.querySelector(`.feedback-form`);
 const feedbackLink = document.querySelector(`.page-header__feedback-link`);
 const acceptedBlock = document.querySelector(`.accept`);
@@ -306,9 +305,7 @@ if (moreInfo) {
 if (isIe() || isSafari()) {
   for (const src of imagesSources) {
     const imageSrc = src.srcset;
-    console.log(`old`, src)
     src.srcset = imageSrc.replace(/.webp/gi, `.png`);
     src.type = `image/png`;
-    console.log(`new`, src)
   }
 }

@@ -4,7 +4,7 @@ function compareVersion(version, range) {
   const string = (range + ``);
   const n = +(string.match(/\d+/) || NaN);
   const op = string.match(/^[<>]=?|/)[0];
-  return comparator[op] ? comparator[op](version, n) : (version == n || n !== n);
+  return comparator[op] ? comparator[op](version, n) : (version === n || n !== n);
 }
 
 const comparator = {
