@@ -20,6 +20,7 @@ const MAX_TABLET_WIDTH = 1023;
 const MAX_MOBILE_WIDTH = 767;
 const MIN_MOBILE_WIDTH = 320;
 
+const html = document.querySelector(`html`);
 const feedbackForm = document.querySelector(`.feedback-form`);
 const feedbackLink = document.querySelector(`.page-header__feedback-link`);
 const acceptedBlock = document.querySelector(`.accept`);
@@ -51,28 +52,6 @@ function scrollToAnchor(anchor) {
     behavior: `smooth`,
     block: `start`
   });
-}
-
-function checkUserAgent() {
-  const ua = navigator.userAgent;
-
-  if (ua.search(/MSIE/) > 0) {
-    return `Internet Explorer`;
-  }
-
-  if (ua.search(/Firefox/) > 0) {
-    return `Firefox`;
-  }
-
-  if (ua.search(/Chrome/) > 0) {
-    return `Google Chrome`;
-  }
-
-  if (ua.search(/Safari/) > 0) {
-    return `Safari`;
-  }
-
-  return `other`;
 }
 
 if (headerAnchor) {
@@ -279,13 +258,6 @@ if (reviews) {
   reviewsSwiper.init();
 }
 
-if (checkUserAgent() === `Safari` || checkUserAgent() === `Internet Explorer`) {
-  for (const src of imagesSources) {
-    const imageSrc = src.srcset;
-    src.srcset = imageSrc.replace(/.webp/gi, `.png`);
-  }
-}
-
 if (moreInfo) {
   const phoneInput = moreInfo.querySelector(`input[type="tel"]`);
   const form = moreInfo.querySelector(`form`);
@@ -317,4 +289,11 @@ if (moreInfo) {
 
   imask(phoneInput, {mask: `+{7}(000)000-00-00`});
   form.addEventListener(`submit`, sumbitBtnClickHandler);
+}
+
+if (html.classList.contains(`no-webp`)) {
+  for (const src of imagesSources) {
+    const imageSrc = src.srcset;
+    src.srcset = imageSrc.replace(/.webp/gi, `.png`);
+  }
 }
