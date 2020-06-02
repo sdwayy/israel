@@ -275,6 +275,8 @@
 @media (max-width: $tablet-width-max) {
   .programs {
     padding-top: 27px;
+    background-size: 60% auto;
+    background-position: right top 50px;
 
     h2 {
       @include mobile-title;
@@ -353,6 +355,8 @@
 
 @media (max-width: $mobile-width-max) {
   .programs {
+    background-size: 296px 201px;
+    background-position: right top 146px;
     h2 {
       padding: 0;
     }
@@ -375,5 +379,13 @@
     h3 {
       margin-left: -84px;
     }
+  }
+
+  .webp .programs {
+    background-image: url("../img/programs-background-mobile.webp");
+  }
+
+  .no-webp .programs {
+    background-image: url("../img/programs-background-mobile.jpg");
   }
 }

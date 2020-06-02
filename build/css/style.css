@@ -1592,7 +1592,9 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1023px) {
   .programs {
-    padding-top: 27px; }
+    padding-top: 27px;
+    background-size: 60% auto;
+    background-position: right top 50px; }
     .programs h2 {
       font-size: 32px;
       line-height: 39px;
@@ -1645,10 +1647,13 @@ button.swiper-pagination-bullet {
       width: auto; } }
 
 @media (max-width: 767px) {
-  .programs h2 {
-    padding: 0; }
-  .programs br {
-    display: inline; }
+  .programs {
+    background-size: 296px 201px;
+    background-position: right top 146px; }
+    .programs h2 {
+      padding: 0; }
+    .programs br {
+      display: inline; }
   .programs__names-list {
     flex-wrap: nowrap;
     justify-content: flex-start; }
@@ -1657,7 +1662,11 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     align-items: center; }
     .programs__descriptions-item h3 {
-      margin-left: -84px; } }
+      margin-left: -84px; }
+  .webp .programs {
+    background-image: url("../img/programs-background-mobile.webp"); }
+  .no-webp .programs {
+    background-image: url("../img/programs-background-mobile.jpg"); } }
 
 .feedback {
   background-repeat: no-repeat;
