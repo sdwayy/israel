@@ -208,7 +208,8 @@
 @media (max-width: $mobile-width-max) {
   .reviews {
     padding-top: 56px;
-    background-position: right top calc(80px + 67%);
+    background-position: right top calc(50px + 67%);
+    background-size: auto;
 
     h2 {
       margin-bottom: 9px;
