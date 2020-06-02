@@ -2890,6 +2890,10 @@ button.swiper-pagination-bullet {
     display: flex;
     flex-direction: column; }
 
+.more-info__map {
+  position: relative;
+  z-index: -1; }
+
 @media (max-width: 1365px) {
   .more-info__container {
     padding-left: 8.1%; }

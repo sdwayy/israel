@@ -208,6 +208,11 @@
   }
 }
 
+.more-info__map {
+  position: relative;
+  z-index: -1;
+}
+
 @media (max-width: $desktop-width-max) {
   .more-info__container {
     padding-left: 8.1%;
