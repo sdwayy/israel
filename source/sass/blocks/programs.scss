@@ -2,7 +2,7 @@
   padding-top: 50px;
   background-size: 680px 426px;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right calc(50% - 345px) top;
 
   h2 {
     @include desktop-title;

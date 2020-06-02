@@ -1425,7 +1425,7 @@ button.swiper-pagination-bullet {
   padding-top: 50px;
   background-size: 680px 426px;
   background-repeat: no-repeat;
-  background-position: right top; }
+  background-position: right calc(50% - 345px) top; }
   .programs h2 {
     margin: 0;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -2348,8 +2348,8 @@ button.swiper-pagination-bullet {
 
 .questions {
   background-repeat: no-repeat;
-  background-size: 194px 177px, cover;
-  background-position: left -18px bottom, center top 40px; }
+  background-size: 154px 172px, 100% 967px;
+  background-position: left bottom, center top 40px; }
   .questions h2 {
     margin: 0;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -2525,8 +2525,8 @@ button.swiper-pagination-bullet {
   padding-top: 33px;
   padding-bottom: 50px;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: right top calc(80px + 20%); }
+  background-size: 523px 318px, 100% 527px;
+  background-position: right calc(50% - 421px) top calc(80px + 2%), right top 64px; }
   .reviews h2 {
     margin: 0;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -2628,20 +2628,20 @@ button.swiper-pagination-bullet {
   left: 42.5%; }
 
 .webp .reviews {
-  background-image: url("../img/reviews-background-desktop@1x.webp"); }
+  background-image: url("../img/sketch-desktop@1x.webp"), url("../img/reviews-background-desktop@1x.webp"); }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .webp .reviews {
-      background-image: url("../img/reviews-background-desktop@2x.webp"); } }
+      background-image: url("../img/sketch-desktop@2x.webp"), url("../img/reviews-background-desktop@2x.webp"); } }
 
 .no-webp .reviews {
-  background-image: url("../img/reviews-background-desktop@1x.jpg"); }
+  background-image: url("../img/sketch-desktop@1x.png"), url("../img/reviews-background-desktop@1x.jpg"); }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .no-webp .reviews {
-      background-image: url("../img/reviews-background-desktop@2x.jpg"); } }
+      background-image: url("../img/sketch-desktop@1x.webp"), url("../img/reviews-background-desktop@2x.jpg"); } }
 
 @media (max-width: 1023px) {
   .reviews {
-    background-position: right top calc(80px + 75%); }
+    background-position: right bottom 11%; }
     .reviews h2 {
       font-size: 32px;
       line-height: 39px;
@@ -2669,13 +2669,25 @@ button.swiper-pagination-bullet {
     margin-left: unset;
     margin-right: auto; }
   .reviews__more-link {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .webp .reviews {
+    background-image: url("../img/sketch-desktop@1x.webp"); } }
+  @media (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .webp .reviews {
+      background-image: url("../img/sketch-desktop@2x.webp"); } }
+
+@media (max-width: 1023px) {
+  .no-webp .reviews {
+    background-image: url("../img/sketch-desktop@1x.png"); } }
+  @media (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .no-webp .reviews {
+      background-image: url("../img/sketch-desktop@1x.webp"); } }
 
 @media (max-width: 767px) {
   .reviews {
     padding-top: 56px;
-    background-position: right top calc(50px + 67%);
-    background-size: auto; }
+    background-position: right top calc(50% + 123px), right bottom 18.6%;
+    background-size: auto, 100% 234px; }
     .reviews h2 {
       margin-bottom: 9px; }
   .reviews__list img {
@@ -2717,9 +2729,9 @@ button.swiper-pagination-bullet {
   .reviews__social {
     min-width: 99px; }
   .webp .reviews {
-    background-image: url("../img/reviews-mobile.webp"); }
+    background-image: url("../img/sketch-mobile.webp"), url("../img/reviews-background-mobile.webp"); }
   .no-webp .reviews {
-    background-image: url("../img/reviews-mobile.jpg"); } }
+    background-image: url("../img/sketch-mobile.png"), url("../img/reviews-background-mobile.jpg"); } }
 
 .more-info {
   background-repeat: no-repeat;

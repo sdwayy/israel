@@ -3,8 +3,8 @@
   padding-top: 33px;
   padding-bottom: 50px;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: right top calc(80px + 20%);
+  background-size: 523px 318px, 100% 527px;
+  background-position: right calc(50% - 421px) top calc(80px + 2%), right top 64px;
 
   h2 {
     @include desktop-title;
@@ -137,24 +137,24 @@
 }
 
 .webp .reviews {
-  background-image: url("../img/reviews-background-desktop@1x.webp");
+  background-image: url("../img/sketch-desktop@1x.webp"), url("../img/reviews-background-desktop@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/reviews-background-desktop@2x.webp");
+    background-image: url("../img/sketch-desktop@2x.webp"), url("../img/reviews-background-desktop@2x.webp");
   }
 }
 
 .no-webp .reviews {
-  background-image: url("../img/reviews-background-desktop@1x.jpg");
+  background-image: url("../img/sketch-desktop@1x.png"), url("../img/reviews-background-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/reviews-background-desktop@2x.jpg");
+    background-image: url("../img/sketch-desktop@1x.webp"), url("../img/reviews-background-desktop@2x.jpg");
   }
 }
 
 @media (max-width: $tablet-width-max) {
   .reviews {
-    background-position: right top calc(80px + 75%);
+    background-position: right bottom 11%;
 
     h2 {
       @include mobile-title;
@@ -203,13 +203,29 @@
   .reviews__more-link {
     margin-bottom: 30px;
   }
+
+  .webp .reviews {
+    background-image: url("../img/sketch-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sketch-desktop@2x.webp");
+    }
+  }
+
+  .no-webp .reviews {
+    background-image: url("../img/sketch-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sketch-desktop@1x.webp");
+   }
+  }
 }
 
 @media (max-width: $mobile-width-max) {
   .reviews {
     padding-top: 56px;
-    background-position: right top calc(50px + 67%);
-    background-size: auto;
+    background-position: right top calc(50% + 123px), right bottom 18.6%;
+    background-size: auto, 100% 234px;
 
     h2 {
       margin-bottom: 9px;
@@ -283,10 +299,10 @@
   }
 
   .webp .reviews {
-    background-image: url("../img/reviews-mobile.webp");
+    background-image: url("../img/sketch-mobile.webp"), url("../img/reviews-background-mobile.webp");
   }
 
   .no-webp .reviews {
-    background-image: url("../img/reviews-mobile.jpg");
+    background-image: url("../img/sketch-mobile.png"), url("../img/reviews-background-mobile.jpg");
   }
 }
